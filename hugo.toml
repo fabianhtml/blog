@@ -1,5 +1,5 @@
 baseURL = "https://fablab.blog"
 languageCode = "es-cl"
 paginate = 5
-title = "Hola, soy Fabián Acuña Hernández"
+title = "Fabián Acuña Hernández"
 theme = "PaperMod"
