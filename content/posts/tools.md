@@ -8,25 +8,25 @@ En 2021 hice esta recopilación con más de 130 soluciones que yo mismo he utili
 Ayer la actualicé y aquí aprovecho de compartirte las que uso con más frecuencia, espero que alguna te resulte útil.
 
 ## 📂 Las que uso (casi) todos los días
-- Navegador: Arc, Firefox, Safari
-- Escribir en mi computador: iA Writer | Ulysses
-- Documentos y trabajo colaborativo: Google Drive
-- Leer: Reeder de Readwise (link con prueba gratis por el doble de tiempo)
-- Escuchar libros y podcast: Audible | Overcast
-- Blog (iar): Ghost | Hugo
-- Newsletter: Beehiiv
-- Inteligencia Artificial Generativa: ChatGPT
-- Diseñar: Figma
-- Editor de código: Visual Studio Code
-- Conversaciones: Telegram | WhatsApp para el computador
-- Captura de pantalla y video (screenshot), OCR:  CleanShot
-- Comunidades: Discord | Slack
-- Calendario: Cron
-- Reuniones online: Zoom | Google Meet
-- Mail: HEY | Gmail
-- Crear, editar y subtitular videos: Captions | Davinci Resolve (gratis e increíble)
-- Crear podcast: Spotify for podcaster | YouTube Studio
-- Varias: Alfred (barra de búsqueda con vitaminas), aText (autocompletar texto), Iristech (atenuar la pantalla), ControlD (privacidad y no ver anuncios), Rectangle (ajustar tamaño de las ventanas en el mac)
+- **Navegador:** Arc, Firefox, Safari
+- **Escribir en mi computador:** iA Writer | Ulysses
+- **Documentos y trabajo colaborativo:** Google Drive
+- **Leer:** Reeder de Readwise
+- **Escuchar libros y podcast:** Audible | Overcast
+- **Blog (iar):** Ghost | Hugo
+- **Newsletter:** Beehiiv
+- **Inteligencia Artificial Generativa:** ChatGPT
+- **Diseñar:** Figma
+- **Editor de código:** Visual Studio Code
+- **Conversaciones:** Telegram | WhatsApp para el computador
+- **Captura de pantalla y video (screenshot), OCR:**  CleanShot
+- **Comunidades:** Discord | Slack
+- **Calendario:** Cron
+- **Reuniones online:** Zoom | Google Meet
+- **Mail:** HEY | Gmail
+- **Crear, editar y subtitular videos:** Captions | Davinci Resolve (gratis e increíble)
+- **Crear podcast:** Spotify for podcaster | YouTube Studio
+- **Varias:** Alfred (barra de búsqueda con vitaminas), aText (autocompletar texto), Iristech (atenuar la pantalla), ControlD (privacidad y no ver anuncios), Rectangle (ajustar tamaño de las ventanas en el mac)
 
 
 **👉 [Acá puedes ver la lista completa](https://fragmentos.co/130-herramientas-productividad-trabajo-remoto/) 👈**
