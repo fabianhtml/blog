@@ -6,14 +6,24 @@ theme: PaperMod
 
 params :
   homeInfoParams:
-    Title: Aprendizajes para la vida y el trabajo
-    Content: Hola, gracias por pasar, soy **Fabián Acuña Hernández,** aquí encontrarás mi bitácora. Una recopilación del contenido que voy creando, así como las cosas con las que me voy encontrando.
+    title: Aprendizajes para la vida y el trabajo
+    subtitle: This is subtitle
+    content: Soy **Fabián Acuña Hernández**. Aquí encontrarás ideas para mejorar tu desarrollo personal y profesional. Regularme leo, escucho y hablo sobre cultura, desarrollo de comunidades, tecnología, desarrollo de carrera, negocios y trabajo remoto. 💌 Si quieres recibir mi **newsletter** regístrate en el segundo ícono abajo. **¡Gracias por pasar**!
+
 
   SocialIcons:
     - name: Twitter
       url: https://x.com/fabianhtml/
+    - name: email
+      url: https://fabianhtml.substack.com
     - name: LinkedIn
       url: https://www.linkedin.com/in/fabianhtml/
+    - name: youtube
+      url: https://www.youtube.com/@9punto5
+    - name: spotify
+      url: https://open.spotify.com/show/2pUeShjEGgArImaTZy7IoJ?si=d167758a18a14b95
+    - name: other
+      url: https://9punto5.cl/
 
   ShowBreadCrumbs: true
   
@@ -26,14 +36,28 @@ params :
 menu:
   main:
     - identifier: categories
-      name: Categorías
+      name: categorías
       url: /categories/
       weight: 10
-    - identifier: tagas
-      name: Etiquetas
+    - identifier: tags
+      name: etiquetas
       url: /tags/
       weight: 20
     - identifier: archives
-      name: Archivo
+      name: archivo
       url: /archives/
       weight: 30
+    - identifier: about
+      name: about
+      url: /about/
+      weight: 40
+    - identifier: search
+      name: 🔍
+      url: /search/
+      weight: 50
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
