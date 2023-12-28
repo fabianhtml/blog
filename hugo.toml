@@ -1,5 +1,0 @@
-baseURL = "https://fablab.blog"
-languageCode = "es-cl"
-paginate = 5
-title = "FabLab"
-theme = "PaperMod"
