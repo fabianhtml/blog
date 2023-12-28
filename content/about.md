@@ -1,5 +1,5 @@
 +++
-title = 'Sobre mí'
+title = 'Qué hago'
 date = 2023-12-28T01:39:48-03:00
 draft = false
 categories = ["about"]
