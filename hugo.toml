@@ -1,4 +1,4 @@
-baseURL = ''
+baseURL = 'http://fablab.blog'
 languageCode = 'en-us'
 title = 'Fabián Acuña Hernández'
 theme = 'Papermod'
