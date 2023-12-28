@@ -2,6 +2,8 @@
 title = 'Películas diciembre 2023'
 date = 2023-12-28T01:39:48-03:00
 draft = false
+tags = ["películas"]
+categories = ["ocio"]
 +++
 Las 8 películas que he visto o estoy viendo en diciembre de 2023:
 

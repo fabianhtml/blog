@@ -1,5 +1,39 @@
 baseURL: "https://fablab.blog"
 languageCode: "es-cl"
 paginate: 5
-title: "Fabián Acuña Hernández"
-theme: "PaperMod"
+title: FabLab
+theme: PaperMod
+
+params :
+  homeInfoParams:
+    Title: Aprendizajes para la vida y el trabajo
+    Content: Hola, gracias por pasar, soy **Fabián Acuña Hernández,** aquí encontrarás mi bitácora. Una recopilación del contenido que voy creando, así como las cosas con las que me voy encontrando.
+
+  SocialIcons:
+    - name: Twitter
+      url: https://x.com/fabianhtml/
+    - name: LinkedIn
+      url: https://www.linkedin.com/in/fabianhtml/
+
+  ShowBreadCrumbs: true
+  
+  ShowReadingTime: true
+
+  ShowShareButtons: true
+
+  ShowPostNavLinks: true
+
+menu:
+  main:
+    - identifier: categories
+      name: Categorías
+      url: /categories/
+      weight: 10
+    - identifier: tagas
+      name: Etiquetas
+      url: /tags/
+      weight: 20
+    - identifier: archives
+      name: Archivo
+      url: /archives/
+      weight: 30
