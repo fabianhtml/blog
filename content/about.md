@@ -31,4 +31,4 @@ En definitiva, estamos construyendo un espacio de cooperación que impulse cambi
 ## BuenaOnda Talks
 Desde **2022** soy parte de **BuenaOnda Talks**, un espacio de oportunidades y movilidad social que inspira, articula y conecta a jóvenes con el mundo tech mediante charlas, becas de formación y opciones laborales. Acá mi rol principalmente es diseñar los procesos que nos permitan llegar a la mayor cantidad de jóvenes posibles usando tecnología.
 
-Si quieres hablar escríbeme por mail a fabian arroba 9punto5 punto cl.
+**Si quieres hablar escríbeme por mail a fabian arroba 9punto5 punto cl.**
