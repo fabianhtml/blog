@@ -63,3 +63,7 @@ outputs:
         - HTML
         - RSS
         - JSON # is necessary
+
+services:
+  googleAnalytics:
+    ID: G-MP5R98H23T
