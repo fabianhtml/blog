@@ -107,6 +107,8 @@ Con esto, las comunidades comprometerán a llevar a cabo ciertas actividades y a
 
 Además, creemos que esto permitirá atraer a comunidades que no necesariamente buscan financiamiento.
 
+Otra razón para iniciar la relación con comunidades a través de una convocatoria abierta es **evitar el desgate de las coordinaciones iniciales**. Creemos que con una convocatoria con objetivos, expectativas y reglas claras será posible establecer bases comunes y un marco de relación sobre la que construir hacia los desafíos futuros.
+
 Con esto esperamos reunir al menos 10 comunidades en el Q1 de 2024.
 
 La convocatoria debería ocurrir en el Q1 y para hacerlo dependemos de ir bien encaminados en el levantamiento de financiamiento.
