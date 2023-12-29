@@ -2,6 +2,7 @@
 title = 'HackStack (WIP)'
 date = 2023-12-28T01:39:48-03:00
 draft = false
+description = Resumen ejecutivo HackStack
 +++
 
 ### Ideas a transmitir
