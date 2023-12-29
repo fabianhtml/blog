@@ -127,7 +127,9 @@ Crear un modelo de gobernanza y trasparencia en que tanto HackStack como las com
 
 Pensar un modelo de incentivos que genere recompensas y nuevas oportunidades a quienes participan de esta iniciativa: líderes de comunidades, talento, empresas, y las propias comunidades.
 
-Con esto creemos que sentaremos las bases para un resto de año aún más desafiante que permita abrir nuevas redes y desafíos.
+> Con esto creemos que sentaremos las bases para un resto de año aún más desafiante que permita abrir nuevas redes y desafíos.
+
++ + + + + + + + + + + +
 
 ## Cosas que sabemos que conocemos y tenemos
 Hay asuntos sobre los que tenemos altos niveles de certeza.
