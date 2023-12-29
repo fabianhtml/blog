@@ -11,9 +11,13 @@ params :
     content: Soy **[Fabián Acuña Hernández](/about/)**. Aquí encontrarás ideas para mejorar tu desarrollo personal y profesional. Regularme leo, escucho y hablo sobre cultura, desarrollo de comunidades, tecnología, desarrollo de carrera, negocios y trabajo remoto. Te invito a mi [**newsletter** 💌](https://fabianhtml.substack.com). **¡Gracias por pasar**!
     description: Aprendizajes para la vida y el trabajo. Encuentra ideas para desarrollar tu carrera y negocio. Regularme leo, escucho y hablo sobre cultura, desarrollo de comunidades, tecnología, desarrollo de carrera, negocios y trabajo remoto.
 
+  ShowBreadCrumbs: true
 
-assets: 
-  favicon: "/assets/favicon.ico"
+  ShowReadingTime: true
+  
+  ShowShareButtons: true
+  
+  ShowPostNavLinks: true
 
   SocialIcons:
     - name: Twitter
@@ -29,13 +33,8 @@ assets:
     - name: other
       url: https://9punto5.cl/
 
-  ShowBreadCrumbs: true
-  
-  ShowReadingTime: true
-
-  ShowShareButtons: true
-
-  ShowPostNavLinks: true
+assets: 
+  favicon: "/assets/favicon.ico"
 
 menu:
   main:

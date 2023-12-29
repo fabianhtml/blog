@@ -5,25 +5,38 @@ date = 2023-12-28T01:39:48-03:00
 draft = false
 +++
 
+## Notas internas sobre la estructura y propósito de este documento
 ### Ideas a transmitir
 - Introducción y contexto
-- Oportunidad y rol de las comunidades 
-- Beneficios que aportan las comunidades
-- Necesidad por cooperación y crear comunidades y un ecosistema saludables
-- Desafíos de desarrollar de comunidades tecnológicas
-- Rol de HackStack para apoyar estos problemas
+- Identificar la oportunidad y el rol crucial de las comunidades tecnológicas
+- Descripción de los beneficios que aportan estas comunidades
+- Enfatizar la necesidad de cooperación para crear un ecosistema saludable
+- Mostrar los principales desafíos al desarrollar comunidades tecnológicas
+- Presentar HackStack y su rol en apoyar estos desafíos
+- Propuesta de próximos pasos para avanzar
+
+
+## Objetivos al solicitar feedback de Jeannette von Wolfersdorff y Francisco Mardones
+- Buscar retroalimentación general sobre la idea y su implementación
+- Obtener opiniones sobre los próximos pasos planteados
 
 ### En qué queremos pedir ayuda a Jeannette von Wolfersdorff y Francisco Mardones
 - Feedback a la idea en general
 - Feedback sobre los próximos pasos que hemos pensado 
 
-#### Otro objetivo de este documento: Mostrar claramente cómo está nuestro nivel de *”awareness”* y *”knowledge”*
-- **Conocimiento:** Lo que sabemos **que sí sabemos** (Known Knowns)
-- **Áreas de preguntas y oportunidades:** Sabemos que **no sabemos** (Knowns unknowns)
-- Pedirles que nos ayuden a identificar lo que NO sabemos, que **no sabemos** (Unknown, unknow)
-- Pedirles que nos ayuden a identificar lo que NO sabemos que **sí sabemos** y que no estamos valorando (Unknown, know)
 
-## Desarrollo
+### Otro objetivo de este documento: mejorar nuestros nivel de conocimiento y conciencia sobre los temas importantes
+
+- **Conocimiento ("Known Knowns”):** Mostrar los que sabemos con certeza
+- **Áreas de incertidumbre ("Known Unknowns”)**: Mostrar lo que sabemos que desconocemos
+- **Revelar la ignorancia ("Unknown Unknowns”)**: Ayudarlos a que nos digan cosas de las que no somos conscientes que ignoramos
+- **Revelar nuestros conocimientos inadvertidos ("Unknown Knowns”)””**: Ayudarles a que nos ayuden a reconocer conocimientos que estamos subestimando o que no estamos valoradndo
+
+
+Fin de las notas internas
++ + + + + + + + + + + +
+
+# Resumen ejecutivo
 
 Creemos que la industria de la tecnología tiene un rol fundamental para el desarrollo de Chile. Pero si no intencionamos su desarrollo terminará comportándose como las industrias tradicionales que tienen modelos de operación, impacto y gobernanza que fomentan prácticas anticompetitivas, monopólicas, asimétricas y poco sostenibles social y ambientalmente.
 
@@ -58,14 +71,16 @@ Considerando todo esto estamos creando HackStack como un espacio que inicialment
 
 - Financiamiento a comunidades
 - Espacio de conversación y coordinación en Slack para líderes de comunidades
-- Gmail & Google Workspace gratis para comunidades
 - Recursos, playbook, y en general recopilación buenas prácticas 
-- Una plataforma open source gratuita de manejo de eventos y usuarios open source
-- Una plataforma open source gratuita para envío de mail y newsletter lo que facilita la comunicación
 
-Pero además, y más importante, buscamos ser un punto de encuentro para dar mayor sentido y significado al trabajo de estas comunidades, lo que implica construir un diseño que amplifique el impacto y la visibilidad de su trabajo.
+**Herramietnas para facilitar su trabajo**
+-  Gmail & Google Workspace gratis para comunidades
+- Una plataforma open source gratuita de manejo de eventos y usuarios
+- Una plataforma open source gratuita para envío de mail y newsletter lo que facilita la comunicación con la comunidad
 
-Creemos que este trabajo permitirá 
+Pero además, y más importante, **buscamos ser un punto de encuentro para dar mayor sentido y significado al trabajo de estas comunidades**, lo que implica construir un diseño que amplifique el impacto y la visibilidad de su trabajo.
+
+Creemos que este trabajo permitirá:
 - Concentrar esfuerzos en desafíos compartidos
 - Llegar y atraer a nuevos actores
 - Conseguir nuevos recursos para el trabajo de comunidades
@@ -73,7 +88,7 @@ Creemos que este trabajo permitirá
 
 ## Próximos pasos
 
-### Financiamiento
+### 1. Financiamiento
 
 #### Meta
 - Levantar al menos 150 millones en el Q1 de 2024
@@ -82,8 +97,9 @@ Hemos desarrollado una propuesta de auspicios y un presupuesto para 2024
 
 - **Financiamiento basal para 2024:** 250 millones
 - **Propuesta de auspicio**: (Pendiente de compartir)
+- **Presupuesto**: (Pendiente de compartir)
 
-### Convocatoria a comunidades
+### 2. Convocatoria a comunidades
 
 #### Metas
 - Lanzar convocatoria de comunidades
@@ -99,21 +115,50 @@ Con esto esperamos reunir al menos 10 comunidades en el Q1 de 2024.
 
 La convocatoria debería ocurrir en el Q1 y para hacerlo dependemos de ir bien encaminados en el levantamiento de financiamiento.
 
-- **Pendiente:** agregar presupuesto.
+- **Presupuesto que incluye en qué gastaremos el dinero y cuál es el apoyo concreto a las comunidades**: (Pendiente de compartir)
 
-### Modelo de gobernanza 1.0
+### 3. Modelo de gobernanza 1.0
 
 #### Meta
 - Generar modelo de gobernanza 1.0 en Q1
 
 Crear un modelo de gobernanza y trasparencia en que tanto HackStack como las comunidades dan cuenta de su impacto, trabajo y gastos asociados —al menos— a los esfuerzos compartidos.
 
-### Modelo de incentivos 1.0
+### 4. Modelo de incentivos 1.0
 
 ### Meta
 - Generar modelo de incentivos 1.0 en Q1 2024
 
 Pensar un modelo de incentivos que genere recompensas y nuevas oportunidades a quienes participan de esta iniciativa: líderes de comunidades, talento, empresas, y las propias comunidades.
 
+
+## Cosas que sabemos que conocemos y tenemos
+Hay cosas en que tenemos altos niveles de certeza, y también hay cosas que sabemos que tenemos con bastante certeza.
+
+Cosas que conocemos y tenemos
+- Capacidad de organizar eventos y conferencias de nivel internacional de varios días, manejando los diferentes desafíos relacionados con contenidos / speakers, venta de tickets, venta de auspicios, logística y toda la operación en general
+- Redes internacionales para conseguir speakers y auspiciadores
+- Reputación y confianza dentro del ecosistema tecnológico, la que hemos desarrollado por unos 10 años
+- Capacidad de convocar a talento tech de alto perfil
+- Capacidad de convocar y cooperar con otras personas que lideran comunidades
+- Red de auspiciadores actuales: Con empresas como Walmart, Google, OpenAI, y más de 20 empresas que han auspiciado nuestras iniciativas en el pasado
+- Redes de colaboración: Tenemos más de 20 organizaciones que nos han ayudado en el pasado en difusión y de diversas 
+- etc
+- etc
+
+## Cosas que sabemos que desconocemos, que nos faltan o donde somos débiles
+
+Además, es importante reconocer que hay cosas que sabemos que nos faltan
+
+Cosas que nos faltan
+- Redes para acceder a más oportunidades de auspicios
+- Participar en eventos que nos den visibilidad delante del Coporate
+- etc
+- etc
+
+Cosas en que somos débiles
+- Posicionamiento en prensa, aunque creemos que con una persona en el rol de gestión de prensa podemos superar esto
+- etc
+- etc
 
 ....
