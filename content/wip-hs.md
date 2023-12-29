@@ -71,9 +71,9 @@ Considerando todo esto estamos creando HackStack como un espacio que inicialment
 
 - Financiamiento a comunidades
 - Espacio de conversación y coordinación en Slack para líderes de comunidades
-- Recursos, playbook, y en general recopilación buenas prácticas 
+- Recursos, experiencias e ideas para implementar buenas prácticas en el desarrollo de comunidades
 
-**Herramietnas para facilitar su trabajo**
+**Herramientas para facilitar su trabajo**
 -  Gmail & Google Workspace gratis para comunidades
 - Una plataforma open source gratuita de manejo de eventos y usuarios
 - Una plataforma open source gratuita para envío de mail y newsletter lo que facilita la comunicación con la comunidad
