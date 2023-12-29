@@ -10,6 +10,8 @@ params :
     subtitle: This is subtitle
     content: Soy **Fabián Acuña Hernández**. Aquí encontrarás ideas para mejorar tu desarrollo personal y profesional. Regularme leo, escucho y hablo sobre cultura, desarrollo de comunidades, tecnología, desarrollo de carrera, negocios y trabajo remoto. 💌 Si quieres recibir mi **newsletter** regístrate en el segundo ícono abajo. **¡Gracias por pasar**!
 
+assets: 
+  favicon: "/assets/favicon.ico"
 
   SocialIcons:
     - name: Twitter
