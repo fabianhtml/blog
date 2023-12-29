@@ -20,17 +20,12 @@ draft = false
 - Buscar retroalimentación general sobre la idea y su implementación
 - Obtener opiniones sobre los próximos pasos planteados
 
-### En qué queremos pedir ayuda a Jeannette von Wolfersdorff y Francisco Mardones
-- Feedback a la idea en general
-- Feedback sobre los próximos pasos que hemos pensado 
-
-
-### Otro objetivo de este documento: mejorar nuestros nivel de conocimiento y conciencia sobre los temas importantes
+### Otro objetivo de este documento: mejorar nuestros niveles de conocimiento y conciencia sobre los temas importantes
 
 - **Conocimiento ("Known Knowns”):** Mostrar los que sabemos con certeza
 - **Áreas de incertidumbre ("Known Unknowns”)**: Mostrar lo que sabemos que desconocemos
 - **Revelar la ignorancia ("Unknown Unknowns”)**: Ayudarlos a que nos digan cosas de las que no somos conscientes que ignoramos
-- **Revelar nuestros conocimientos inadvertidos ("Unknown Knowns”)””**: Ayudarles a que nos ayuden a reconocer conocimientos que estamos subestimando o que no estamos valoradndo
+- **Revelar nuestros conocimientos inadvertidos ("Unknown Knowns”)””**: Ayudarles a que nos ayuden a reconocer conocimientos que estamos subestimando o que no estamos valorando
 
 
 Fin de las notas internas
