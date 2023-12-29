@@ -130,7 +130,7 @@ Pensar un modelo de incentivos que genere recompensas y nuevas oportunidades a q
 Con esto creemos que sentaremos las bases para un resto de año aún más desafiante que permita abrir nuevas redes y desafíos.
 
 ## Cosas que sabemos que conocemos y tenemos
-Hay cosas en que tenemos altos niveles de certeza, y también hay cosas que sabemos que tenemos con bastante certeza.
+Hay asuntos sobre los que tenemos altos niveles de certeza.
 
 Cosas que conocemos y tenemos
 - Capacidad de organizar eventos y conferencias de nivel internacional de varios días, manejando los diferentes desafíos relacionados con contenidos / speakers, venta de tickets, venta de auspicios, logística y toda la operación en general
