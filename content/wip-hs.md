@@ -69,7 +69,7 @@ Considerando todo esto estamos creando HackStack como un espacio que inicialment
 - Recursos, experiencias e ideas para implementar buenas prácticas en el desarrollo de comunidades
 
 **Herramientas para facilitar su trabajo**
--  Gmail & Google Workspace gratis para comunidades
+- Gmail & Google Workspace gratis para comunidades
 - Una plataforma open source gratuita de manejo de eventos y usuarios
 - Una plataforma open source gratuita para envío de mail y newsletter lo que facilita la comunicación con la comunidad
 
@@ -80,6 +80,7 @@ Creemos que este trabajo permitirá:
 - Llegar y atraer a nuevos actores
 - Conseguir nuevos recursos para el trabajo de comunidades
 - Desarrollar nuevas oportunidades
+- Generar economías de escala
 
 ## Próximos pasos
 
