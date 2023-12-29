@@ -1,15 +1,13 @@
 +++
-title = 'Qué hago'
+title = 'Fabián Acuña Hernández'
 date = 2023-12-28T01:39:48-03:00
 draft = false
 categories = ["about"]
 +++
+#### Regístrate a mi [**newsletter**](https://fabianhtml.substack.com). 💌
+> _Creo que las transformaciones ocurren desde las personas y me encantaría si algo de lo que encuentras en este sitio te ayuda a desarrollar tu potencial y hace más simple tu trabajo._
 
-> _Creo que las transformaciones ocurren desde las personas y me encantaría si algo de lo que encuentras en este sitio te ayuda a desarrollar tu potencial._
-
-Mi nombre es Fabián Acuña Hernández.
-
-Hoy *[fracciono](https://en.wikipedia.org/wiki/Fractional_work)* mi rol liderando el desarrollo de comunidades en diferentes iniciativas como son 9punto5, HackStack y BuenaOnda Talks. Además, lidero el desarrollo de algunos productos digitales.
+Hola, soy Fabián. Hoy *[fracciono](https://en.wikipedia.org/wiki/Fractional_work)* mi rol liderando el desarrollo de comunidades en diferentes iniciativas como son 9punto5, HackStack y BuenaOnda Talks. Además, lidero el desarrollo de algunos productos digitales.
 
 Buena parte de mis intereses profesionales tienen que ver con comprender los cambios en el mundo del trabajo y los negocios.
 
