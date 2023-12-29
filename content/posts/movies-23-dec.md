@@ -1,6 +1,6 @@
 +++
 title = 'Películas diciembre 2023'
-Descripotion = 'Lista de películas 2023'
+description = 'Lista de películas 2023'
 date = 2023-12-28T01:39:48-03:00
 draft = false
 tags = ["películas"]
