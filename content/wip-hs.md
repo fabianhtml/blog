@@ -147,15 +147,19 @@ Pensar un modelo de incentivos que genere recompensas y nuevas oportunidades a q
 
 1. ¿Cómo podemos elaborar mejor nuestra visión estratégica a largo plazo de HackStack?
 
-**Misión actual**
-Enriquecer el ecosistema potenciando la vinculación y el impacto de las comunidades tecnológicas.
+    **Misión actual**
+    Enriquecer el ecosistema potenciando la vinculación y el impacto de las comunidades tecnológicas.
 
-**Visión actual**
-Ayudar a las personas, comunidades y empresas a realizar su máximo potencial.
+    **Visión actual**
+    Ayudar a las personas, comunidades y empresas a realizar su máximo potencial.
 
 2.  ¿Cuáles son las principales oportunidades estratégicas que deberíamos considerar para expandir nuestro impacto en las comunidades tecnológicas y el ecosistema?
 
 3. ¿Cuál debería ser nuestra estrategia para involucrar a actores clave, como empresas y organizaciones gubernamentales, en el apoyo a las comunidades tecnológicas?
+
+4. ¿De qué cosas diríamos que no somos conscientes que ignoramos?
+
+5. ¿Creen que hay algún conocimiento o capacidad que tenemos y que estamos subestimando o que no estamos valorando?
 
 ## Cosas que sabemos que conocemos y tenemos
 Hay asuntos sobre los que tenemos altos niveles de certeza.
