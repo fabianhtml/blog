@@ -15,12 +15,11 @@ draft = false
 - Presentar HackStack y su rol en apoyar estos desafíos
 - Propuesta de próximos pasos para avanzar
 
-
 ## Objetivos al solicitar feedback de Jeannette von Wolfersdorff y Francisco Mardones
 - Buscar retroalimentación general sobre la idea y su implementación
 - Obtener opiniones sobre los próximos pasos planteados
 
-### Otro objetivo de este documento: mejorar nuestros niveles de conocimiento y conciencia sobre los temas importantes
+#### Otro objetivo de este documento: mejorar nuestros niveles de conocimiento y conciencia sobre los temas importantes
 
 - **Conocimiento ("Known Knowns”):** Mostrar los que sabemos con certeza
 - **Áreas de incertidumbre ("Known Unknowns”)**: Mostrar lo que sabemos que desconocemos
@@ -68,7 +67,7 @@ Ahora bien, y porque hemos liderado comunidades tecnológicas por más de 10 añ
 - Las comunidades carecen de recursos para operar
 - Faltan incentivos que retribuyan el aporte a las comunidades
 - Existe una baja cooperación y coordinación entre comunidades
-- Las comunidades suelen estar enfocadas en sus propios desafíos internos y en satisfacer las necesidades de sus miembros, por esto están, a veces, ensimismadas. Esta situación provoca una falta de conexión con el entorno más amplio, incluyendo entidades públicas y privadas, así como con los problemas sociales y desafíos que enfrenta el país.
+- Las comunidades suelen estar enfocadas en sus propios desafíos internos y en satisfacer las necesidades de sus miembros, por esto están, a veces, ensimismadas. Esta situación provoca una falta de conexión con el entorno más amplio, incluyendo entidades públicas y privadas, así como con los problemas sociales y desafíos que enfrenta el país
 - Existen comunidades con dinámicas de participación tóxicas y de corte narcisista que atentan contra el beneficio común
 - En general, falta pensamiento sistémico
 
@@ -86,12 +85,17 @@ Pero además, y más importante, **buscamos ser un punto de encuentro para dar m
 
 Creemos que este trabajo permitirá:
 - Concentrar esfuerzos en desafíos compartidos
-- Llegar y atraer a nuevos actores
+- Promover nuevos desafíos estimulantes entre las comunidades
 - Conseguir nuevos recursos para el trabajo de comunidades
+- Llegar y atraer a nuevos actores
 - Desarrollar nuevas oportunidades
+- Genera y distribuir capacidades entre las comunidades al compartir aprendizajes y buenas prácticas
 - Generar economías de escala
 
 ## Próximos pasos
+Pensamos que el Q1 deberías ser un trimestre más operativo. En el sentido de que permita sentar las bases, conseguir recursos y atraer al menos 10 comunidades. En este periodo esperamos desarrollar un sistema de gobernanza y de incentivos para seguir desarrollando nuestro trabajo.
+
+Por esto no estamos generando una estrategia exhaustiva, ya que esperamos incorporar a las nuevas comunidades en los procesos de decisión para que las iniciativas y prioridades puedan emerger y ser definidas por el grupo. Esto aunque –por los desafíos antes descritos en que viven las comunidades– creemos que probablemente sea necesario un liderazgo propositivo.
 
 ### 1. Financiamiento
 
@@ -100,9 +104,8 @@ Creemos que este trabajo permitirá:
 
 Hemos desarrollado una propuesta de auspicios y un presupuesto para 2024
 
-- **Financiamiento basal para 2024:** 250 millones
-- **Propuesta de auspicio**: (Pendiente de compartir)
-- **Presupuesto**: (Pendiente de compartir)
+- **Financiamiento basal para 2024:** 250 millones (presupuesto pendiente de compartir))
+- **Propuesta de auspicio**: (pendiente de compartir)
 
 ### 2. Convocatoria a comunidades
 
@@ -110,13 +113,18 @@ Hemos desarrollado una propuesta de auspicios y un presupuesto para 2024
 - Lanzar convocatoria de comunidades
 - Reunir 10 comunidades en Q1 2024
 
-Partiendo con **4 comunidades** (JavaScript Chile, +Mujeres en UX, Women Who Code y 9punto5) HackStack realizará una convocatoria para que otras comunidades tecnológicas puedan postular por financiamiento de hasta CLP 1 millón. 
+Partiendo con **4 comunidades** (JavaScript Chile, +Mujeres en UX, Women Who Code y 9punto5) HackStack realizará una convocatoria para que otras comunidades tecnológicas puedan postular por financiamiento de hasta CLP 1 millón.
 
-Con esto, las comunidades comprometerán a llevar a cabo ciertas actividades y a cumplir con estándares de calidad mínimos como aplicar códigos de conducta y promover espacios saludables.
+Con esto, las comunidades comprometerán llevar a cabo ciertas actividades adhiriendo estándares mínimos de calidad y ética, principalmente relacionados a operar con transparencia en el gasto de los recursos entregados por HackStack, aplicar códigos de conducta, promover espacios diversos y saludables. 
 
-Además, creemos que esto permitirá atraer a comunidades que no necesariamente buscan financiamiento.
+Cada comunidad:
+- Operará con autonomía, ownership y accountability
+- Será parte de una relación basada en la confianza y la transparencia
+- Tendrá la libertad de fijar sus propias metas y definir sus propios métodos
 
-Otra razón para iniciar la relación con comunidades a través de una convocatoria abierta es **evitar el desgaste de las coordinaciones iniciales**. Creemos que con una convocatoria con objetivos, expectativas y reglas claras será posible establecer bases comunes y un marco de relación sobre la que construir hacia los desafíos futuros.
+Además, creemos que esto permitirá atraer a comunidades que no necesariamente buscan financiamiento, pero sí ciertos recursos y redes.
+
+Otra razón para iniciar la relación con comunidades a través de una convocatoria abierta es **evitar el desgaste de las coordinaciones iniciales**. Creemos que con una convocatoria con expectativas y reglas claras será posible establecer bases comunes y un marco de relación sobre la que construir hacia los desafíos futuros.
 
 Con esto esperamos reunir al menos 10 comunidades en el Q1 de 2024.
 
@@ -129,7 +137,9 @@ La convocatoria debería ocurrir en el Q1 y para hacerlo dependemos de ir bien e
 #### Meta
 - Generar modelo de gobernanza 1.0 en Q1
 
-Crear un modelo de gobernanza y trasparencia en que tanto HackStack como las comunidades dan cuenta de su impacto, trabajo y gastos asociados —al menos— a los esfuerzos compartidos.
+Crear un modelo de gobernanza y transparencia en que tanto HackStack como las comunidades dan cuenta de su impacto, trabajo y gastos asociados —al menos— a los esfuerzos compartidos.
+
+Durante el Q1 definir de forma participativa al menos un desafío compartido que queramos abordar como conjunto de comunidades tecnológicas.
 
 ### 4. Modelo de incentivos 1.0
 
@@ -146,12 +156,12 @@ Pensar un modelo de incentivos que genere recompensas y nuevas oportunidades a q
 ## Preguntas para el consejo
 
 1. ¿Cómo podemos elaborar mejor nuestra visión estratégica a largo plazo de HackStack?
-
-    **Misión actual**
-    Enriquecer el ecosistema potenciando la vinculación y el impacto de las comunidades tecnológicas.
-
-    **Visión actual**
-    Ayudar a las personas, comunidades y empresas a realizar su máximo potencial.
+	
+	**Misión actual**
+	Enriquecer el ecosistema potenciando la vinculación y el impacto de las comunidades tecnológicas.
+	
+	**Visión actual**
+	Ayudar a las personas, comunidades y empresas a realizar su máximo potencial.
 
 2.  ¿Cuáles son las principales oportunidades estratégicas que deberíamos considerar para expandir nuestro impacto en las comunidades tecnológicas y el ecosistema?
 
