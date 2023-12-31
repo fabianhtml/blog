@@ -116,7 +116,7 @@ Con esto, las comunidades comprometerán a llevar a cabo ciertas actividades y a
 
 Además, creemos que esto permitirá atraer a comunidades que no necesariamente buscan financiamiento.
 
-Otra razón para iniciar la relación con comunidades a través de una convocatoria abierta es **evitar el desgate de las coordinaciones iniciales**. Creemos que con una convocatoria con objetivos, expectativas y reglas claras será posible establecer bases comunes y un marco de relación sobre la que construir hacia los desafíos futuros.
+Otra razón para iniciar la relación con comunidades a través de una convocatoria abierta es **evitar el desgaste de las coordinaciones iniciales**. Creemos que con una convocatoria con objetivos, expectativas y reglas claras será posible establecer bases comunes y un marco de relación sobre la que construir hacia los desafíos futuros.
 
 Con esto esperamos reunir al menos 10 comunidades en el Q1 de 2024.
 
@@ -142,6 +142,21 @@ Pensar un modelo de incentivos que genere recompensas y nuevas oportunidades a q
 
 + + + + + + + + + + + +
 
+
+## Preguntas para el consejo
+
+1. ¿Cómo podemos elaborar mejor nuestra visión estratégica a largo plazo de HackStack?
+
+**Misión actual**
+Enriquecer el ecosistema potenciando la vinculación y el impacto de las comunidades tecnológicas.
+
+**Visión actual**
+Ayudar a las personas, comunidades y empresas a realizar su máximo potencial.
+
+2.  ¿Cuáles son las principales oportunidades estratégicas que deberíamos considerar para expandir nuestro impacto en las comunidades tecnológicas y el ecosistema?
+
+3. ¿Cuál debería ser nuestra estrategia para involucrar a actores clave, como empresas y organizaciones gubernamentales, en el apoyo a las comunidades tecnológicas?
+
 ## Cosas que sabemos que conocemos y tenemos
 Hay asuntos sobre los que tenemos altos niveles de certeza.
 
@@ -162,7 +177,7 @@ Además, es importante reconocer que hay cosas que sabemos que nos faltan
 
 Cosas que nos faltan
 - Redes para acceder a más oportunidades de auspicios
-- Participar en eventos que nos den visibilidad delante del Coporate
+- Participar en eventos que nos den visibilidad delante del Corporate
 - etc
 - etc
 
