@@ -31,8 +31,18 @@ draft = false
 Fin de las notas internas
 + + + + + + + + + + + +
 
-# Resumen ejecutivo
+# HackStack
 
+> HackStack busca **enriquecer el ecosistema potenciando la vinculación y el impacto de las comunidades tecnológicas**. Para lo cual aspira a generar cooperación e impulsar cambios positivos que permitan avanzar hacia un ecosistema saludable que contribuya a que el talento, las comunidades y las empresas alcancen su máximo potencial.
+
+## Consejo asesor
+Es nuestro interés iniciar nuestra operación junto a consejo asesor, el que cumplirá un papel clave en la estrategia, pero también en el control y equilibrio de la operación.
+
+Entre las principales funciones inicialmente creemos que estás tendrán que ver con acompañar y dar perspectiva a la toma de decisiones estratégicas; supervisar las actividades y decisiones para alinearlas con la misión del proyecto; garantizar la transparencia y la rendición de cuentas con una perspectiva independiente; actuar como mediadores en conflictos y salvaguardando la ética del proyecto.
+
+Con esto buscamos asegurar la integridad, transparencia y equidad en la administración del proyecto, previniendo el abuso de poder y manteniendo el proyecto en sintonía con sus objetivos a largo plazo.
+
+## Resumen Ejecutivo
 Creemos que la industria de la tecnología tiene un rol fundamental para el desarrollo de Chile. Pero si no intencionamos su desarrollo terminará comportándose como las industrias tradicionales que tienen modelos de operación, impacto y gobernanza que fomentan prácticas anticompetitivas, monopólicas, asimétricas y poco sostenibles social y ambientalmente.
 
 Por otro lado, en el contexto global los avances tecnológicos son cada vez más acelerados y la disrupción de la inteligencia artificial hará que el trabajo individualista entregue cada vez menos rendimientos.
@@ -49,18 +59,18 @@ En este sentido las comunidades son un motor de innovación, crecimiento y desar
 
 Sabemos que con cooperación podemos impulsar cambios positivos para avanzar hacia un ecosistema saludable que contribuya a que el talento, las comunidades y las empresas alcancen su máximo potencial.
 
-Con todo, este contexto es un hecho que necesitamos de espacios saludables donde, con incentivos alineados, se promueva la cooperación, la inteligencia colectiva, la diversidad y la transdisciplina. Con un propósito y relato unificador y estimulante.
+Con todo este contexto es un hecho que necesitamos de **espacios saludables** donde, con incentivos alineados, se promueva la cooperación, la inteligencia colectiva, la diversidad y la transdisciplina. Con un propósito y relato unificador y estimulante. Con transparencia y reglas claras.
 
-Ahora bien, y porque hemos liderado comunidades tecnológicas por más de 10 años, conocemos los desafíos de desarrollar estas comunidades:
+Ahora bien, y porque hemos liderado comunidades tecnológicas por más de 10 años, conocemos sus desafíos:
 
 - Las comunidades suelen basarse en el voluntariado
 - El trabajo dedicado al desarrollo de comunidades suele ser oscilante y pocas veces alcanza una mayor profundidad y alcance
 - Las comunidades carecen de recursos para operar
 - Faltan incentivos que retribuyan el aporte a las comunidades
 - Existe una baja cooperación y coordinación entre comunidades
-- Por tener múltiples desafíos internos para servir a las necesidades de la propia comunidad y quienes la integran las comunidades suelen estar ensimismadas. Falta vínculo con el entorno, con entidades públicas y privadas. Conectar con problemas sociales y desafíos del país
-- Falta pensamiento sistémico
+- Las comunidades suelen estar enfocadas en sus propios desafíos internos y en satisfacer las necesidades de sus miembros, por esto están, a veces, ensimismadas. Esta situación provoca una falta de conexión con el entorno más amplio, incluyendo entidades públicas y privadas, así como con los problemas sociales y desafíos que enfrenta el país.
 - Existen comunidades con dinámicas de participación tóxicas y de corte narcisista que atentan contra el beneficio común
+- En general, falta pensamiento sistémico
 
 Considerando todo esto estamos creando HackStack como un espacio que inicialmente entregue:
 
@@ -70,8 +80,7 @@ Considerando todo esto estamos creando HackStack como un espacio que inicialment
 
 **Herramientas para facilitar su trabajo**
 - Gmail & Google Workspace gratis para comunidades
-- Una plataforma open source gratuita de manejo de eventos y usuarios
-- Una plataforma open source gratuita para envío de mail y newsletter lo que facilita la comunicación con la comunidad
+- Una plataforma open source gratuita de manejo de eventos/usuarios y otra para el envío de correos y newsletter
 
 Pero además, y más importante, **buscamos ser un punto de encuentro para dar mayor sentido y significado al trabajo de estas comunidades**, lo que implica construir un diseño que amplifique el impacto y la visibilidad de su trabajo.
 
