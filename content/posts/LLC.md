@@ -19,6 +19,11 @@ Todo el trámite bastante accesible y sencillo. Solo necesitas tener tu pasaport
 El costo total del trámite parte desde menos de $300 dólares, y luego tienes que pagar unos $300 dólares anuales, incluso puede ser menos.
 Esto si abres tu empresa en Delaware o Wyoming. Además, mientras no tengas personas contratadas o alguna propiedad en EE. UU., no tendrás que pagar impuestos en EE. UU.
 
+## Siempre ten precaución
+Ten en cuenta que no soy contador ni tengo mayores conocimientos legales, así que siempre es muy importante tener asesoría/servicios en temas de legales y de impuestos.
+
 En mi caso usé "Northwest Registered Agent", y el mismo Stripe ofrece este servicio con su programa "Atlas".
 
-Ten en cuenta que no soy contador, así que siempre es muy importante tener asesoría/servicios en temas de legales y de impuestos
+Northwest tiene muy buen soporte y te pueden orientar y responder cualqueir duda de muy buena manera.
+
+Si quieres asesoría experta en 9punto5 "Lexgo" es parte de la comunidad y se que también te pueden ayudar con esto.
