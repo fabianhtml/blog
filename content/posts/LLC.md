@@ -21,4 +21,4 @@ Esto si abres tu empresa en Delaware o Wyoming. Además, mientras no tengas pers
 
 En mi caso usé "Northwest Registered Agent", y el mismo Stripe ofrece este servicio con su programa "Atlas".
 
-Ten en cuenta que no soy contador, así que siempre es muy importante tener asesoría/servicios en temas de legales y de impuestos.
+Ten en cuenta que no soy contador, así que siempre es muy importante tener asesoría/servicios en temas de legales y de impuestos
