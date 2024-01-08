@@ -5,6 +5,7 @@ date = 2023-12-28T01:39:48-03:00
 draft = false
 +++
 
+
 # HackStack
 > HackStack busca enriquecer el ecosistema potenciando la vinculación y el impacto de las comunidades tecnológicas. Para lo cual aspira a generar cooperación e impulsar cambios positivos que permitan avanzar hacia un ecosistema saludable que contribuya a que el talento, las comunidades y las empresas alcancen su máximo potencial.
 
