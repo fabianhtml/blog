@@ -1,6 +1,6 @@
 baseURL: "https://fablab.blog"
 languageCode: "es-cl"
-paginate: 5
+paginate: 8
 title: FabLab
 theme: PaperMod
 description: Aprendizajes para la vida y el trabajo. Encuentra ideas para desarrollar tu carrera y negocio. Regularme leo, escucho y hablo sobre cultura, desarrollo de comunidades, tecnología, desarrollo de carrera, negocios y trabajo remoto.
