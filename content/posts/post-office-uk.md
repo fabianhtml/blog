@@ -11,9 +11,9 @@ Un fallo informático en Correos del Reino Unido arruinó la vida de cientos de 
 
 **El sistema informático *Horizon*, desarrollado por Fujitsu**, reportaba regularmente déficits financieros de hasta miles de libras en las cuentas de las sucursales. Sin embargo, en numerosas ocasiones, estos supuestos déficits no eran más que errores del propio sistema.
 
-Durante **dos décadas** la Oficina de Correos del Reino Unido usó su poder financiero y legal para acusar y conder injustamente de robo y falsificación a cientos de directores de diferentes sucursales.
+Durante **dos décadas** la Oficina de Correos del Reino Unido usó su poder financiero y legal para acusar y condenar injustamente de robo y falsificación a cientos de directores de diferentes sucursales.
 
-Neil Hudgell, abogado representante de unos 350 casos, reportó que algunas de las persoans afectadas incluso se quitaron la vida luego de ser fálsamente acusadas, llevadas a la quiebra y ver destruida su reputación.
+Neil Hudgell, abogado representante de unos 350 casos, reportó que algunas de las personas afectadas incluso se quitaron la vida luego de ser falsamente acusadas, llevadas a la quiebra y ver destruida su reputación.
 
 El gobierno británico ha reconocido este incidente como **uno de los errores judiciales más importantes de su historia**. Aunque se han efectuado algunas compensaciones, aún persisten dudas sobre la responsabilidad y el alcance de la rendición de cuentas por parte de Fujitsu en este desastre tecnológico y humano.
 
