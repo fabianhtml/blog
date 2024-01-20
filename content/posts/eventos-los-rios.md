@@ -14,7 +14,7 @@ Si hoy quieres realizar actividades o eventos que no existen en tu territorio, s
 
 Ahora, si ya estás haciendo esto, otra buena idea es buscar cómo colaboras con otras personas y comunidades que hacen cosas similares.
 
-**Hoy te comparto un ejemplo de esto**
+## Hoy te comparto un ejemplo de esto
 
 En mi caso organizo 9punto5, una conferencia que se realiza en Valdivia en la que hablamos sobre tecnología, talento, cultura y negocios desde el año 2016.
 
