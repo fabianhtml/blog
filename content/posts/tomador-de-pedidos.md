@@ -4,6 +4,7 @@ date = 2024-01-31T23:44:53-03:00
 draft = false
 categories = ["cultura"]
 tags = ["poder"]
+description = 'Acompáñame en esta involución. De resolver problemas completos a tomar pedidos.
 +++
 
 Los años de experiencia acumulada en el **desarrollo de productos** nos muestran que, especialmente para un rol senior, las buenas prácticas incluyen:
