@@ -2,7 +2,7 @@
 title = 'Inteligencia artificial, qué es un LLM'
 date = 2022-12-06T16:58:34-03:00
 draft = false
-tags = ["llm","ChatGPT","inteligencia-artificial"]
+tags = ["llm","chatgpt","inteligencia-artificial"]
 categories = ["tecnología"]
 
 +++

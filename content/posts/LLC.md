@@ -2,7 +2,7 @@
 title = 'Abrir una empresa (LLC) en Estados Unidos desde Chile y Latinoamérica'
 date = 2022-12-25T12:26:44-03:00
 draft = false
-tags = ["LLC"]
+tags = ["llc"]
 categories = ["negocios"]
 +++
 
