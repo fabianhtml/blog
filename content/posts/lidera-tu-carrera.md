@@ -6,16 +6,15 @@ tags = ["autoconocimiento"]
 categories = ["Desarrollo profesional"]
 description = 'Lidera el desarrollo de tu carrera posicionándote en el lugar que te da mejores oportunidades'
 +++
+Tuve la oportunidad de dar esta charla en la [TechTon](https://techton.jschile.org/), una iniciativa para recaudar fondos por los últimos incendios en Chile y que reunió a diferentes comunidades de tecnología y más de 40 charlistas por más de 26 horas de streaming en el [Twitch de Javascript Chile](https://www.twitch.tv/javascriptchile) ([día 1](https://www.twitch.tv/videos/2057806063) y [día 2](https://www.twitch.tv/videos/2058631454)).
 
 Aquí te comparto las *slides* de la charla: claves para liderar tu carrera.
 
 https://fabianhtml.github.io/lidera-tu-carrera/slides.htm
 
-Tuve la oportunidad de dar esta charla en la [TechTon](https://techton.jschile.org/), una iniciativa para recaudar fondos por los últimos incendios en Chile y que reunió a diferentes comunidades de tecnología y más de 40 charlistas por más de 26 horas de streaming en el [Twitch de Javascript Chile](https://www.twitch.tv/javascriptchile) ([día 1](https://www.twitch.tv/videos/2057806063) y [día 2](https://www.twitch.tv/videos/2058631454)).
-
 La charla fue sobre cómo liderar tu carrera partiendo desde el autoconocimiento y en este post aprovecho de repasar sus temas centrales.
 
-## Liderar tu carrera es difícil
+## El desafío de liderar tu carrera
 Tener cierta certeza sobre cómo avanzará nuestra carrera profesional es algo cada vez más difícil ya que nos movemos en mundos aleatorios, estocásticos y complejos.
 
 - **Mundos aleatorios:** Todo es azar y es imposible predecir con certeza el estado futuro del sistema.
@@ -57,10 +56,10 @@ Para entrar en estos temas y como la charla era de 20 minutos, decidí enfocarme
 ### ¿Qué es el autoconocimiento?
 Es la habilidad conocerse a uno mismo y ser consciente de cómo nos ve el resto. Lo que implica la autoconciencia interna y externa.
 
-### La autoconciencia ==interna==
+### La autoconciencia interna
 Esto es sobre entender nuestro mundo interior. Tener conciencia de lo que nos gusta y lo que no, nuestras aspiraciones, nuestro lugar en el entorno y nuestro impacto en los demás.
 
-### La autoconciencia ==externa==
+### La autoconciencia externa
 Tiene que ver con entender cómo nos ven los demás. 
 
 Se trata de ser capaces de mirarnos desde otras percepciones. Entender cómo te percibe el resto, la organización, tus compañeros, tu jefe.
