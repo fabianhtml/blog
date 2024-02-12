@@ -1,5 +1,5 @@
 +++
-title = 'Lidera tu carrera y autoconocimiento'
+title = 'Lidera tu carrera'
 date = 2024-02-10T12:23:12-03:00
 draft = false
 tags = ["autoconocimiento"]
