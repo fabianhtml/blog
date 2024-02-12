@@ -4,6 +4,7 @@ date = 2024-02-10T12:23:12-03:00
 draft = false
 tags = ["autoconocimiento"]
 categories = ["Desarrollo profesional"]
+description = 'Lidera el desarrollo de tu carrera posicionándote en el lugar que te da mejores oportunidades'
 +++
 
 Aquí te comparto las *slides* de la charla: claves para liderar tu carrera.
