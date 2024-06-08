@@ -7,7 +7,7 @@ categories = ["about"]
 #### Regístrate a mi [**newsletter**](https://fabianhtml.substack.com). 💌
 > _Creo que las transformaciones ocurren desde las personas y me encantaría si algo de lo que encuentras en este sitio te ayuda a desarrollar tu potencial y hace más simple tu trabajo._
 
-Hola, soy Fabián. Hoy *[fracciono](https://en.wikipedia.org/wiki/Fractional_work)* mi rol liderando el desarrollo de comunidades en diferentes iniciativas como son 9punto5, HackStack y BuenaOnda Talks. Además, lidero el desarrollo de algunos productos digitales.
+Hola, soy Fabián. Hoy *[fracciono](https://en.wikipedia.org/wiki/Fractional_work)* mi rol liderando el desarrollo de comunidades en diferentes iniciativas como son 9punto5 y CommunityOS. Además, lidero el desarrollo de algunos productos digitales.
 
 Buena parte de mis intereses profesionales tienen que ver con comprender los cambios en el mundo del trabajo y los negocios.
 
@@ -16,10 +16,10 @@ Soy fundador de **9punto5**, comunidad y conferencia anual de tecnología, cultu
 
 Tengo interés en el desarrollo de comunidades, ya que he visto cómo desafían la conversación, promueven cooperación e impulsan cambios positivos en el entorno.
 
-## HackStack
-Por esto, desde mediados de **2023** estamos creando **HackStack** donde —junto a un grupo increíble de otras personas que también lideran comunidades— buscamos **enriquecer el ecosistema, potenciando la vinculación y el impacto de las comunidades tecnológicas**.
+## CommunityOS
+Por esto, desde mediados de **2023** estamos creando **CommunityOS** donde —junto a un grupo increíble de otras personas que también lideran comunidades— buscamos **enriquecer el ecosistema, potenciando la vinculación y el impacto de las comunidades tecnológicas**.
 
-Cómo hemos liderado el desarrollo de comunidades por más de 10 años y conocemos los desafíos que esto implica, creamos HackStack para potenciar el impacto de las comunidades entregándoles:
+Cómo hemos liderado el desarrollo de comunidades por más de 10 años y conocemos los desafíos que esto implica, creamos CommunityOS para potenciar el impacto de las comunidades entregándoles:
 
 - Financiamento
 - Espacios de conversación y coordinación entre líderes de comunidades
@@ -27,8 +27,5 @@ Cómo hemos liderado el desarrollo de comunidades por más de 10 años y conocem
 - Recursos, experiencias e ideas para implementar buenas prácticas en el desarrollo de comunidades
 
 En definitiva, estamos construyendo un espacio de cooperación que impulse cambios positivos para avanzar hacia un ecosistema saludable que contribuya a que el talento, las comunidades y las empresas alcancen su máximo potencial.
-
-## BuenaOnda Talks
-Desde **2022** soy parte de **BuenaOnda Talks**, un espacio de oportunidades y movilidad social que inspira, articula y conecta a jóvenes con el mundo tech mediante charlas, becas de formación y opciones laborales. Acá mi rol principalmente es diseñar los procesos que nos permitan llegar a la mayor cantidad de jóvenes posibles usando tecnología.
 
 **Si quieres hablar escríbeme por mail a fabian arroba 9punto5 punto cl.**
