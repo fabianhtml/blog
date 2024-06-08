@@ -2,6 +2,7 @@
 title = 'Recupera tu atención: la tecnología te roba concentración y autoconciencia'
 date = 2024-04-13T20:22:48-04:00
 draft = false
+categories = ["desarrollo"]
 +++
 
 Si te "bajonea" repasar el pasado o te da ansiedad pensar en el futuro, puede que la tecnología tenga parte de la culpa.
