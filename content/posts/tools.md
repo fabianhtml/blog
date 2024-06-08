@@ -1,5 +1,5 @@
 +++
-title = 'Más 130 herramientas para facilitar tu trabajo'
+title = 'Más de 130 herramientas para facilitar tu trabajo'
 date = 2023-11-09T01:25:23-03:00
 draft = false
 +++
@@ -29,4 +29,4 @@ Ayer la actualicé y aquí aprovecho de compartirte las que uso con más frecuen
 - **Varias:** Alfred (barra de búsqueda con vitaminas), aText (autocompletar texto), Iristech (atenuar la pantalla), ControlD (privacidad y no ver anuncios), Rectangle (ajustar tamaño de las ventanas en el mac)
 
 
-**👉 [Acá puedes ver la lista completa](https://fragmentos.co/130-herramientas-productividad-trabajo-remoto/) 👈**
+**👉 [Acá puedes ver la lista completa](http://fablab.blog/posts/130-herramientas-productividad-trabajo-remoto/)👈**
