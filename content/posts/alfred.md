@@ -2,6 +2,7 @@
 title = 'Herramientas que uso todos los días: Alfred'
 date = 2024-06-08T03:29:44-04:00
 draft = false
+categories = ["herramientas"]
 +++
 > Aproveché de reescribir este post del 2021 y crear la categoría [herramientas][1] del blog, porque siempre me ha gustado probar cosas nuevas para facilitar (o complicarme) la vida.
 
