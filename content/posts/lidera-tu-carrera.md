@@ -3,7 +3,7 @@ title = 'Lidera tu carrera'
 date = 2024-02-10T12:23:12-03:00
 draft = false
 tags = ["autoconocimiento"]
-categories = ["Desarrollo profesional"]
+categories = ["desarrollo"]
 description = 'Lidera el desarrollo de tu carrera posicionándote en el lugar que te da mejores oportunidades'
 +++
 Tuve la oportunidad de dar esta charla en la [TechTon](https://techton.jschile.org/), una iniciativa para recaudar fondos por los últimos incendios en Chile y que reunió a diferentes comunidades de tecnología y más de 40 charlistas por más de 26 horas de streaming en el [Twitch de Javascript Chile](https://www.twitch.tv/javascriptchile) ([día 1](https://www.twitch.tv/videos/2057806063) y [día 2](https://www.twitch.tv/videos/2058631454)).

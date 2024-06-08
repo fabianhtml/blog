@@ -2,6 +2,7 @@
 title = 'Más de 130 herramientas para facilitar tu trabajo'
 date = 2023-11-09T01:25:23-03:00
 draft = false
+categories = ["herramientas"]
 +++
 En 2021 hice esta recopilación con más de 130 soluciones que yo mismo he utilizado a lo largo de los años a nivel personal, con equipos, o que sé que son buenas herramientas para productividad, trabajo remoto, digitalizar partes de un negocio y algunas cosas más.
 

@@ -2,6 +2,7 @@
 title = 'Más de 130 herramientas para productividad, digitalizar tu negocio, trabajo remoto y un poco más'
 date = 2021-07-17T02:55:18-04:00
 draft = false
+categories = ["herramientas"]
 +++
 
 > Actualizado 2022-07-21
@@ -12,7 +13,7 @@ Te comparto más de 130 soluciones que yo mismo he utilizado a lo largo de los a
 
 ### ¿Falta alguna categoría?
 
-Escríbeme en Twitter a [@fabianhtml](https://twitter.com/fabianhtml) o por mail a fabianhtml@hey.com.
+Escríbeme en Twitter a [@fabianhtml](https://twitter.com/fabianhtml).
 
 ACTUALIZACIÓN: Gracias por la colaboración, he ido agregando categorías y nuevas herramientas.
 
