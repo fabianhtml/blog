@@ -1,6 +1,6 @@
 +++
 title = 'Platform owners: el caso de Haier para coordinar iniciativas'
-date = 2024-09-15T21:54:07-04:00
+date = 2024-09-15T00:00:00-04:00
 draft = false
 categories = ["negocios"]
 +++
