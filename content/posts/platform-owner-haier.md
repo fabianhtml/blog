@@ -1,5 +1,5 @@
 +++
-title = '"Platform owners". Cómo coordinan sus iniciativas en Haier'
+title = 'Platform owners: Cómo coordinan sus iniciativas en Haier'
 date = 2024-09-15T21:54:07-04:00
 draft = false
 categories = ["cultura"]
