@@ -1,5 +1,6 @@
 +++
 title = 'Platform owners: Cómo coordinan sus iniciativas en Haier'
+description = 'Desafiando la coordinación empresarial tradicional con un modelo que impulsa la colaboración y el crecimiento sin jerarquías.'
 date = 2024-09-15T21:54:07-04:00
 draft = false
 categories = ["cultura"]
