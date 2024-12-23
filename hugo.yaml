@@ -22,6 +22,8 @@ params :
   SocialIcons:
     - name: RSS
       url: "/index.xml"
+    - name: bluesky
+      url: https://bsky.app/profile/fabianhtml.bsky.social
     - name: Twitter
       url: https://x.com/fabianhtml/
     - name: LinkedIn
