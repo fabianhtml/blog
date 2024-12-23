@@ -24,8 +24,6 @@ params :
       url: "/index.xml"
     - name: Twitter
       url: https://x.com/fabianhtml/
-    - name: email
-      url: https://fabianhtml.substack.com
     - name: LinkedIn
       url: https://www.linkedin.com/in/fabianhtml/
     - name: youtube
