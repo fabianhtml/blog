@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Gestion-De-Proyectos on FabLab</title>
+    <link>http://localhost:1313/tags/gestion-de-proyectos/</link>
+    <description>Recent content in Gestion-De-Proyectos on FabLab</description>
+    <generator>Hugo -- 0.140.0</generator>
+    <language>es-cl</language>
+    <lastBuildDate>Sun, 22 Dec 2024 01:54:07 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/gestion-de-proyectos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>La Ley de Parkinson: es real, úsala a tu favor</title>
+      <link>http://localhost:1313/posts/ley-parkinson/</link>
+      <pubDate>Sun, 22 Dec 2024 01:54:07 -0400</pubDate>
+      <guid>http://localhost:1313/posts/ley-parkinson/</guid>
+      <description>La Ley de Parkinson afecta tu desempeño y aprende a usarla a tu favor. Los plazos son tus aliados.</description>
+    </item>
+  </channel>
+</rss>
