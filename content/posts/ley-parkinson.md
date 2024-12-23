@@ -3,6 +3,7 @@ title = 'La Ley de Parkinson: es Real, úsala a tu favor'
 description = 'La Ley de Parkinson afecta tu desempeño y aprende a usarla a tu favor. Los plazos son tus aliados.'
 date = 2024-12-22T01:54:07-04:00
 draft = false
+tags = ["productividad"]
 categories = ["cultura"]
 +++
 ![parkinson](/img/parkinson.jpg)
