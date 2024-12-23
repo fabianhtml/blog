@@ -20,8 +20,6 @@ params :
   ShowPostNavLinks: true
 
   SocialIcons:
-    - name: RSS
-      url: "/index.xml"
     - name: bluesky
       url: https://bsky.app/profile/fabianhtml.bsky.social
     - name: Twitter
@@ -34,6 +32,8 @@ params :
       url: https://open.spotify.com/show/2pUeShjEGgArImaTZy7IoJ?si=d167758a18a14b95
     - name: other
       url: https://9punto5.cl/
+    - name: RSS
+      url: "/index.xml"
 
 assets: 
   favicon: "/assets/favicon.ico"
