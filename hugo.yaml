@@ -20,6 +20,8 @@ params :
   ShowPostNavLinks: true
 
   SocialIcons:
+    - name: RSS
+      url: "/index.xml"
     - name: Twitter
       url: https://x.com/fabianhtml/
     - name: email

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Autoconocimiento on FabLab</title>
+    <link>http://localhost:1313/tags/autoconocimiento/</link>
+    <description>Recent content in Autoconocimiento on FabLab</description>
+    <generator>Hugo -- 0.140.0</generator>
+    <language>es-cl</language>
+    <lastBuildDate>Sat, 10 Feb 2024 12:23:12 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/autoconocimiento/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lidera tu carrera</title>
+      <link>http://localhost:1313/posts/lidera-tu-carrera/</link>
+      <pubDate>Sat, 10 Feb 2024 12:23:12 -0300</pubDate>
+      <guid>http://localhost:1313/posts/lidera-tu-carrera/</guid>
+      <description>Lidera el desarrollo de tu carrera posicionándote en el lugar que te da mejores oportunidades</description>
+    </item>
+  </channel>
+</rss>

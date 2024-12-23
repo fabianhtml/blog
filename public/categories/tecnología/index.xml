@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tecnología on FabLab</title>
+    <link>http://localhost:1313/categories/tecnolog%C3%ADa/</link>
+    <description>Recent content in Tecnología on FabLab</description>
+    <generator>Hugo -- 0.140.0</generator>
+    <language>es-cl</language>
+    <lastBuildDate>Tue, 06 Dec 2022 16:58:34 -0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/tecnolog%C3%ADa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Inteligencia artificial, qué es un LLM</title>
+      <link>http://localhost:1313/posts/llm/</link>
+      <pubDate>Tue, 06 Dec 2022 16:58:34 -0300</pubDate>
+      <guid>http://localhost:1313/posts/llm/</guid>
+      <description>&lt;p&gt;Los modelos de lenguaje masivos (LLM, por sus siglas en inglés) son un tipo de modelo de procesamiento de lenguaje que utiliza un gran conjunto de datos para generar lenguaje natural; explicado en simple, esto se logra a través de tres pasos:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Un gran número de preguntas son respondidas por humanos y entregadas al modelo;&lt;/li&gt;
+&lt;li&gt;El modelo genera respuestas, y se hace una calificación humana de las mejores respuestas;&lt;/li&gt;
+&lt;li&gt;Las respuestas son generadas por máquinas y valoradas por una máquina; es decir, robots entrenando a robots.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img alt=&#34;ChatGPT_Diagram&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/img/ChatGPT_Diagram.jpg&#34;&gt;
+&lt;a href=&#34;https://openai.com/blog/chatgpt&#34;&gt;https://openai.com/blog/chatgpt&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

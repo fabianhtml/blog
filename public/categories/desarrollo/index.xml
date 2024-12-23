@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Desarrollo on FabLab</title>
+    <link>http://localhost:1313/categories/desarrollo/</link>
+    <description>Recent content in Desarrollo on FabLab</description>
+    <generator>Hugo -- 0.140.0</generator>
+    <language>es-cl</language>
+    <lastBuildDate>Sat, 13 Apr 2024 20:22:48 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/desarrollo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recupera tu atención: la tecnología te roba concentración y autoconciencia</title>
+      <link>http://localhost:1313/posts/atencion/</link>
+      <pubDate>Sat, 13 Apr 2024 20:22:48 -0400</pubDate>
+      <guid>http://localhost:1313/posts/atencion/</guid>
+      <description>&lt;p&gt;Si te &amp;ldquo;bajonea&amp;rdquo; repasar el pasado o te da ansiedad pensar en el futuro, puede que la tecnología tenga parte de la culpa.&lt;/p&gt;
+&lt;p&gt;Nuestra salud mental está siendo la moneda de cambio de aplicaciones y servicios que con recompensas fáciles y alegrías baratas están destruyendo nuestra capacidad de hacer cosas difíciles, y hacer cosas difíciles que traen mejores recompensas y gratificación más duradera.&lt;/p&gt;
+&lt;p&gt;Es lo que me dejó pensando leer la entrevista a Marian Rojas Estapé &lt;em&gt;&lt;a href=&#34;https://www.abc.es/bienestar/psicologia-sexo/psicologia/marian-rojas-estape-sociedad-distracciones-piensa-peor-20240413092158-nt.html&#34;&gt;«Una mente que no sabe reposar pierde rápido el control de las emociones»&lt;/a&gt;&lt;/em&gt;. Algunas cosas que encontrarás en la entrevista:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lidera tu carrera</title>
+      <link>http://localhost:1313/posts/lidera-tu-carrera/</link>
+      <pubDate>Sat, 10 Feb 2024 12:23:12 -0300</pubDate>
+      <guid>http://localhost:1313/posts/lidera-tu-carrera/</guid>
+      <description>Lidera el desarrollo de tu carrera posicionándote en el lugar que te da mejores oportunidades</description>
+    </item>
+  </channel>
+</rss>
