@@ -17,6 +17,12 @@
     <loc>http://localhost:1313/posts/</loc>
     <lastmod>2024-12-22T01:54:07-04:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/productividad/</loc>
+    <lastmod>2024-12-22T01:54:07-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-12-22T01:54:07-04:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/empresa-en-crisis/</loc>
     <lastmod>2024-10-22T01:54:07-04:00</lastmod>
   </url><url>
@@ -42,9 +48,6 @@
     <lastmod>2024-02-10T12:23:12-03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/lidera-tu-carrera/</loc>
-    <lastmod>2024-02-10T12:23:12-03:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-02-10T12:23:12-03:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/tomador-de-pedidos/</loc>

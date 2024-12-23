@@ -6,8 +6,15 @@
     <description>Recent content in Tags on FabLab</description>
     <generator>Hugo -- 0.140.0</generator>
     <language>es-cl</language>
-    <lastBuildDate>Sat, 10 Feb 2024 12:23:12 -0300</lastBuildDate>
+    <lastBuildDate>Sun, 22 Dec 2024 01:54:07 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Productividad</title>
+      <link>http://localhost:1313/tags/productividad/</link>
+      <pubDate>Sun, 22 Dec 2024 01:54:07 -0400</pubDate>
+      <guid>http://localhost:1313/tags/productividad/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Autoconocimiento</title>
       <link>http://localhost:1313/tags/autoconocimiento/</link>
