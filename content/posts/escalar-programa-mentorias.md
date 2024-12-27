@@ -11,7 +11,7 @@ Vuelvo a compartir unos [apuntes](http://fablab.blog/tags/apuntes/). Esta vez so
 
 Estoy revisando material sobre esto, porque en noviembre de este año lanzamos un programa de mentorías durante la 8va edición de la conferencia 9punto5.
 
-Se sumaron 15 personas al piloto del programa, y cómo nos gustó, ya estamos estamos pensando cómo hacerlo avanzar. Para eso decidí volver a una charla que Carolina Rojas y Liliana Reyes presentaron durante la versión 2021 de la conferencia 9punto5.
+Se sumaron 15 personas al piloto del programa, y cómo nos gustó, ya estamos estamos pensando cómo hacerlo avanzar. Para eso decidí volver la charla **"Cómo escalar 10 veces un programa de mentorías"** que Carolina Rojas y Liliana Reyes presentaron durante la versión 2021 de la conferencia 9punto5, y que puedes escuchar en formato _**[podcast](https://open.spotify.com/episode/3ZO7WgHroFhvrAkRdAsgNJ?si=c0bae1bcc998409f)**_.
 
 Pero antes de seguir, vamos a un paréntesis nerd.
 
