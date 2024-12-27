@@ -3,7 +3,7 @@ title = 'Ideas para escalar un programa de mentorías (y otras iniciativas)'
 description = 'Aprende cómo escalar un programa de mentorías de manera efectiva, desde la validación temprana hasta la documentación y el crecimiento sostenible'
 date = 2024-12-25T00:00:00-04:00
 draft = false
-tags = ["mentoría", "apuntes"]
+tags = ["mentorías", "apuntes"]
 categories = ["comunidades"]
 +++
 
