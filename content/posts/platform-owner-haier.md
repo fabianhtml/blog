@@ -4,6 +4,7 @@ description = 'Desafiando la coordinación empresarial tradicional con un modelo
 date = 2024-09-15T21:54:07-04:00
 draft = false
 categories = ["cultura"]
+tags = ["apuntes"]
 +++
 
 Antes ya hablé de [Humanocracy](https://fablab.blog/posts/humanocracy/) un libro muy interesante en mostrar nuevas maneras de crear organizaciones.

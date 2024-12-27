@@ -2,7 +2,7 @@
 title = 'Humanocracy'
 date = 2023-12-31T16:34:40-03:00
 draft = false
-tags = ["futuro-del-trabajo"]
+tags = ["futuro-del-trabajo", "apuntes"]
 categories = ["libros"]
 +++
 
