@@ -5,6 +5,8 @@ title: FabLab
 theme: PaperMod
 description: Aprendizajes para la vida y el trabajo. Encuentra ideas para desarrollar tu carrera y negocio. Regularmente leo, escucho y hablo sobre cultura, desarrollo de comunidades, tecnología, desarrollo de carrera, negocios y trabajo remoto.
 
+enableRobotsTXT: true
+
 params :
   homeInfoParams:
     title: Aprendizajes para la vida y el trabajo
@@ -12,12 +14,19 @@ params :
     description: Aprendizajes para la vida y el trabajo. Encuentra ideas para desarrollar tu carrera y negocio. Regularmente leo, escucho y hablo sobre cultura, desarrollo de comunidades, tecnología, desarrollo de carrera, negocios y trabajo remoto.
 
   ShowBreadCrumbs: true
-
   ShowReadingTime: true
-  
   ShowShareButtons: true
-  
   ShowPostNavLinks: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
 
   SocialIcons:
     - name: bluesky
