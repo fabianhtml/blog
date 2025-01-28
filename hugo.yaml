@@ -1,13 +1,41 @@
 baseURL: "https://fablab.blog"
 languageCode: "es-cl"
-paginate: 8
+pagination:
+  pagerSize: 8
 title: FabLab
 theme: PaperMod
 description: Aprendizajes para la vida y el trabajo. Encuentra ideas para desarrollar tu carrera y negocio. Regularmente leo, escucho y hablo sobre cultura, desarrollo de comunidades, tecnología, desarrollo de carrera, negocios y trabajo remoto.
 
 enableRobotsTXT: true
 
-params :
+markup:
+  goldmark:
+    parser:
+      wrapStandAloneImageWithinParagraph: false
+    renderHooks:
+      image:
+        enableDefault: false
+
+imaging:
+  quality: 85
+  resampleFilter: Lanczos
+  anchor: Smart
+  bgColor: "#ffffff"
+  hint: photo
+
+security:
+  enableInlineShortcodes: true
+
+module:
+  mounts:
+    - source: static/img
+      target: assets/img
+    - source: assets
+      target: assets
+    - source: content
+      target: content
+
+params:
   homeInfoParams:
     title: Aprendizajes para la vida y el trabajo
     content: Soy **[Fabián Acuña Hernández](/about/)**. Aquí encontrarás ideas para tu desarrollo personal y profesional. Regularmente leo, escucho y hablo sobre cultura, desarrollo de comunidades, tecnología, desarrollo de carrera, negocios y trabajo remoto. Te invito a mi [**newsletter** 💌](https://fabianhtml.substack.com). **¡Gracias por pasar**!
@@ -79,3 +107,6 @@ outputs:
 services:
   googleAnalytics:
     ID: G-68SGH6GQCZ
+
+  assets:
+    disableFingerprinting: true

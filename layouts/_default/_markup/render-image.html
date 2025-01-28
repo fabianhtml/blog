@@ -1,0 +1,75 @@
+{{- $dest := .Destination -}}
+{{- $isBlock := .IsBlock -}}
+{{- $title := .Title -}}
+{{- $text := .PlainText -}}
+
+{{/* Limpia la ruta de la imagen */}}
+{{- $cleanPath := strings.TrimPrefix "/" $dest -}}
+{{- $cleanPath = strings.TrimPrefix "img/" $cleanPath -}}
+
+{{/* Intenta obtener la imagen */}}
+{{- $img := resources.Get (printf "img/%s" $cleanPath) -}}
+
+{{- if $img -}}
+  {{- if eq $img.MediaType.MainType "image" -}}
+    {{- $originalType := $img.MediaType.SubType -}}
+    {{- if or (eq $originalType "svg") (eq $originalType "svg+xml") -}}
+      {{- if $isBlock -}}
+        <figure>
+          <img src="{{ $img.RelPermalink }}" alt="{{ $text }}" {{ with $title }}title="{{ . }}"{{ end }}>
+          {{- with $title }}<figcaption>{{ . }}</figcaption>{{ end -}}
+        </figure>
+      {{- else -}}
+        <img src="{{ $img.RelPermalink }}" alt="{{ $text }}" {{ with $title }}title="{{ . }}"{{ end }}>
+      {{- end -}}
+    {{- else if eq $originalType "webp" -}}
+      {{- if $isBlock -}}
+        <figure>
+          <img src="{{ $img.RelPermalink }}" alt="{{ $text }}" {{ with $title }}title="{{ . }}"{{ end }}>
+          {{- with $title }}<figcaption>{{ . }}</figcaption>{{ end -}}
+        </figure>
+      {{- else -}}
+        <img src="{{ $img.RelPermalink }}" alt="{{ $text }}" {{ with $title }}title="{{ . }}"{{ end }}>
+      {{- end -}}
+    {{- else -}}
+      {{- $processed := $img -}}
+      {{- if ne $originalType "gif" -}}
+        {{- $webp := $processed.Process "webp q85" -}}
+        {{- if $isBlock -}}
+          <figure>
+            <picture>
+              <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+              <source srcset="{{ $processed.RelPermalink }}" type="{{ $processed.MediaType }}">
+              <img src="{{ $processed.RelPermalink }}" alt="{{ $text }}" {{ with $title }}title="{{ . }}"{{ end }}>
+            </picture>
+            {{- with $title }}<figcaption>{{ . }}</figcaption>{{ end -}}
+          </figure>
+        {{- else -}}
+          <picture>
+            <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+            <source srcset="{{ $processed.RelPermalink }}" type="{{ $processed.MediaType }}">
+            <img src="{{ $processed.RelPermalink }}" alt="{{ $text }}" {{ with $title }}title="{{ . }}"{{ end }}>
+          </picture>
+        {{- end -}}
+      {{- else -}}
+        {{- if $isBlock -}}
+          <figure>
+            <img src="{{ $processed.RelPermalink }}" alt="{{ $text }}" {{ with $title }}title="{{ . }}"{{ end }}>
+            {{- with $title }}<figcaption>{{ . }}</figcaption>{{ end -}}
+          </figure>
+        {{- else -}}
+          <img src="{{ $processed.RelPermalink }}" alt="{{ $text }}" {{ with $title }}title="{{ . }}"{{ end }}>
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- else -}}
+  {{- if $isBlock -}}
+    <figure>
+      <img src="{{ $dest | safeURL }}" alt="{{ $text }}" {{ with $title }}title="{{ . }}"{{ end }}>
+      {{- with $title }}<figcaption>{{ . }}</figcaption>{{ end -}}
+    </figure>
+  {{- else -}}
+    <img src="{{ $dest | safeURL }}" alt="{{ $text }}" {{ with $title }}title="{{ . }}"{{ end }}>
+  {{- end -}}
+{{- end -}} 
