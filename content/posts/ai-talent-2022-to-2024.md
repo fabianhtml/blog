@@ -1,6 +1,6 @@
 +++
 title = 'AI talent hiring: 2022 vs early 2024'
-date = 2025-02-28T00:11:01-03:00
+date = 2025-02-27T22:16:00-03:00
 draft = false
 tags = ["deep research", "openAI"]
 categories = ["tecnología"]
