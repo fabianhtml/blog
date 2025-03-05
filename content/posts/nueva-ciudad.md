@@ -1,5 +1,6 @@
 +++
 title = '¿Cómo cambiarse a vivir a la ciudad que quisieras?'
+description = 'Trabajo remoto, networking y cómo crear oportunidades.'
 date = 2017-12-23T21:19:51-04:00
 draft = false
 +++

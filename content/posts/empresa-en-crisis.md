@@ -1,6 +1,6 @@
 +++
 title = 'La empresa en crisis'
-description = 'Descubre cómo la falta de sentido compartido y productividad afecta a las organizaciones. Análisis basado en la teoría de Habermas sobre cohesión institucional'
+description = 'Descubre cómo la falta de sentido compartido y productividad afecta a las organizaciones. Habermas y la cohesión institucional'
 date = 2024-10-22T01:54:07-04:00
 draft = false
 categories = ["cultura"]

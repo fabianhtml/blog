@@ -1,8 +1,10 @@
 +++
 title = 'Gestión de proyecto en simple y un bonus track'
+description = 'Visión más ejecución y cómo gestionar tu tiempo, energía, atención y motivación.'
 date = 2024-02-27T19:31:00-03:00
 draft = true
-description = 'De la visión a la ejecución de un proyecto y cómo gestionar tu tiempo, energía, atención y motivación'
+tags = ["tiempo", "energia", "atencion", "motivacion"]
+categories = ["desarrollo"]
 +++
 
 

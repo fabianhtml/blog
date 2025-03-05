@@ -41,6 +41,11 @@ params:
     content: Soy **[Fabián Acuña Hernández](/about/)**. Aquí encontrarás ideas para tu desarrollo personal y profesional. Regularmente leo, escucho y hablo sobre cultura, desarrollo de comunidades, tecnología, desarrollo de carrera, negocios y trabajo remoto. Te invito a mi [**newsletter** 💌](https://fabianhtml.substack.com). **¡Gracias por pasar**!
     description: Aprendizajes para la vida y el trabajo. Encuentra ideas para desarrollar tu carrera y negocio. Regularmente leo, escucho y hablo sobre cultura, desarrollo de comunidades, tecnología, desarrollo de carrera, negocios y trabajo remoto.
 
+  # Social Media Metadata
+  author: "Fabián Acuña Hernández"
+  linkedin_author: "https://www.linkedin.com/in/fabianhtml/"
+  twitter_username: "fabianhtml"
+
   ShowBreadCrumbs: true
   ShowReadingTime: true
   ShowShareButtons: true

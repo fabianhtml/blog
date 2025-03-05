@@ -1,5 +1,6 @@
 +++
 title = 'La distribución normal ya no es lo que era'
+description = 'Seth Godin sobre cómo la personalización extrema redefine el mercado.'
 date = 2024-01-01T13:35:17-03:00
 draft = false
 categories = ["negocios"]

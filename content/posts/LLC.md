@@ -1,5 +1,6 @@
 +++
 title = 'Abrir una empresa (LLC) en Estados Unidos desde Chile y Latinoamérica'
+description = 'Lo básico para para crear tu empresa, EIN, y tu cuenta de Stripe y en un banco gringo.'
 date = 2022-12-25T12:26:44-03:00
 draft = false
 tags = ["llc"]

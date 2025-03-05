@@ -1,5 +1,6 @@
 +++
 title = 'Visibilidad como contraparte a la autonomía'
+description = 'Estrategias para manter el alineamiento y evitar la confusión.'
 date = 2024-07-20T21:54:07-04:00
 draft = false
 categories = ["cultura"]

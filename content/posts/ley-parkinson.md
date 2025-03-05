@@ -1,6 +1,6 @@
 +++
 title = 'La Ley de Parkinson: es real, úsala a tu favor'
-description = 'La Ley de Parkinson afecta tu desempeño y aprende a usarla a tu favor. Los plazos son tus aliados.'
+description = 'La Ley de Parkinson afecta tu desempeño. Los plazos son tus aliados.'
 date = 2024-12-22T01:54:07-04:00
 draft = false
 tags = ["productividad", "gestion-de-proyectos"]
