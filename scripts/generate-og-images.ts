@@ -130,7 +130,7 @@ async function generateOGImage(title: string, description: string, outputPath: s
           '--disable-dev-shm-usage',
           '--disable-accelerated-2d-canvas',
           '--disable-gpu',
-          '--window-size=1200,630',
+          '--window-size=2400,1260',
           '--disable-web-security',
           '--disable-features=IsolateOrigins,site-per-process'
         ],
@@ -139,7 +139,7 @@ async function generateOGImage(title: string, description: string, outputPath: s
       });
 
       const page = await browser.newPage();
-      await page.setViewport({ width: 1200, height: 630 });
+      await page.setViewport({ width: 2400, height: 1260 });
 
       const html = `
         <!DOCTYPE html>
@@ -149,34 +149,40 @@ async function generateOGImage(title: string, description: string, outputPath: s
             <style>
               body {
                 margin: 0;
-                padding: 60px;
-                width: 1200px;
-                height: 630px;
+                padding: 120px;
+                width: 2400px;
+                height: 1260px;
                 background: #000000;
                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                 display: flex;
                 flex-direction: column;
-                justify-content: flex-start;
+                justify-content: center;
+                align-items: flex-start;
                 box-sizing: border-box;
                 color: white;
               }
               .container {
-                max-width: 1080px;
+                max-width: 2000px;
               }
               h1 {
-                font-size: 72px;
+                font-size: 120px;
                 line-height: 1.1;
-                margin: 0 0 40px;
-                font-weight: 700;
+                margin: 0 0 60px;
+                font-weight: 800;
                 letter-spacing: -0.02em;
+                color: #ffffff;
+                text-align: left;
               }
               p {
-                font-size: 48px;
-                line-height: 1.3;
+                font-size: 64px;
+                line-height: 1.4;
                 margin: 0;
                 font-weight: 400;
                 letter-spacing: -0.01em;
+                color: #ffffff;
+                max-width: 1800px;
                 opacity: 0.9;
+                text-align: left;
               }
             </style>
           </head>
@@ -245,20 +251,12 @@ async function main(): Promise<void> {
     const currentHash = generateHash(frontMatter.title, frontMatter.description);
     const outputPath = path.join(outputDir, `${slug}.png`);
 
-    if (!cache[slug] || cache[slug] !== currentHash) {
-      if (!cache[slug]) {
-        console.log(`✨ Nuevo post detectado - Generando OG image para: ${frontMatter.title}`);
-      } else {
-        console.log(`🔄 Cambios detectados - Actualizando OG image para: ${frontMatter.title}`);
-      }
-
-      const success = await generateOGImage(frontMatter.title, frontMatter.description, outputPath);
-      if (success) {
-        cache[slug] = currentHash;
-        hasChanges = true;
-      }
-    } else {
-      console.log(`⏭️ Sin cambios - Saltando: ${frontMatter.title}`);
+    // Forzar regeneración de imágenes
+    console.log(`🔄 Generando OG image para: ${frontMatter.title}`);
+    const success = await generateOGImage(frontMatter.title, frontMatter.description, outputPath);
+    if (success) {
+      cache[slug] = currentHash;
+      hasChanges = true;
     }
   }
 
