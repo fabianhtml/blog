@@ -2,6 +2,9 @@ import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 import puppeteer from 'puppeteer';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 interface FrontMatter {
   title: string;
@@ -162,26 +165,27 @@ async function generateOGImage(title: string, description: string, outputPath: s
                 color: white;
               }
               .container {
-                max-width: 2000px;
+                max-width: 2200px;
               }
               h1 {
-                font-size: 120px;
+                font-size: 140px;
                 line-height: 1.1;
                 margin: 0 0 60px;
                 font-weight: 800;
                 letter-spacing: -0.02em;
                 color: #ffffff;
                 text-align: left;
+                max-width: 2100px;
               }
               p {
-                font-size: 64px;
-                line-height: 1.4;
+                font-size: 84px;
+                line-height: 1.25;
                 margin: 0;
                 font-weight: 400;
                 letter-spacing: -0.01em;
                 color: #ffffff;
-                max-width: 1800px;
-                opacity: 0.9;
+                max-width: 2100px;
+                opacity: 1;
                 text-align: left;
               }
             </style>
