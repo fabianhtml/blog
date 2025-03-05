@@ -3,5 +3,4 @@
 .DS_Store
 node_modules/
 .og-cache.json
-dist/
-static/images/og/ 
+dist/ 

@@ -122,7 +122,7 @@ async function generateOGImage(title: string, description: string, outputPath: s
     let browser;
     try {
       browser = await puppeteer.launch({
-        headless: 'new',
+        headless: true,
         executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
         args: [
           '--no-sandbox',
