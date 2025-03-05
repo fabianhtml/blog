@@ -13,7 +13,11 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ .Title }}">
     <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
-    <meta name="twitter:image" content="{{ printf "/images/og/%s.png" .File.ContentBaseName | absURL }}">
+    {{- $twitterImage := "/images/og/default.png" -}}
+    {{- if .File -}}
+        {{- $twitterImage = printf "/images/og/%s.png" .File.ContentBaseName -}}
+    {{- end -}}
+    <meta name="twitter:image" content="{{ $twitterImage | absURL }}">
     
     {{- if .Site.Params.favicon }}
     <link rel="icon" href="{{ .Site.Params.favicon | absURL }}">

@@ -4,11 +4,16 @@
     {{- $desc = .Summary -}}
 {{- end -}}
 
-{{- $ogimage := printf "/images/og/%s.png" (.File.ContentBaseName) -}}
+{{- $ogimage := "" -}}
+{{- if .File -}}
+    {{- $ogimage = printf "/images/og/%s.png" .File.ContentBaseName -}}
+{{- else -}}
+    {{- $ogimage = "/images/og/default.png" -}}
+{{- end -}}
 
 <meta property="og:title" content="{{ $title }}">
 <meta property="og:description" content="{{ $desc }}">
-<meta property="og:type" content="article">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:image" content="{{ $ogimage | absURL }}">
 <meta property="og:site_name" content="{{ site.Title }}">
