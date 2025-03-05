@@ -4,7 +4,7 @@ date = 2025-03-04T06:05:00-03:00
 draft = false
 tags = ["grit", "Angela Duckworth"]
 categories = ["desarrollo"]
-description = 'El GRIT supera al talento innato, la pasión y motivación'
+description = 'El talento innato, la pasión y motivación estan sobrevaloradas'
 +++
 
 No todo tiene que comenzar con palabras grandes como: **pasión**. A veces la curiosidad o la exploración nos pueden mostrar la relevancia de un tema o una práctica, transformándola en un interés duradero.

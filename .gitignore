@@ -1,6 +1,7 @@
 # Hugo
 /public/ 
 .DS_Store
-node_modules
+node_modules/
 .og-cache.json
-dist/ 
+dist/
+static/images/og/ 
