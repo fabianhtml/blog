@@ -1,0 +1,11 @@
+{
+  "name": "blog-og-images",
+  "version": "1.0.0",
+  "description": "Generate OG images for blog posts",
+  "scripts": {
+    "generate-og": "node scripts/generate-og-images.js"
+  },
+  "dependencies": {
+    "puppeteer": "^21.7.0"
+  }
+} 
