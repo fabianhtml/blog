@@ -27,8 +27,8 @@
     <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .Site.Params.rss | absURL }}">
     {{- end }}
     
-    {{- $styles := resources.Get "css/style.css" | resources.ExecuteAsTemplate "css/style.css" . -}}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
     
     {{- if .Site.Params.customCSS }}
     {{- range .Site.Params.customCSS }}
