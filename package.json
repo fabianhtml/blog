@@ -1,11 +1,18 @@
 {
   "name": "blog-og-images",
   "version": "1.0.0",
-  "description": "Generate OG images for blog posts",
+  "description": "Generador de imágenes OG para el blog",
+  "main": "dist/generate-og-images.js",
   "scripts": {
-    "generate-og": "node scripts/generate-og-images.js"
+    "build": "tsc",
+    "generate-og": "npm run build && node dist/generate-og-images.js",
+    "dev": "tsc -w"
   },
   "dependencies": {
-    "puppeteer": "^21.7.0"
+    "puppeteer": "^21.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
   }
 } 

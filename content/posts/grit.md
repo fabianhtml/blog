@@ -4,7 +4,7 @@ date = 2025-03-04T06:05:00-03:00
 draft = false
 tags = ["grit", "Angela Duckworth"]
 categories = ["desarrollo"]
-description = 'Descubre por qué el GRIT (consistencia y perseverancia) puede ser más importante que el talento innato, la pasión o la motivación.'
+description = 'El GRIT supera al talento innato, la pasión y motivación'
 +++
 
 No todo tiene que comenzar con palabras grandes como: **pasión**. A veces la curiosidad o la exploración nos pueden mostrar la relevancia de un tema o una práctica, transformándola en un interés duradero.

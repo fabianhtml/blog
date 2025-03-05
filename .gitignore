@@ -1,2 +1,6 @@
 # Hugo
 /public/ 
+.DS_Store
+node_modules
+.og-cache.json
+dist/ 
