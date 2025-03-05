@@ -1,0 +1,4 @@
+params:
+  assets:
+    customCSS:
+      - "css/custom/post-single.css" 

@@ -1,0 +1,58 @@
+.page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.page__headline {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.page__headline h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.page__headline .post-description {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: var(--secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.thought {
+    background: var(--entry);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.thought__content {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.thought__content h2 {
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+    color: var(--primary);
+}
+
+.thought__content p {
+    margin-bottom: 1.5rem;
+}
+
+.thought__content a {
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--primary);
+}
+
+.thought__content a:hover {
+    border-bottom: 2px solid var(--primary);
+} 
