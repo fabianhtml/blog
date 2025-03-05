@@ -1,54 +1,27 @@
+{{- if lt hugo.Version "0.125.7" }}
+{{- errorf "=> hugo v0.125.7 or greater is required for hugo-PaperMod to build " }}
+{{- end -}}
+
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
-    
-    <title>{{ block "title" . }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
-    
-    {{- partial "opengraph.html" . -}}
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ .Title }}">
-    <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
-    {{- $twitterImage := "/images/og/default.png" -}}
-    {{- if .File -}}
-        {{- $twitterImage = printf "/images/og/%s.png" .File.ContentBaseName -}}
-    {{- end -}}
-    <meta name="twitter:image" content="{{ $twitterImage | absURL }}">
-    
-    {{- if .Site.Params.favicon }}
-    <link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
-    {{- end }}
-    
-    {{- if .Site.Params.rss }}
-    <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .Site.Params.rss | absURL }}">
-    {{- end }}
-    
-    <!-- Core CSS -->
-    {{- $common := resources.Get "css/common/main.css" -}}
-    {{- $extended := resources.Get "css/extended/main.css" -}}
-    {{- $core := resources.Get "css/core/reset.css" -}}
-    
-    {{- if $core }}
-    <link rel="stylesheet" href="{{ $core.RelPermalink }}">
-    {{- end }}
-    {{- if $common }}
-    <link rel="stylesheet" href="{{ $common.RelPermalink }}">
-    {{- end }}
-    {{- if $extended }}
-    <link rel="stylesheet" href="{{ $extended.RelPermalink }}">
-    {{- end }}
-    
-    {{- if .Site.Params.customCSS }}
-    {{- range .Site.Params.customCSS }}
-    <link rel="stylesheet" href="{{ . | absURL }}">
-    {{- end }}
-    {{- end }}
+    {{- partial "head.html" . }}
 </head>
-<body>
-    {{ block "main" . }}{{ end }}
+
+<body class="
+{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) -}}
+{{- print "list" -}}
+{{- end -}}
+{{- if eq site.Params.defaultTheme `dark` -}}
+{{- print " dark" }}
+{{- end -}}
+" id="top">
+    {{- partialCached "header.html" . .Page -}}
+    <main class="main">
+        {{- block "main" . }}{{ end }}
+    </main>
+    {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
 </body>
+
 </html> 
