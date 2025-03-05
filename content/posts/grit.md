@@ -31,7 +31,7 @@ El escritor John Irving es un ejemplo de eso.
 Lejos de ser un prodigio, tuvo dificultades en la escuela, repitió un año, reprobó lenguaje y obtuvo calificaciones por debajo del promedio en los exámenes de admisión a la universidad. Era disléxico y necesitó más tiempo que sus pares para aprender a leer y escribir. Sin embargo, Irving se aplicó con esfuerzo a esta tarea a lo largo de su vida, llegando a escribir y reescribir hasta 10 borradores de sus novelas. Su perseverancia le dio, entre otras cosas, el *National Book Award* en 1978 por su novela "El Mundo Según Garp".
 
 ## Como los finlandeses
-En Chile, y quizá también en tu país, regularmente citamos a Finlandia como un país al que imitar, y sin duda sus logros se relacionan con la idea de este post. Su cultura valora profundamente la perseverancia y la determinación, e incluso tienen una palabra para esto: _"[sisu](https://es.wikipedia.org/wiki/Sisu) _".
+En Chile, y quizá también en tu país, regularmente citamos a Finlandia como un país al que imitar, y sin duda sus logros se relacionan con la idea de este post. Su cultura valora profundamente la perseverancia y la determinación, e incluso tienen una palabra para esto: "[sisu](https://es.wikipedia.org/wiki/Sisu)".
 
 La resistencia y la tenacidad son una parte integral de su identidad nacional.
 
