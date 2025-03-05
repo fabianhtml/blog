@@ -9,7 +9,7 @@
     "dev": "tsc -w"
   },
   "dependencies": {
-    "puppeteer": "^21.0.0"
+    "puppeteer": "^22.8.2"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
