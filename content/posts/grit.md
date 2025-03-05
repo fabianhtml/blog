@@ -11,13 +11,13 @@ No todo tiene que comenzar con palabras grandes como: **pasión**. A veces la cu
 
 ¿Sientes que alguna o muchas veces abandonaste algo antes de tiempo, o no lo profundizaste suficiente? A veces, solo necesitábamos un poco más de perseverancia para descubrir su verdadero potencial. Quizá soltamos algo antes de tiempo porque nos dijimos: «no tengo dedos para el piano». Pero hay razones para continuar.
 
-Angela Duckworth, a través de su investigación sobre el **_[Grit](https://angeladuckworth.com/grit-book/)_**, ha demostrado que la perseverancia da resultados, incluso si creemos que no tenemos “habilidades naturales” para algo.
+Angela Duckworth, a través de su investigación sobre el **_[Grit](https://angeladuckworth.com/grit-book/)_**, ha demostrado que la perseverancia da resultados, incluso si creemos que no tenemos "habilidades naturales" para algo.
 
 Aunque las habilidades con las que nacemos sí juegan un papel (no es lo mismo medir dos metros si juegas el basquetbol, por ejemplo), deberíamos reconocer el esfuerzo como algo mucho más valioso.
 
 El esfuerzo sostenido y la práctica deliberada son el camino para desarrollar habilidades y lograr resultados tangibles. Incluso el talento inicial se desvanece sin ellos.
 
-Para entender mejor esto, Angela Duckworth propone una “fórmula” simple pero poderosa:
+Para entender mejor esto, Angela Duckworth propone una "fórmula" simple pero poderosa:
 
 	     Talento × Esfuerzo = Habilidad
 	
@@ -28,10 +28,10 @@ Esto significa que el talento inicial necesita ser multiplicado por el esfuerzo 
 ## El caso del escritor John Irving
 El escritor John Irving es un ejemplo de eso.
 
-Lejos de ser un prodigio, tuvo dificultades en la escuela, repitió un año, reprobó lenguaje y obtuvo calificaciones por debajo del promedio en los exámenes de admisión a la universidad. Era disléxico y necesitó más tiempo que sus pares para aprender a leer y escribir. Sin embargo, Irving se aplicó con esfuerzo a esta tarea a lo largo de su vida, llegando a escribir y reescribir hasta 10 borradores de sus novelas. Su perseverancia le dio, entre otras cosas, el *National Book Award* en 1978 por su novela “El Mundo Según Garp”.
+Lejos de ser un prodigio, tuvo dificultades en la escuela, repitió un año, reprobó lenguaje y obtuvo calificaciones por debajo del promedio en los exámenes de admisión a la universidad. Era disléxico y necesitó más tiempo que sus pares para aprender a leer y escribir. Sin embargo, Irving se aplicó con esfuerzo a esta tarea a lo largo de su vida, llegando a escribir y reescribir hasta 10 borradores de sus novelas. Su perseverancia le dio, entre otras cosas, el *National Book Award* en 1978 por su novela "El Mundo Según Garp".
 
 ## Como los finlandeses
-En Chile, y quizá también en tu país, regularmente citamos a Finlandia como un país al que imitar, y sin duda sus logros se relacionan con la idea de este post. Su cultura valora profundamente la perseverancia y la determinación, e incluso tienen una palabra para esto: _“[sisu](https://es.wikipedia.org/wiki/Sisu)”_.
+En Chile, y quizá también en tu país, regularmente citamos a Finlandia como un país al que imitar, y sin duda sus logros se relacionan con la idea de este post. Su cultura valora profundamente la perseverancia y la determinación, e incluso tienen una palabra para esto: _"[sisu](https://es.wikipedia.org/wiki/Sisu) _".
 
 La resistencia y la tenacidad son una parte integral de su identidad nacional.
 
@@ -42,9 +42,9 @@ Necesitamos algo que nos motive e impulse sobre los baches cotidianos (metas al 
 
 Si quieres llegar a los 80 años con vigor y autonomía, necesitas moverte hoy.
 
-Para alcanzar objetivos a largo plazo, es importante establecer pequeñas acciones que puedes cumplir “hoy”.
+Para alcanzar objetivos a largo plazo, es importante establecer pequeñas acciones que puedes cumplir "hoy".
 
-Es necesario encontrar los hilos que conectan los esfuerzos actuales con los frutos futuros, y la motivación crece cuando —además— notamos el impacto que esto tiene en el bienestar de los demás. Esto nos ayuda a perseverar a través de los desafíos.
+Es necesario encontrar los hilos que conectan los esfuerzos actuales con los frutos futuros, y la motivación crece cuando --además-- notamos el impacto que esto tiene en el bienestar de los demás. Esto nos ayuda a perseverar a través de los desafíos.
 
 No es extraño que encontremos placer y significado a lo que hacemos durante la práctica consistente. Más que al revés.
 
