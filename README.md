@@ -35,7 +35,7 @@ El blog incluye un sistema automático para generar imágenes Open Graph para ca
 
 - Node.js 18 o superior
 - NPM
-- Puppeteer (se instala automáticamente con `npm install`)
+- Puppeteer v22.8.2 o superior (se instala automáticamente con `npm install`)
 
 ### Cómo Funciona
 
@@ -56,16 +56,17 @@ npm run generate-og
 
 ### Características del Sistema OG
 
-- Genera imágenes de 1200x630 pixels (tamaño recomendado para redes sociales)
-- Usa el título y descripción del post para crear la imagen
-- Incluye una imagen por defecto para páginas que no son posts
-- Soporta tanto posts en formato YAML como TOML
+- Genera imágenes de 2400x1260 pixels (optimizadas para redes sociales)
+- Diseño minimalista con fondo negro y tipografía clara
+- Alineación a la izquierda para mejor legibilidad
+- Sistema de caché para evitar regeneraciones innecesarias
+- Soporte para tanto posts en formato YAML como TOML
 
 ### Personalización
 
 Las plantillas de las imágenes OG se pueden personalizar editando:
-- El estilo en `layouts/partials/og-image.html`
-- La lógica de generación en `scripts/generate-og-images.js`
+- La lógica de generación en `scripts/generate-og-images.ts`
+- El estilo está integrado en el script TypeScript
 
 ## Despliegue
 
