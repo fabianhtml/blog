@@ -27,8 +27,20 @@
     <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .Site.Params.rss | absURL }}">
     {{- end }}
     
-    <!-- Theme CSS -->
-    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    <!-- Core CSS -->
+    {{- $common := resources.Get "css/common/main.css" -}}
+    {{- $extended := resources.Get "css/extended/main.css" -}}
+    {{- $core := resources.Get "css/core/reset.css" -}}
+    
+    {{- if $core }}
+    <link rel="stylesheet" href="{{ $core.RelPermalink }}">
+    {{- end }}
+    {{- if $common }}
+    <link rel="stylesheet" href="{{ $common.RelPermalink }}">
+    {{- end }}
+    {{- if $extended }}
+    <link rel="stylesheet" href="{{ $extended.RelPermalink }}">
+    {{- end }}
     
     {{- if .Site.Params.customCSS }}
     {{- range .Site.Params.customCSS }}
