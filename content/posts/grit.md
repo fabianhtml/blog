@@ -9,11 +9,11 @@ description = 'El talento innato, la pasión y motivación estan sobrevalorados.
 
 No todo tiene que comenzar con palabras grandes como: **pasión**. A veces la curiosidad o la exploración nos pueden mostrar la relevancia de un tema o una práctica, transformándola en un interés duradero.
 
-¿Sientes que alguna o muchas veces abandonaste algo antes de tiempo, o no lo profundizaste suficiente? A veces, solo necesitábamos un poco más de perseverancia para descubrir su verdadero potencial. Quizá soltamos algo antes de tiempo porque nos dijimos: _«no tengo dedos para el piano»_. Pero hay razones para continuar.
+¿Sientes que alguna o muchas veces abandonaste algo antes de tiempo, o no lo profundizaste suficiente? A veces, sólo necesitábamos un poco más de perseverancia para descubrir su verdadero potencial. Quizá soltamos algo antes de tiempo porque nos dijimos: _«no tengo dedos para el piano»_. Pero hay razones para continuar.
 
 Angela Duckworth, a través de su investigación sobre el **_[Grit](https://angeladuckworth.com/grit-book/)_**, ha demostrado que la perseverancia da resultados, incluso si creemos que no tenemos "habilidades naturales" para algo.
 
-Aunque las habilidades con las que nacemos sí juegan un papel (no es lo mismo medir dos metros si juegas el basquetbol, por ejemplo), deberíamos reconocer el esfuerzo como algo mucho más valioso.
+Aunque las habilidades con las que nacemos sí juegan un papel (no es lo mismo medir dos metros si juegas basquetbol, por ejemplo), deberíamos reconocer el esfuerzo como algo mucho más valioso.
 
 El esfuerzo sostenido y la práctica deliberada son el camino para desarrollar habilidades y lograr resultados tangibles. Incluso el talento inicial se desvanece sin ellos.
 
@@ -45,7 +45,7 @@ Es necesario encontrar los hilos que conectan los esfuerzos actuales con los fru
 No es extraño que encontremos placer y significado a lo que hacemos durante la práctica consistente. Más que al revés.
 
 ## Práctica deliberada
-Todo esto se relaciona con el concepto de *práctica deliberada*. Es decir, el esfuerzo consciente y enfocado en la mejora constante, la búsqueda activa de retroalimentación. De identificar y aplicarse a algo no puedes hacer hoy, pero que con esfuerzo consigues hacer mañana (o pasado).
+Todo esto se relaciona con el concepto de *práctica deliberada*. Es decir, el esfuerzo consciente y enfocado en la mejora constante, la búsqueda activa de retroalimentación. De identificar y aplicarse a algo que no puedes hacer hoy, pero que con esfuerzo consigues hacer mañana (o pasado).
 
 Eso es gratificante en sí mismo, nos hace evitar el estancamiento y nos permite ver y disfrutar de los resultados y los beneficios de la práctica y mejora consistente.
 
