@@ -200,7 +200,11 @@ async function generateOGImage(title: string, description: string, outputPath: s
       `;
 
       await page.setContent(html, { waitUntil: 'networkidle0' });
-      await page.screenshot({ path: outputPath, type: 'png' });
+      await page.screenshot({ 
+        path: outputPath, 
+        type: 'png',
+        omitBackground: true
+      });
       return true;
     } catch (error) {
       retryCount++;
