@@ -7,7 +7,7 @@ categories = ["desarrollo"]
 description = 'El talento innato, la pasión y la motivación están sobrevalorados.'
 +++
 
-No todo tiene que comenzar con palabras grandilocuentes como **‘talento’, ‘pasión’ o ‘motivación’**. A veces la curiosidad o la exploración nos pueden mostrar la relevancia de un tema o una práctica, transformándola en un interés duradero.
+No todo tiene que comenzar con palabras grandilocuentes como **‘pasión’**. A veces la curiosidad o la exploración nos pueden mostrar la relevancia de un tema o una práctica, transformándola en un interés duradero.
 
 ¿Sientes que alguna o muchas veces abandonaste algo antes de tiempo, o no lo profundizaste suficiente? A veces, sólo necesitábamos un poco más de perseverancia para descubrir su verdadero potencial. Quizá soltamos algo antes de tiempo porque nos dijimos: _«no tengo dedos para el piano»_. Pero hay razones para continuar.
 
@@ -42,9 +42,9 @@ Si queremos ser como los finlandeses no podemos copiar simplemente sus resultado
 ## Cómo se consigue el GRIT en la práctica
 Este tipo de determinación se construye combinando metas a corto y largo plazo. Necesitamos una visión de futuro que nos motive e impulse sobre los baches cotidianos. Pero el *grit* también requiere de acción en el ahora.
 
-Si quieres llegar a los 80 años con vigor y autonomía, necesitas moverte hoy. 
+Si quieres llegar a los 80 años con vigor y autonomía, necesitas moverte hoy.
 
-Es necesario encontrar los hilos que conectan los esfuerzos actuales con los resultados futuros, y la motivación crece cuando --además-- vemos el impacto positivo que nuestras acciones generan en la vida de otras personas. Algo que nos ayuda a perseverar a través de los desafíos.
+Es necesario encontrar los hilos que conectan claramente nuestros esfuerzos actuales con los resultados futuros. Cuando además notamos cómo lo que hacemos impacta positivamente en la vida de otras personas, nuestra motivación aumenta. Esa conexión nos ayuda a perseverar a través de los desafíos.
 
 No es extraño que encontremos satisfacción y pasión como resultado de la práctica constante. Más que al revés.
 
