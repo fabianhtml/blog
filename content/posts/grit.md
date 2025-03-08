@@ -7,7 +7,7 @@ categories = ["desarrollo"]
 description = 'El talento innato, la pasión y la motivación están sobrevalorados.'
 +++
 
-No todo tiene que comenzar con palabras grandilocuentes como **‘pasión’**. A veces la curiosidad o la exploración nos pueden mostrar la relevancia de un tema o una práctica, transformándola en un interés duradero.
+No todo tiene que comenzar con palabras grandes como **pasión**. A veces la curiosidad o la exploración nos pueden mostrar la relevancia de un tema o una práctica, transformándola en un interés duradero.
 
 ¿Sientes que alguna o muchas veces abandonaste algo antes de tiempo, o no lo profundizaste suficiente? A veces, sólo necesitábamos un poco más de perseverancia para descubrir su verdadero potencial. Quizá soltamos algo antes de tiempo porque nos dijimos: _«no tengo dedos para el piano»_. Pero hay razones para continuar.
 
@@ -46,7 +46,7 @@ Si quieres llegar a los 80 años con vigor y autonomía, necesitas moverte hoy.
 
 Es necesario encontrar los hilos que conectan claramente nuestros esfuerzos actuales con los resultados futuros. Cuando además notamos cómo lo que hacemos impacta positivamente en la vida de otras personas, nuestra motivación aumenta. Esa conexión nos ayuda a perseverar a través de los desafíos.
 
-No es extraño que encontremos satisfacción y pasión como resultado de la práctica constante. Más que al revés.
+No es extraño que encontremos motivación y hasta pasión como resultado de la práctica constante. Más que al revés.
 
 ## Práctica deliberada
 Todo esto se relaciona con el concepto de *práctica deliberada*. Es decir, el esfuerzo consciente y enfocado en la mejora constante, la búsqueda activa de retroalimentación. De identificar y aplicarse a algo que no puedes hacer hoy, pero que con esfuerzo consigues hacer mañana (o pasado).
