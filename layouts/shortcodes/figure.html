@@ -12,27 +12,74 @@
     {{- $height := .Get "height" -}}
     {{- $align := .Get "align" -}}
 
-    {{- /* Generate WebP path by replacing extension */ -}}
-    {{- $originalSrc := $src -}}
-    {{- $webpSrc := replaceRE `\.(png|jpg|jpeg)$` ".webp" $src -}}
-    {{- $originalExt := findRE `\.(png|jpg|jpeg|gif|svg)$` $src 1 -}}
-    {{- $originalType := "" -}}
-    {{- if $originalExt -}}
-        {{- $originalType = index $originalExt 0 -}}
-        {{- $originalType = strings.TrimPrefix "." $originalType -}}
-        {{- if eq $originalType "jpg" -}}
-            {{- $originalType = "jpeg" -}}
-        {{- end -}}
+    {{/* Limpia la ruta de la imagen */}}
+    {{- $cleanPath := strings.TrimPrefix "/" $src -}}
+
+    {{/* Intenta obtener la imagen de los assets o static */}}
+    {{- $img := resources.GetMatch (printf "img/%s" $cleanPath) -}}
+    {{- if not $img -}}
+      {{- $img = resources.GetMatch $cleanPath -}}
     {{- end -}}
-    
-    <picture>
-        <source srcset="{{ $webpSrc }}" type="image/webp">
-        <img loading="lazy" src="{{ $originalSrc }}" 
+
+    {{- if $img -}}
+      {{/* Para imágenes que podemos procesar con Hugo */}}
+      {{- $processed := $img -}}
+
+      {{/* Para los formatos que admiten WebP (excluyendo SVG y GIF) */}}
+      {{- $mediaType := $img.MediaType.SubType -}}
+      {{- if and (ne $mediaType "svg") (ne $mediaType "svg+xml") (ne $mediaType "webp") (ne $mediaType "gif") -}}
+        {{/* Generar versión WebP */}}
+        {{- $webp := $processed.Process "webp q85" -}}
+        
+        <picture>
+          <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
+          <source srcset="{{ $processed.RelPermalink }}" type="{{ $processed.MediaType }}">
+          <img loading="lazy" src="{{ $processed.RelPermalink }}" 
+               {{- if $alt }} alt="{{ $alt }}"{{ end -}}
+               {{- if $width }} width="{{ $width }}"{{ end -}}
+               {{- if $height }} height="{{ $height }}"{{ end -}}
+          >
+        </picture>
+      {{- else -}}
+        {{/* Para SVG, GIF y WebP ya existentes - sin conversión */}}
+        <img loading="lazy" src="{{ $processed.RelPermalink }}" 
              {{- if $alt }} alt="{{ $alt }}"{{ end -}}
              {{- if $width }} width="{{ $width }}"{{ end -}}
              {{- if $height }} height="{{ $height }}"{{ end -}}
-        />
-    </picture>
+        >
+      {{- end -}}
+    {{- else -}}
+      {{/* Para imágenes externas o no encontradas en assets o static */}}
+      {{- $imgSrc := $src -}}
+      {{- if not (or (hasPrefix $imgSrc "http://") (hasPrefix $imgSrc "https://") (hasPrefix $imgSrc "/")) -}}
+        {{- $imgSrc = printf "/%s" $imgSrc -}}
+      {{- end -}}
+      
+      {{/* Generar ruta WebP tentativa para imágenes locales no procesables */}}
+      {{- $webpSrc := $imgSrc -}}
+      {{- if not (or (hasPrefix $imgSrc "http://") (hasPrefix $imgSrc "https://")) -}}
+        {{- $webpSrc = replaceRE `\.(png|jpg|jpeg)$` ".webp" $imgSrc -}}
+      {{- end -}}
+      
+      {{- if and (ne $webpSrc $imgSrc) (not (or (hasPrefix $imgSrc "http://") (hasPrefix $imgSrc "https://"))) -}}
+        {{/* Imágenes locales con potencial formato WebP */}}
+        <picture>
+          <source srcset="{{ $webpSrc | safeURL }}" type="image/webp">
+          <img loading="lazy" src="{{ $imgSrc | safeURL }}" 
+               {{- if $alt }} alt="{{ $alt }}"{{ end -}}
+               {{- if $width }} width="{{ $width }}"{{ end -}}
+               {{- if $height }} height="{{ $height }}"{{ end -}}
+          >
+        </picture>
+      {{- else -}}
+        {{/* Imágenes externas o sin formato convertible */}}
+        <img loading="lazy" src="{{ $imgSrc | safeURL }}" 
+             {{- if $alt }} alt="{{ $alt }}"{{ end -}}
+             {{- if $width }} width="{{ $width }}"{{ end -}}
+             {{- if $height }} height="{{ $height }}"{{ end -}}
+        >
+      {{- end -}}
+    {{- end -}}
 
     {{- if .Get "link" }}</a>{{ end -}}
     {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
