@@ -32,7 +32,7 @@ En mi caso, prefiero usar Claude 3.7 Sonnet para esto. Seguro llegarás a versio
 
 Con esto podrás representar procesos simples o complejos, de una o varias rutas, podrás agregar colores que faciliten su visualización y mucho más.
 
-{{< figure src="/img/mermaid-airbnb-2.png" alt="Mermaid" caption="Instrucción: crea una versión más completa" >}}
+{{< figure src="/img/mermaid-airbnb-2.png" alt="Mermaid" caption="Instrucción de seguimiento al diagrama generado anteriormente: crea una versión más completa" >}}
 
 Esto te permitirá visualizar, iterar y ampliar tu visión –simplemente a través de chat:
 

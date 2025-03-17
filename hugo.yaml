@@ -28,8 +28,10 @@ security:
 
 module:
   mounts:
+    - source: static
+      target: static
     - source: assets/img
-      target: static/img
+      target: assets/img
     - source: assets
       target: assets
     - source: content
