@@ -4,7 +4,7 @@ date = 2025-03-17T06:05:00-03:00
 draft = false
 tags = ["mermaid", "alineación", "visibilidad", "documentación"]
 categories = ["herramientas"]
-description = 'Una herramienta simple pero poderosa para definir productos, servicios, flujos y procesos de manera visual.'
+description = 'Una herramienta que facilita la definición de productos, servicios, flujos y procesos.'
 +++
 
 > _TL;DR: Con IA y Mermaid puedes transformar descripciones de texto en diagramas visuales de procesos y flujos. Mermaid es un lenguaje de diagramas que permite representar procesos y flujos de manera visual._
@@ -40,7 +40,7 @@ Esto te permitirá visualizar, iterar y ampliar tu visión –simplemente a trav
 2. Visualiza el diagrama con una herramienta.
 3. Ajusta, añade o elimina pasos y elementos.
 
-Para visualizar el diagrama, usa herramientas online gratuitas como Mermaid Live Editor o Excalidraw, o implementa el código directamente en un html directo en tu computador:
+**Para visualizar el diagrama**, usa herramientas online gratuitas como [Mermaid Live Editor](https://mermaid.live) o [Excalidraw](https://excalidraw.com), o implementa el código directamente en tu computador con un html tan simple como el siguiente:
 
 ```html
 <!DOCTYPE html>
