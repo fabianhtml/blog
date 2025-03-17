@@ -4,7 +4,7 @@ date = 2025-03-17T06:05:00-03:00
 draft = false
 tags = ["mermaid", "alineación", "visibilidad", "documentación"]
 categories = ["herramientas"]
-description = 'Una herramienta que facilita la definición de productos, servicios, flujos y procesos.'
+description = 'Una herramienta simple pero poderosa para definir productos, servicios, flujos y procesos de manera visual.'
 +++
 
 > _TL;DR: Con IA y Mermaid puedes transformar descripciones de texto en diagramas visuales de procesos y flujos. Mermaid es un lenguaje de diagramas que permite representar procesos y flujos de manera visual._

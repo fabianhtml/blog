@@ -258,13 +258,21 @@ async function main(): Promise<void> {
     const slug = file.replace('.md', '');
     const currentHash = generateHash(frontMatter.title, frontMatter.description);
     const outputPath = path.join(outputDir, `${slug}.png`);
-
-    // Forzar regeneración de imágenes
-    console.log(`🔄 Generando OG image para: ${frontMatter.title}`);
-    const success = await generateOGImage(frontMatter.title, frontMatter.description, outputPath);
-    if (success) {
-      cache[slug] = currentHash;
-      hasChanges = true;
+    
+    // Verificar si el post es nuevo o ha cambiado
+    const isNew = !cache[slug];
+    const hasChanged = cache[slug] !== currentHash;
+    const outputFileExists = fs.existsSync(outputPath);
+    
+    if (isNew || hasChanged || !outputFileExists) {
+      console.log(`🔄 Generando OG image para${isNew ? ' nuevo post' : hasChanged ? ' post modificado' : ' post sin imagen'}: ${frontMatter.title}`);
+      const success = await generateOGImage(frontMatter.title, frontMatter.description, outputPath);
+      if (success) {
+        cache[slug] = currentHash;
+        hasChanges = true;
+      }
+    } else {
+      console.log(`⏭️ Omitiendo ${frontMatter.title}: No hay cambios detectados`);
     }
   }
 
