@@ -26,12 +26,16 @@ imaging:
 security:
   enableInlineShortcodes: true
 
+# Configuración de directorios
+# - Todas las imágenes se guardan en assets/img
+# - Durante la compilación, se copian a static/img en el sitio público
+# - En el sitio generado, las imágenes se acceden como /img/nombre-imagen.ext
 module:
   mounts:
     - source: static
       target: static
     - source: assets/img
-      target: assets/img
+      target: static/img
     - source: assets
       target: assets
     - source: content
