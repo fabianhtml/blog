@@ -1,4 +1,3 @@
-
 +++
 title = 'Maximiza tu Vibe Coding: El documento de base que necesitas antes de usar v0, Lovable, Replit, Bolt, Cursor o Windsurf'
 date = 2025-04-11T08:39:00-03:00
