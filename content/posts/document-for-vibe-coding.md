@@ -3,8 +3,8 @@
 title = 'Maximiza tu Vibe Coding: El documento de base que necesitas antes de usar v0, Lovable, Replit, Bolt, Cursor o Windsurf'
 date = 2025-04-11T08:39:00-03:00
 draft = false
-tags = ["inteligencia artificial", "vibe coding", "desarrollo", "herramientas"]
-categories = ["tecnología", "desarrollo"]
+tags = ["inteligencia artificial", "vibe coding"]
+categories = ["tecnología"]
 description = 'Cómo crear un documento base que potenciará tus resultados con herramientas de IA para desarrollo como v0, Lovable, Bolt, Replit, Cursor o Windsurf.'
 +++
 
@@ -18,7 +18,7 @@ La diferencia entre resultados aleatorios y una base sólida para tu proyecto es
 
 ## Un documento que cambió mi experiencia
 
-Mi experiencia cambió con el documento que te comparto. 
+Mi experiencia cambió usando **al inicio un documento como el que te comparto**:
 
 👉 [Documento de base para Vibe Coding](https://markreader.reshape.so/master-doc/)
 
@@ -68,7 +68,7 @@ La estrategia que mejores resultados me ha dado es:
 
 1. Crear un documento completo
 2. Usar v0 para implementar la mayoría de las funcionalidades de una vez
-3. Descargar el ZIP resultante para continuar el desarrollo con **Cursor** o **Windsurf**
+3. Descargar el ZIP con todo el código y continúa el desarrollo en **Cursor** o **Windsurf**
 
 > 📌 Elegí Next.js y v0 porque ambos son desarrollados por el mismo equipo (Vercel). Y como los modelos de IA se entrenan con grandes volúmenes de ejemplos, tiene sentido usar un framework popular como Next.js. Eso aumenta las probabilidades de obtener buen código desde el inicio.
 
@@ -84,15 +84,14 @@ Pero lo importante es que **las bases estarán ahí**. Y eso es un avance enorme
 
 Basado en mi experiencia, te sugiero:
 
-- A no ser que sea algo simple, **NO HAGAS deploy online** directamente desde estas herramientas. Como decía antes, sus resultados (hoy) no son perfecto, y su capacidad de debugging es MALA; rompren más de lo que "arreglan".
+- A no ser que sea algo simple, **NO HAGAS deploy online** directamente desde estas herramientas. Como decía antes, sus resultados (hoy) no son perfecto, y su capacidad de _debuggiar_ es MALA; rompren más de lo que arreglan.
 - **Prioriza herramientas que permitan descargar el código** o conectarlo con GitHub.
-- **Termina el desarrollo, el debugging y el deploy** tú, con ayuda de Cursor o Windsurf.
+- **Termina de desarrollar, _debuggiar_ y hacer el deploy** tú, con ayuda de Cursor o Windsurf.
 - **Prepárate para actualizar el proyecto** (por ejemplo, v0 aún usa Tailwind v3, no v4).
-- **Define la estructura del proyecto desde el principio** (punto 9 del documento de base).
 
 ## La estructura importa
 
-Uno de los elementos más valiosos que incluí en el documento es mi preferencia por **organizar el proyecto por funcionalidades**. Que es como prefiero trabajar, esto me facilita enormemente el flujo de trabajo posterior para mantener todo "cerca".
+Uno de los elementos más valiosos que incluí en el documento es mi preferencia por **organizar el proyecto por funcionalidades**. Esto me facilita enormemente el flujo de trabajo posterior para mantener todo "cerca".
 
 ```
     recipegenius-app/
@@ -142,4 +141,4 @@ Uno de los elementos más valiosos que incluí en el documento es mi preferencia
 
 Es verdaderamente asombroso lo lejos que hemos llegado, especialmente para quienes no somos programadores.
 
-Pero como toda tecnología poderosa, **necesitan dirección**. Con el documento de base que he compartido, estarás proporcionando exactamente eso: una guía clara que permitirá a la IA generar código que realmente se acerque a tu visión.
+Pero esta tecnología **necesita dirección**. Con el documento de base que he compartido, estarás proporcionando exactamente eso: una guía clara que permitirá a la IA generar código que realmente se acerque a tu visión.

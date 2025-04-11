@@ -2,7 +2,7 @@
 title = 'Mermaid: transforma tus ideas en un diagrama claro y mejora la definición de tu producto'
 date = 2025-03-17T06:05:00-03:00
 draft = false
-tags = ["mermaid", "alineación", "visibilidad", "documentación", "vive coding"]
+tags = ["mermaid", "alineación", "visibilidad", "documentación", "vibe coding"]
 categories = ["herramientas"]
 description = 'Una herramienta que facilita la definición de productos, servicios, flujos y procesos.'
 +++
