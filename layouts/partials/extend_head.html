@@ -1,15 +1,42 @@
-{{- /* Head custom content area start */ -}}
+<!-- Insertar CSS personalizado directamente -->
+<style>
+/* Espacio entre la cabecera (metadatos) y el contenido en posts individuales */
+.post-header {
+  margin-bottom: 2rem !important;
+}
 
-{{- partial "opengraph.html" . -}}
+/* Mejora el espaciado de los metadatos */
+.post-meta {
+  margin-top: 1rem !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 1rem !important;
+  border-bottom: 1px solid rgba(125, 125, 125, 0.1) !important;
+}
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ .Title }}">
-<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
-{{- $twitterImage := "/images/og/default.png" -}}
-{{- if .File -}}
-    {{- $twitterImage = printf "/images/og/%s.png" .File.ContentBaseName -}}
-{{- end -}}
-<meta name="twitter:image" content="{{ $twitterImage | absURL }}">
+/* Espacio entre la imagen de portada y el contenido */
+.entry-cover {
+  margin-bottom: 1.5rem !important;
+}
 
-{{- /* Head custom content area end */ -}} 
+/* Ajuste del espaciado interno del contenido */
+.post-content {
+  margin-top: 2rem !important;
+}
+
+/* Espaciado para el primer párrafo */
+.post-content > p:first-of-type {
+  margin-top: 1rem !important;
+  padding-top: 0 !important;
+}
+
+/* Espaciado consistente entre párrafos */
+.post-content p {
+  margin-bottom: 1.2rem !important;
+  line-height: 1.6 !important;
+}
+
+/* Añadir espacio después del ToC si existe */
+.toc {
+  margin-bottom: 2rem !important;
+}
+</style>

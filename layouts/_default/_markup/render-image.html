@@ -1,92 +1,43 @@
-{{- $dest := .Destination -}}
-{{- $isBlock := .IsBlock -}}
-{{- $title := .Title -}}
-{{- $text := .PlainText -}}
-
-{{/* Limpia la ruta de la imagen */}}
-{{- $cleanPath := strings.TrimPrefix "/" $dest -}}
-
-{{/* Intenta obtener la imagen de los assets o static */}}
-{{- $img := resources.GetMatch (printf "img/%s" $cleanPath) -}}
-{{- if not $img -}}
-  {{- $img = resources.GetMatch $cleanPath -}}
-{{- end -}}
-
-{{- if $img -}}
-  {{/* Para imágenes que podemos procesar con Hugo */}}
-  {{- $processed := $img -}}
-
-  {{/* Para los formatos que admiten WebP (excluyendo SVG y GIF) */}}
-  {{- $mediaType := $img.MediaType.SubType -}}
-  {{- if and (ne $mediaType "svg") (ne $mediaType "svg+xml") (ne $mediaType "webp") (ne $mediaType "gif") -}}
-    {{/* Generar versión WebP */}}
-    {{- $webp := $processed.Process "webp q85" -}}
-    
-    {{- if $isBlock -}}
-      <figure>
-        <picture>
-          <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
-          <source srcset="{{ $processed.RelPermalink }}" type="{{ $processed.MediaType }}">
-          <img loading="lazy" src="{{ $processed.RelPermalink }}" alt="{{ $text }}" {{ with $title }}title="{{ . }}"{{ end }}>
-        </picture>
-        {{- with $title }}<figcaption>{{ . }}</figcaption>{{ end -}}
-      </figure>
-    {{- else -}}
-      <picture>
-        <source srcset="{{ $webp.RelPermalink }}" type="image/webp">
-        <source srcset="{{ $processed.RelPermalink }}" type="{{ $processed.MediaType }}">
-        <img loading="lazy" src="{{ $processed.RelPermalink }}" alt="{{ $text }}" {{ with $title }}title="{{ . }}"{{ end }}>
-      </picture>
+{{- $u := urls.Parse .Destination -}}
+{{- $src := $u.String -}}
+{{- $base := path.Base $src -}}
+{{- $ext := path.Ext $base -}}
+{{- $name := strings.TrimSuffix $ext $base -}}
+{{- $webp := printf "/img/webp/%s.webp" $name -}}
+{{- if not $u.IsAbs -}}
+  {{- $path := strings.TrimPrefix "./" $u.Path }}
+  {{- with or (.PageInner.Resources.Get $path) (resources.Get $path) -}}
+    {{- $src = .RelPermalink -}}
+    {{- with $u.RawQuery -}}
+      {{- $src = printf "%s?%s" $src . -}}
     {{- end -}}
-  {{- else -}}
-    {{/* Para SVG, GIF y WebP ya existentes - sin conversión */}}
-    {{- if $isBlock -}}
-      <figure>
-        <img loading="lazy" src="{{ $processed.RelPermalink }}" alt="{{ $text }}" {{ with $title }}title="{{ . }}"{{ end }}>
-        {{- with $title }}<figcaption>{{ . }}</figcaption>{{ end -}}
-      </figure>
-    {{- else -}}
-      <img loading="lazy" src="{{ $processed.RelPermalink }}" alt="{{ $text }}" {{ with $title }}title="{{ . }}"{{ end }}>
+    {{- with $u.Fragment -}}
+      {{- $src = printf "%s#%s" $src . -}}
     {{- end -}}
   {{- end -}}
+{{- end -}}
+
+{{- $attributes := merge .Attributes (dict "alt" .Text "src" $src "title" (.Title | transform.HTMLEscape) "loading" "lazy") -}}
+
+{{- /* Determinar si el formato es compatible con WebP */ -}}
+{{- $webpCompatible := or (in (slice ".jpg" ".jpeg" ".png") $ext) -}}
+
+{{- if $webpCompatible -}}
+<picture>
+  <source srcset="{{ $webp }}" type="image/webp">
+  <img
+  {{- range $k, $v := $attributes -}}
+    {{- if $v -}}
+      {{- printf " %s=%q" $k $v | safeHTMLAttr -}}
+    {{- end -}}
+  {{- end -}}>
+</picture>
 {{- else -}}
-  {{/* Para imágenes externas o no encontradas en assets o static */}}
-  {{- $imgSrc := $dest -}}
-  {{- if not (or (hasPrefix $imgSrc "http://") (hasPrefix $imgSrc "https://") (hasPrefix $imgSrc "/")) -}}
-    {{- $imgSrc = printf "/%s" $imgSrc -}}
-  {{- end -}}
-  
-  {{/* Generar ruta WebP tentativa para imágenes locales no procesables */}}
-  {{- $webpSrc := $imgSrc -}}
-  {{- if not (or (hasPrefix $imgSrc "http://") (hasPrefix $imgSrc "https://")) -}}
-    {{- $webpSrc = replaceRE `\.(png|jpg|jpeg)$` ".webp" $imgSrc -}}
-  {{- end -}}
-  
-  {{- if and (ne $webpSrc $imgSrc) (not (or (hasPrefix $imgSrc "http://") (hasPrefix $imgSrc "https://"))) -}}
-    {{/* Imágenes locales con potencial formato WebP */}}
-    {{- if $isBlock -}}
-      <figure>
-        <picture>
-          <source srcset="{{ $webpSrc | safeURL }}" type="image/webp">
-          <img loading="lazy" src="{{ $imgSrc | safeURL }}" alt="{{ $text }}" {{ with $title }}title="{{ . }}"{{ end }}>
-        </picture>
-        {{- with $title }}<figcaption>{{ . }}</figcaption>{{ end -}}
-      </figure>
-    {{- else -}}
-      <picture>
-        <source srcset="{{ $webpSrc | safeURL }}" type="image/webp">
-        <img loading="lazy" src="{{ $imgSrc | safeURL }}" alt="{{ $text }}" {{ with $title }}title="{{ . }}"{{ end }}>
-      </picture>
+<img
+  {{- range $k, $v := $attributes -}}
+    {{- if $v -}}
+      {{- printf " %s=%q" $k $v | safeHTMLAttr -}}
     {{- end -}}
-  {{- else -}}
-    {{/* Imágenes externas o sin formato convertible */}}
-    {{- if $isBlock -}}
-      <figure>
-        <img loading="lazy" src="{{ $imgSrc | safeURL }}" alt="{{ $text }}" {{ with $title }}title="{{ . }}"{{ end }}>
-        {{- with $title }}<figcaption>{{ . }}</figcaption>{{ end -}}
-      </figure>
-    {{- else -}}
-      <img loading="lazy" src="{{ $imgSrc | safeURL }}" alt="{{ $text }}" {{ with $title }}title="{{ . }}"{{ end }}>
-    {{- end -}}
-  {{- end -}}
+  {{- end -}}>
 {{- end -}}
+{{- /**/ -}}
