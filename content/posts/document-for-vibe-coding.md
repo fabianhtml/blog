@@ -1,65 +1,145 @@
+
 +++
-title = "Antes de usar v0, Lovable, Bolt, o Replit... crea esto"
+title = 'Maximiza tu Vibe Coding: El documento de base que necesitas antes de usar v0, Lovable, Replit, Bolt, Cursor o Windsurf'
 date = 2025-04-11T08:39:00-03:00
 draft = false
-tags = ["inteligencia artificial", "vive coding"]
-categories = ["tecnología"]
-description = "Un documento base para el vibe coding usando v0, Lovable, Bolt o Replit, Cursor o Windsurf que te ayudará a darle contexto, estructura y limites claros."
+tags = ["inteligencia artificial", "vibe coding", "desarrollo", "herramientas"]
+categories = ["tecnología", "desarrollo"]
+description = 'Cómo crear un documento base que potenciará tus resultados con herramientas de IA para desarrollo como v0, Lovable, Bolt, Replit, Cursor o Windsurf.'
 +++
 
-Es impresionante lo mucho que puedes avanzar usando herramientas como **v0** con una única instrucción clara.
+> *TL;DR: Antes de usar herramientas de Vibe Coding como v0, Lovable, Bolt, Replit, Cursor o Windsurf, crea un documento completo que defina claramente tu proyecto. Incluye requisitos, estructura, stack tecnológico y limitaciones. Esto mejorará drásticamente los resultados que obtengas.*
 
-Hoy quiero compartir un documento práctico que preparé como ejemplo. Es una combinación de un **Product Requirements Document (PRD)**, especificaciones técnicas y guías prácticas de implementación.
+Especialmente si no tienes formación en programación. ¿Has probado herramientas como **v0**, **Lovable**, **Bolt**, **Replit**, **Cursor** o **Windsurf** y te has sentido frustrado por los resultados inconsistentes? A mi me ha pasado muchas veces. Después de varios intentos fallidos, descubrí que el problema no estaba en las herramientas, sino en **cómo las estaba usando**.
 
-Aunque el contenido es ficticio (una plataforma llamada *RecipeGenius*), la estructura y los detalles pueden ser útiles como referencia si estás trabajando con herramientas como **v0, Lovable, Bolt, Replit**, etc.
+La diferencia entre resultados aleatorios y una base sólida para tu proyecto está en **lo que le proporcionas al modelo antes de empezar**.
 
-En vez de pedir: *“Quiero que crees [inserta tu idea aquí]”* en solo un párrafo, la idea es que le pases al modelo **todo un documento completo como este**:
+{{< figure src="/img/v0.png" alt="v0" caption="Es impresionante todo lo que v0 puede hacer con solo una instrucción" >}}
 
-👉 https://markreader.reshape.so/master-doc/
+## Un documento que cambió mi experiencia
 
-## Stack
+Mi experiencia cambió con el documento que te comparto. 
 
-Este documento está pensado para un proyecto basado en:
+👉 [Documento de base para Vibe Coding](https://markreader.reshape.so/master-doc/)
 
-**Next.js + React + TypeScript + Tailwind + Shadcn + Supabase + Clerk + Upstash**
+Aunque el ejemplo es para una plataforma ficticia llamada *RecipeGenius*, la estructura es lo valioso.
 
-Pero como cada proyecto es diferente, la idea es que, si te sirve de ejemplo, puedas usarlo para estructurar el tuyo, adaptándolo a tu idea, stack tecnológico y preferencias personales.
+Es una combinación de **PRD** (Product Requirements Document), especificaciones técnicas y –muy importante– guías de implementación.
 
-Aunque casi todos los proyectos que tengo están en **Cloudflare**, estoy probando usar **Vercel** para un proyecto nuevo. Por eso me decanté por v0 como herramienta: como también están detrás de Next.js y manejan el deploy en Vercel, quiero creer que tienen su herramienta más *tuneada* para ese ecosistema.
+Este documento incluye:
 
-## Mi aprendizaje usando Vibe Coding
+- Introducción y alcance
+- Objetivos (negocio y producto)
+- Flujo de uso y funcionalidades
+- Requisitos funcionales
+- Requisitos o no funcionales
+- Guías de diseño y UX
+- Modelo de datos (esquema DB)
+- Stack tecnológico y arquitectura
+- Estructura de carpetas
+- Modelo de negocio
+- Variables de entorno
+- Métricas de éxito (KPIs)
+- Diagrama de flujo del usuario
+- Diagrama entidad-relación (ERD)
 
-- ❌ Empezar con algo pequeño e ir haciendo mejoras incrementales ha sido una **mala experiencia**.
-- ✅ Tener una **visión clara desde el inicio** facilita muchísimo el proceso y le pone límites a las herramientas.
+Este documento está pensado para un stack específico:
 
-Porque si no, el modelo improvisa demasiado.
+- Next.js
+- React
+- TypeScript
+- Tailwind
+- Shadcn
+- Supabase
+- Clerk
+- Upstash
 
-**Mi estrategia actual**
+Pero lo importante es la **estructura**, no las tecnologías específicas. Puedes adaptarlo a tu stack preferido.
 
-- Crear un documento como el que compartí antes. Lo más completo posible.  
-- Usar v0 para avanzar lo más lejos posible implementando la mayoría (o todas) las funcionalidades.  
-- Luego descargar el ZIP para seguir desarrollando en **Cursor** o **Windsurf**.
+## Lo que aprendí sobre Vibe Coding (a veces por las malas)
 
+Mi experiencia me ha enseñado algunas lecciones:
 
-Con v0 (o cualquier herramienta similar), todavía no obtienes una versión completamente aceptable al primer intento. Ni siquiera tras varias iteraciones.  
+❌ **Lo que NO funciona**: Empezar con instrucciones vagas e ir iterando incrementalmente. Esto lleva a que el modelo improvise demasiado y genere código inconsistente.
 
-Y si el proyecto ya tiene cierta complejidad, lo más probable es que ni siquiera funcione al inicio.
+✅ **Lo que SÍ funciona**: Proporcionar una visión completa y detallada desde el principio, con límites claros y expectativas definidas.
 
-🧱 **Pero las bases están ahí**.
+La estrategia que mejores resultados me ha dado es:
 
-## Algunas recomendaciones
+1. Crear un documento completo
+2. Usar v0 para implementar la mayoría de las funcionalidades de una vez
+3. Descargar el ZIP resultante para continuar el desarrollo con **Cursor** o **Windsurf**
 
-No te concentres en hacer el *deploy* online directo en la herramienta. Por ahora, estas plataformas no logran *debuggear* bien los problemas. Y cuando las dejas ir solas, muchas veces terminan rompiendo más de lo que arreglan.
+> 📌 Elegí Next.js y v0 porque ambos son desarrollados por el mismo equipo (Vercel). Y como los modelos de IA se entrenan con grandes volúmenes de ejemplos, tiene sentido usar un framework popular como Next.js. Eso aumenta las probabilidades de obtener buen código desde el inicio.
 
-Prefiere herramientas que te permitan descargar el código completo o conectarlo con **GitHub**. Así puedes terminar el desarrollo tú, con ayuda de IA, usando **Cursor** o **Windsurf**.
+## La realidad del Vibe Coding actual
 
-Tendrás que actualizar herramientas —por ejemplo, v0 aún no usa Tailwind v4— y también corregir u optimizar código.  
+Honestamente **ninguna de estas herramientas te dará un producto perfecto al primer intento**. Ni siquiera después de varias iteraciones.
 
-Pero lo bueno es que la base inicial se genera a una velocidad impresionante ⚡
+Si tu proyecto tiene cierta complejidad, probablemente ni siquiera funcione inicialmente.
 
-Algo clave que agregué en el documento es mi preferencia al **definir la estructura del proyecto desde el principio**. En mi caso prefiro organizar carpetas y archivos por funcionalidades. Esto me simplifica mucho el flujo de trabajo y me facilita encontrar los archivos.
+Pero lo importante es que **las bases estarán ahí**. Y eso es un avance enorme comparado con empezar desde cero.
 
-Puedes ver un ejemplo en el punto 9 del documento:  
-👉 https://markreader.reshape.so/master-doc/
+## Recomendaciones prácticas
 
-Es increíble lo lejos que hemos llegado, especialmente quienes no somos programadores.
+Basado en mi experiencia, te sugiero:
+
+- A no ser que sea algo simple, **NO HAGAS deploy online** directamente desde estas herramientas. Como decía antes, sus resultados (hoy) no son perfecto, y su capacidad de debugging es MALA; rompren más de lo que "arreglan".
+- **Prioriza herramientas que permitan descargar el código** o conectarlo con GitHub.
+- **Termina el desarrollo, el debugging y el deploy** tú, con ayuda de Cursor o Windsurf.
+- **Prepárate para actualizar el proyecto** (por ejemplo, v0 aún usa Tailwind v3, no v4).
+- **Define la estructura del proyecto desde el principio** (punto 9 del documento de base).
+
+## La estructura importa
+
+Uno de los elementos más valiosos que incluí en el documento es mi preferencia por **organizar el proyecto por funcionalidades**. Que es como prefiero trabajar, esto me facilita enormemente el flujo de trabajo posterior para mantener todo "cerca".
+
+```
+    recipegenius-app/
+    ├── app/                       # App Router Root
+    │   ├── recipe-generator/      # FEATURE: Core Recipe/Plan Generation
+    │   │   ├── _components/
+    │   │   ├── actions.ts
+    │   │   ├── page.tsx           # Main input/output page
+    │   │   └── [requestId]/       # Maybe for viewing saved requests
+    │   │       └── ...
+    │   ├── dashboard/             # FEATURE: User Dashboard
+    │   │   └── ...
+    │   ├── auth/                  # FEATURE: Authentication (Clerk)
+    │   │   └── ...
+    │   ├── billing/               # FEATURE: Credit Purchase
+    │   │   └── ... (Similar a CVFácil)
+    │   │
+    │   ├── (root)/                # Root level app files
+    │   │   ├── layout.tsx
+    │   │   └── page.tsx           # Landing Page
+    │
+    ├── lib/                       # SHARED Logic & Central Configuration
+    │   ├── db/
+    │   │   ├── index.ts
+    │   │   └── schema.ts  <-- FUENTE DE VERDAD PARA TIPOS DE DB
+    │   ├── ai/                    # AI interaction logic, prompts
+    │   ├── storage/               # R2 interactions (if used)
+    │   ├── utils/
+    │   ├── auth.ts
+    │   ├── payment.ts
+    │   └── rate-limit.ts
+    │
+    ├── components/                # SHARED UI Components
+    │   ├── ui/                    # Base Shadcn/UI components
+    │   └── shared/                # Custom reusable components
+    │
+    ├── public/
+    ├── styles/
+    ├── .env.example
+    ├── .env.local
+    ├── next.config.mjs
+    ├── tsconfig.json
+    └── package.json
+```
+
+## El futuro está aquí (pero necesita tu guía)
+
+Es verdaderamente asombroso lo lejos que hemos llegado, especialmente para quienes no somos programadores.
+
+Pero como toda tecnología poderosa, **necesitan dirección**. Con el documento de base que he compartido, estarás proporcionando exactamente eso: una guía clara que permitirá a la IA generar código que realmente se acerque a tu visión.
