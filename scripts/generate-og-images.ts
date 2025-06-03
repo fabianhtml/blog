@@ -3,6 +3,7 @@ import path from 'path';
 import crypto from 'crypto';
 import puppeteer from 'puppeteer';
 import { fileURLToPath } from 'url';
+import os from 'os';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -46,6 +47,44 @@ function saveCache(cache: Cache): void {
   } catch (error) {
     console.error('Error al guardar el caché:', error);
   }
+}
+
+// Función para detectar Chrome/Chromium automáticamente
+function findChrome(): string | undefined {
+  const platform = os.platform();
+  
+  const possiblePaths = {
+    darwin: [
+      '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+      '/Applications/Chromium.app/Contents/MacOS/Chromium',
+    ],
+    linux: [
+      '/usr/bin/google-chrome',
+      '/usr/bin/google-chrome-stable',
+      '/usr/bin/chromium',
+      '/usr/bin/chromium-browser',
+      '/snap/bin/chromium',
+    ],
+    win32: [
+      'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+      'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
+      process.env.LOCALAPPDATA + '\\Google\\Chrome\\Application\\chrome.exe',
+      process.env.PROGRAMFILES + '\\Google\\Chrome\\Application\\chrome.exe',
+      process.env['PROGRAMFILES(X86)'] + '\\Google\\Chrome\\Application\\chrome.exe'
+    ]
+  };
+  
+  const paths = possiblePaths[platform as keyof typeof possiblePaths] || [];
+  
+  for (const chromePath of paths) {
+    if (chromePath && fs.existsSync(chromePath)) {
+      console.log(`✅ Chrome encontrado en: ${chromePath}`);
+      return chromePath;
+    }
+  }
+  
+  console.warn('⚠️ No se pudo encontrar Chrome/Chromium. Usando el navegador incluido con Puppeteer.');
+  return undefined;
 }
 
 // Función para extraer el frontmatter
@@ -124,9 +163,11 @@ async function generateOGImage(title: string, description: string, outputPath: s
   while (retryCount < maxRetries) {
     let browser;
     try {
+      const chromePath = findChrome();
+      
       browser = await puppeteer.launch({
         headless: true,
-        executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+        executablePath: chromePath,
         args: [
           '--no-sandbox',
           '--disable-setuid-sandbox',
@@ -149,6 +190,9 @@ async function generateOGImage(title: string, description: string, outputPath: s
         <html>
           <head>
             <meta charset="UTF-8">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
             <style>
               body {
                 margin: 0;
@@ -156,7 +200,7 @@ async function generateOGImage(title: string, description: string, outputPath: s
                 width: 2400px;
                 height: 1260px;
                 background: #000000;
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-family: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -270,6 +314,15 @@ async function main(): Promise<void> {
       if (success) {
         cache[slug] = currentHash;
         hasChanges = true;
+        
+        // Actualizar el frontmatter con la imagen OG si no tiene cover.image
+        if (!content.includes('[cover]') && !content.includes('cover.image')) {
+          const updatedContent = content.replace(/(\+\+\+[\s\S]*?)(\+\+\+)/, (match, frontmatter, closing) => {
+            return frontmatter.trimEnd() + '\n[cover]\nimage = "/images/og/' + slug + '.png"\nhidden = true\n' + closing;
+          });
+          fs.writeFileSync(filePath, updatedContent);
+          console.log(`📝 Actualizado frontmatter con cover.image para: ${slug}`);
+        }
       }
     } else {
       console.log(`⏭️ Omitiendo ${frontMatter.title}: No hay cambios detectados`);

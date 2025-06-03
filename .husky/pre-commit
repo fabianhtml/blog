@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+
+# Generar OG images para posts nuevos o modificados
+echo "🎨 Generando OG images para posts nuevos o modificados..."
+
+# Ejecutar el generador de OG images
+npm run generate-og
+
+# Verificar si hay nuevas imágenes generadas
+if git diff --name-only --cached | grep -q "static/images/og/"; then
+  echo "📸 Agregando nuevas OG images al commit..."
+  git add static/images/og/*.png
+fi
+
+echo "✅ Pre-commit completado"

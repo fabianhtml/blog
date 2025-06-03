@@ -6,13 +6,15 @@
   "scripts": {
     "build": "tsc",
     "generate-og": "npm run build && node dist/generate-og-images.js",
-    "dev": "tsc -w"
+    "dev": "tsc -w",
+    "prepare": "husky"
   },
   "dependencies": {
     "puppeteer": "^22.8.2"
   },
   "devDependencies": {
     "@types/node": "^20.17.23",
+    "husky": "^9.1.7",
     "typescript": "^5.0.0"
   },
   "type": "module"
