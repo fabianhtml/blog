@@ -9,58 +9,63 @@ Blog personal construido con Hugo y el tema PaperMod, desplegado en Azure Static
 - Soporte para CSS personalizado
 - Optimizado para SEO
 
+## Setup Inicial
+
+Ejecuta este comando una sola vez después de clonar el repositorio:
+```bash
+npm run setup
+```
+
+Este comando:
+- Instala todas las dependencias
+- Compila los scripts TypeScript
+- Configura los git hooks
+- Genera las imágenes Open Graph
+
 ## Desarrollo Local
 
-1. Clona el repositorio:
+Para desarrollo diario:
 ```bash
-git clone https://github.com/fabianhtml/blog.git
-cd blog
+npm run blog:dev
 ```
 
-2. Instala las dependencias:
+Para construir el sitio (genera OG images + Hugo build):
 ```bash
-npm install
+npm run blog:build
 ```
 
-3. Inicia el servidor de desarrollo:
-```bash
-hugo server -D
-```
-
-## Generación de Imágenes Open Graph
-
-El blog incluye un sistema automático para generar imágenes Open Graph para cada post. Estas imágenes se usan cuando compartes tus posts en redes sociales.
-
-### Requisitos
-
-- Node.js 18 o superior
-- NPM
-- Puppeteer v22.8.2 o superior (se instala automáticamente con `npm install`)
-
-### Cómo Funciona
-
-1. Cada post debe incluir en su front matter:
-```yaml
----
-title: "Título del Post"
-description: "Descripción del post que aparecerá en redes sociales"
----
-```
-
-2. Después de crear o actualizar un post, genera las imágenes OG:
+Para generar solo las imágenes Open Graph:
 ```bash
 npm run generate-og
 ```
 
-3. Las imágenes se generarán automáticamente en `static/images/og/[nombre-del-post].png`
+## Generación de Imágenes Open Graph
 
-### Características del Sistema OG
+El sistema genera automáticamente imágenes Open Graph (OG) para compartir en redes sociales.
 
-- Genera imágenes de 2400x1260 pixels (optimizadas para redes sociales)
-- Diseño minimalista con fondo negro y tipografía clara
-- Alineación a la izquierda para mejor legibilidad
-- Sistema de caché para evitar regeneraciones innecesarias
-- Soporte para tanto posts en formato YAML como TOML
+### Cómo Funciona
+
+1. **Automático con commits**: Las imágenes se generan automáticamente al hacer commit gracias al pre-commit hook
+2. **Manual**: Ejecuta `npm run generate-og` para generar solo las imágenes nuevas o modificadas
+3. **Detección inteligente**: Solo regenera imágenes cuando cambia el título o descripción del post
+
+### Requisitos en Posts
+
+Cada post debe incluir en su frontmatter:
+```toml
++++
+title = "Título del Post"
+description = "Descripción para redes sociales"
++++
+```
+
+### Características
+
+- Imágenes de 2400x1260px con fondo negro
+- Fuente Atkinson Hyperlegible para máxima legibilidad
+- Detección automática de Chrome/Chromium
+- Sistema de caché inteligente
+- Se agregan automáticamente al frontmatter como `cover.image`
 
 ### Personalización
 
