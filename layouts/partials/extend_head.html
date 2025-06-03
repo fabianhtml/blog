@@ -1,5 +1,22 @@
+<!-- Google Fonts - Atkinson Hyperlegible -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
 <!-- Insertar CSS personalizado directamente -->
 <style>
+/* Aplicar fuente Atkinson Hyperlegible a todo el sitio */
+:root {
+  --font-family: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+* {
+  font-family: var(--font-family) !important;
+}
+
+body, html {
+  font-family: var(--font-family) !important;
+}
 /* Espacio entre la cabecera (metadatos) y el contenido en posts individuales */
 .post-header {
   margin-bottom: 2rem !important;
