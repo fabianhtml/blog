@@ -1,21 +1,39 @@
-<!-- Google Fonts - Atkinson Hyperlegible -->
+<!-- Google Fonts - Atkinson Hyperlegible & Literata -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Literata:ital,opsz,wght@0,7..72,300;0,7..72,600;1,7..72,300;1,7..72,600&display=swap" rel="stylesheet">
 
 <!-- Insertar CSS personalizado directamente -->
 <style>
-/* Aplicar fuente Atkinson Hyperlegible a todo el sitio */
+/* Configuración de fuentes */
 :root {
-  --font-family: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-body: 'Literata', Georgia, 'Times New Roman', Times, serif;
+  --font-headings: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
 }
 
+/* Literata peso ligero para texto */
+body, html, p, .post-content, .entry-content {
+  font-weight: 300 !important;
+  letter-spacing: 0.01em !important;
+}
+
+/* Bold marcado */
+strong, b, .post-content strong, .post-content b {
+  font-weight: 600 !important;
+}
+
+/* Fuente principal para el cuerpo de texto */
 * {
-  font-family: var(--font-family) !important;
+  font-family: var(--font-body) !important;
 }
 
-body, html {
-  font-family: var(--font-family) !important;
+body, html, p, .post-content, .entry-content {
+  font-family: var(--font-body) !important;
+}
+
+/* Atkinson Hyperlegible solo para títulos */
+h1, h2, h3, h4, h5, h6, .post-title, .entry-title, .archive-title {
+  font-family: var(--font-headings) !important;
 }
 /* Espacio entre la cabecera (metadatos) y el contenido en posts individuales */
 .post-header {
