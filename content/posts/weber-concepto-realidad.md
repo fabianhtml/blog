@@ -1,6 +1,6 @@
 +++
 title = 'El método de Weber: Cuando las ideas chocan (y aprenden) de la realidad'
-description = 'Construir conceptos, contrastarlos con la realidad, reformularlos. Un método para navegar la comprensión de la realidad y la complejidad.'
+description = 'Construir conceptos, contrastarlos con la realidad, reformularlos. Un método para navegar la comprensión de la realidad y la complejidad'
 date = 2025-06-07
 draft = false
 categories = ["cultura"]
