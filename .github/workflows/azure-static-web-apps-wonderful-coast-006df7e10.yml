@@ -31,7 +31,7 @@ jobs:
         with:
           path: |
             static/images/og/
-            scripts/.og-cache.json
+            .og-cache.json
           key: og-images-${{ hashFiles('content/posts/*.md') }}
           restore-keys: |
             og-images-

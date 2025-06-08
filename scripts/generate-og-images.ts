@@ -29,7 +29,8 @@ function generateHash(title: string, description: string): string {
 // Función para cargar el caché
 function loadCache(): Cache {
   try {
-    const cachePath = path.join(__dirname, '.og-cache.json');
+    const projectRoot = path.dirname(__dirname);
+    const cachePath = path.join(projectRoot, '.og-cache.json');
     if (fs.existsSync(cachePath)) {
       return JSON.parse(fs.readFileSync(cachePath, 'utf8'));
     }
@@ -42,7 +43,8 @@ function loadCache(): Cache {
 // Función para guardar el caché
 function saveCache(cache: Cache): void {
   try {
-    const cachePath = path.join(__dirname, '.og-cache.json');
+    const projectRoot = path.dirname(__dirname);
+    const cachePath = path.join(projectRoot, '.og-cache.json');
     fs.writeFileSync(cachePath, JSON.stringify(cache, null, 2));
   } catch (error) {
     console.error('Error al guardar el caché:', error);
