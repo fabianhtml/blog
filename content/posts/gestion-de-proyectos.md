@@ -5,6 +5,9 @@ date = 2024-02-27T19:31:00-03:00
 draft = true
 tags = ["tiempo", "energia", "atencion", "motivacion"]
 categories = ["desarrollo"]
+[cover]
+image = "/images/og/gestion-de-proyectos.png"
+hidden = true
 +++
 
 

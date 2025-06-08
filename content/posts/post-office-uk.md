@@ -3,6 +3,9 @@ title = 'Un desastre informático que destruyó vidas, familias y reputaciones'
 description = 'Condenas injustas, quiebras y suicidios por errores de sistema Horizon de Fujitsu.'
 date = 2024-01-16T16:49:49-03:00
 draft = false
+[cover]
+image = "/images/og/post-office-uk.png"
+hidden = true
 +++
 
 > *La tecnología siempre terminará afectando la vida de otras personas.*

@@ -5,6 +5,9 @@ date = 2022-12-25T12:26:44-03:00
 draft = false
 tags = ["llc"]
 categories = ["negocios"]
+[cover]
+image = "/images/og/LLC.png"
+hidden = true
 +++
 
 Abrir una empresa en EE. UU. es más simple de lo que te podrías imaginar.

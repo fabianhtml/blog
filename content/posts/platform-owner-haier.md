@@ -5,6 +5,9 @@ date = 2024-09-15T21:54:07-04:00
 draft = false
 categories = ["cultura"]
 tags = ["apuntes"]
+[cover]
+image = "/images/og/platform-owner-haier.png"
+hidden = true
 +++
 
 Antes ya hablé de [Humanocracy](https://fablab.blog/posts/humanocracy/) un libro muy interesante en mostrar nuevas maneras de crear organizaciones.

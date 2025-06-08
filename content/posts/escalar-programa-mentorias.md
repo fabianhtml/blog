@@ -5,6 +5,9 @@ date = 2024-12-25T00:00:00-04:00
 draft = false
 tags = ["mentorías", "apuntes"]
 categories = ["comunidades"]
+[cover]
+image = "/images/og/escalar-programa-mentorias.png"
+hidden = true
 +++
 
 Vuelvo a compartir unos [apuntes](http://fablab.blog/tags/apuntes/). Esta vez sobre algo que me podrían (y te podrían) ayudar a iterar una iniciativa de comunidad. En particular, un programa de mentorías.

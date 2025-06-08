@@ -5,6 +5,9 @@ draft = false
 tags = ["grit", "Angela Duckworth", "práctica deliberada", "consistencia", "pasión", "motivación", "talento"]
 categories = ["desarrollo"]
 description = 'El talento innato, la pasión y la motivación están sobrevalorados.'
+[cover]
+image = "/images/og/grit.png"
+hidden = true
 +++
 
 No todo tiene que comenzar con palabras grandes como **pasión**. A veces la curiosidad o la exploración nos pueden mostrar la relevancia de un tema o una práctica, transformándola en un interés duradero.

@@ -5,6 +5,9 @@ date = 2024-01-01T13:35:17-03:00
 draft = false
 categories = ["negocios"]
 tags = ["seth-godin"]
+[cover]
+image = "/images/og/normal.png"
+hidden = true
 +++
 ![normal](/img/normal2.png)
 

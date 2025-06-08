@@ -5,6 +5,9 @@ date = 2024-12-22T01:54:07-04:00
 draft = false
 tags = ["productividad", "gestion-de-proyectos"]
 categories = ["cultura"]
+[cover]
+image = "/images/og/ley-parkinson.png"
+hidden = true
 +++
 ![parkinson](/img/parkinson.jpg)
 

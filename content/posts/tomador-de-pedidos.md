@@ -5,6 +5,9 @@ draft = false
 categories = ["cultura"]
 tags = ["poder"]
 description = 'Acompáñame en esta involución. De resolver problemas completos a tomar pedidos en un proyecto.'
+[cover]
+image = "/images/og/tomador-de-pedidos.png"
+hidden = true
 +++
 
 Los años de experiencia acumulada en el **desarrollo de productos** nos muestran que, especialmente para un rol senior, las buenas prácticas incluyen:

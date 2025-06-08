@@ -5,6 +5,9 @@ draft = false
 tags = ["deep research", "openAI"]
 categories = ["tecnología"]
 description = 'AI talent hiring remains challenging in 2024, though it has improved since 2022. The hardest roles to fill are still ML engineers and AI product managers. Companies are addressing this through reskilling and broader recruitment strategies.'
+[cover]
+image = "/images/og/ai-talent-2022-to-2024.png"
+hidden = true
 +++
 
 I'm testing deep research, and it's 🤯!  
