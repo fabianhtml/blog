@@ -40,13 +40,15 @@ Entonces, necesitamos lenguaje y conceptos que nos ayuden a dar forma y entender
 
 Una vez construido el concepto, se lo confronta con la realidad empírica. Aquí es donde Villacañas señala algo crucial:
 
-> "Los conceptos no están hechos para autoafirmarte, sino para **identificar aquello de la realidad que no cuadra con ellos** y te obliga a reformularlos"
+> "Los conceptos no están hechos para autoafirmarte, sino para **identificar aquello de la realidad que no cuadra con esos conceptos** y te obliga a reformularlos".
 
 Es decir:
 
 - El concepto sirve como **lente** para observar la realidad
 - Pero lo importante es detectar las **discrepancias** entre concepto y realidad
 - Estas diferencias no son "errores" sino **información valiosa** sobre la especificidad de lo real
+
+Los conceptos son hipótesis para poner a prueba con la realidad. Si siempre estás confirmando lo que ya sabías, o te estás engañando, no estás aprendiendo nada. Las ideas mejoran cuando descubres dónde se equivocan.
 
 ## 3. El círculo (hermenéutico) weberiano
 
@@ -74,7 +76,7 @@ Weber propone así una **síntesis**: los conceptos son indispensables para pens
 
 ## Conclusión: Aprendizaje en estado puro
 
-Los conceptos de Weber son como "moldes mentales" para entender la realidad, pero a diferencia de otros filósofos que buscan verdades permanentes, Weber sabe que sus conceptos son herramientas temporales que deben cambiar cuando cambia el mundo. **No son verdades eternas grabadas en piedra, sino instrumentos flexibles de comprensión**.
+Los conceptos de Weber son como "moldes mentales" para entender la realidad, pero a diferencia de otros filósofos que buscan verdades permanentes, Weber sabe que sus conceptos son herramientas temporales que deben cambiar cuando cambia el mundo (o su comprensión del mundo). **No son verdades eternas grabadas en piedra, sino instrumentos flexibles para ganar comprensión**.
 
 Pensar bien requiere un viaje constante de ida y vuelta entre nuestras ideas y el mundo que nos rodea.
 
