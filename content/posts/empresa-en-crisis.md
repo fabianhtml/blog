@@ -15,8 +15,9 @@ Su planteamiento es sobre que la mera productividad y funcionalidad de las estru
 
 Llevado al mundo del trabajo; una organización que solo es funcional y productiva es insuficiente si no logra el sentido compartido. Incluso alcanzando sus metas y objetivos, la organización seguiría vacía de significado para sus integrantes.
 
-Pero, ¿qué pasa si la organización además está en crisis operativa? Estamos, entonces, ante una crisis y vacío profundo: 
-- Falta de productividad 
+Pero, ¿qué pasa si la organización además está en crisis operativa? Estamos, entonces, ante una crisis y vacío profundo:
+
+- Falta de productividad
 - Falta de funcionalidad
 - Ausencia de un sentido compartido que genere propósito y cohesión social.
 
@@ -25,8 +26,9 @@ Una organización así luchará por alcanzar su supervivencia, por recuperar o a
 Una persona en esas circunstancias estará frente a una presión constante por la productividad, y a la vez estará carente de una razón para ser parte de ese espacio (más allá del sustento, ciertas tareas medianamente gratificantes y algunos hilos sociales con pares y compañeros que no alcanzan a suplir el vacío).
 
 Un vacío muy grande
+
 - No lograr los resultados mínimos esperados en términos operativos
-- Falta de eficacia y eficiencia 
+- Falta de eficacia y eficiencia
 - Coas organizativo
 - Desconexión con la misión y los valores de la organización
 
