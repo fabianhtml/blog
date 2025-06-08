@@ -36,11 +36,14 @@ jobs:
           restore-keys: |
             og-images-
       
-      - name: Install and Build
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build and Generate OG Images (parallel)
         run: |
-          npm ci
-          npm run build
-          npm run generate-og
+          npm run build &
+          npm run generate-og &
+          wait
       
       - name: Build And Deploy
         id: builddeploy
