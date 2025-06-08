@@ -6,7 +6,7 @@ draft = false
 categories = ["cultura"]
 tags = ["Max Weber", "filosofía", "sociedad", "José Luis Villacañas"]
 [cover]
-image = "/images/og/weber-2025.png"
+image = "/images/og/weber-concepto-realidad.png"
 hidden = true
 +++
 
