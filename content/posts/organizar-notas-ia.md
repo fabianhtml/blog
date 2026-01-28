@@ -64,10 +64,10 @@ El conocimiento se compone. Cada nota nueva se conecta con las anteriores. Y cua
 - **[QMD](https://github.com/tobi/qmd)** para búsqueda semántica local. Corre modelos de inteligencia artificial localmente en tu máquina (~3 GB en total): Gemma para generar embeddings (vectores que representan el significado del texto) y Qwen3 para re-ranking y expansión de consultas. Crea índices que permiten buscar por concepto, no solo por palabras. Tiene tres modos: búsqueda por keywords (BM25), búsqueda semántica por vectores, y búsqueda híbrida que combina ambas. Todo corre local, sin enviar datos a ningún lado. Si busco "cómo decidir qué construir primero", encuentra notas sobre "MVP" o "criterios de priorización" aunque no usen las mismas palabras.
 - **Obsidian** con estructura PARA extendida:
 
-  ```
+```
   0-inbox/        → captura rápida
   └── daily/      → notas diarias por fecha
-  1-proyects/     → proyectos con objetivo y fecha
+  1-projects/     → proyectos con objetivo y fecha
   2-areas/        → responsabilidades continuas
   3-resources/    → referencias
   4-archive/      → items inactivos
