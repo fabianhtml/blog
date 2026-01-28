@@ -74,6 +74,23 @@ h1, h2, h3, h4, h5, h6, .post-title, .entry-title, .archive-title {
 .toc {
   margin-bottom: 2rem !important;
 }
+
+/* Fuente monoespaciada para bloques de código */
+pre, code, .highlight code, .highlight pre {
+  font-family: 'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace !important;
+}
+
+/* Bloques de código dentro de listas - mantener alineación */
+.post-content li > .highlight,
+.post-content li > pre {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.post-content ul .highlight,
+.post-content ol .highlight {
+  margin-left: 0 !important;
+}
 </style>
 
 <!-- PostHog Analytics -->
