@@ -1,9 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
-import puppeteer, { Browser, Page } from 'puppeteer';
+import satori from 'satori';
+import { Resvg } from '@resvg/resvg-js';
 import { fileURLToPath } from 'url';
-import os from 'os';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -31,7 +31,8 @@ interface PostToProcess {
 }
 
 // Configuración
-const PARALLEL_LIMIT = 5; // Número de imágenes a generar en paralelo
+const WIDTH = 1200;
+const HEIGHT = 630;
 
 // Función para generar hash
 function generateHash(title: string, description: string): string {
@@ -62,42 +63,6 @@ function saveCache(cache: Cache): void {
   } catch (error) {
     console.error('Error al guardar el caché:', error);
   }
-}
-
-// Función para detectar Chrome/Chromium (solo se llama una vez)
-function findChrome(): string | undefined {
-  const platform = os.platform();
-  
-  const possiblePaths = {
-    darwin: [
-      '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
-      '/Applications/Chromium.app/Contents/MacOS/Chromium',
-    ],
-    linux: [
-      '/usr/bin/google-chrome',
-      '/usr/bin/google-chrome-stable',
-      '/usr/bin/chromium',
-      '/usr/bin/chromium-browser',
-      '/snap/bin/chromium',
-    ],
-    win32: [
-      'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-      'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-      process.env.LOCALAPPDATA + '\\Google\\Chrome\\Application\\chrome.exe',
-      process.env.PROGRAMFILES + '\\Google\\Chrome\\Application\\chrome.exe',
-      process.env['PROGRAMFILES(X86)'] + '\\Google\\Chrome\\Application\\chrome.exe'
-    ]
-  };
-  
-  const paths = possiblePaths[platform as keyof typeof possiblePaths] || [];
-  
-  for (const chromePath of paths) {
-    if (chromePath && fs.existsSync(chromePath)) {
-      return chromePath;
-    }
-  }
-  
-  return undefined;
 }
 
 // Función para extraer el frontmatter
@@ -166,113 +131,105 @@ function extractFrontMatter(content: string): FrontMatter | null {
   return null;
 }
 
-// Genera el HTML para la imagen OG
-function generateHTML(title: string, description: string): string {
-  return `
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="UTF-8">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-        <style>
-          body {
-            margin: 0;
-            padding: 120px;
-            width: 2400px;
-            height: 1260px;
-            background: #000000;
-            font-family: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            box-sizing: border-box;
-            color: white;
-          }
-          .container {
-            max-width: 2200px;
-          }
-          h1 {
-            font-size: 140px;
-            line-height: 1.1;
-            margin: 0 0 60px;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            color: #ffffff;
-            text-align: left;
-            max-width: 2100px;
-          }
-          p {
-            font-size: 84px;
-            line-height: 1.25;
-            margin: 0;
-            font-weight: 400;
-            letter-spacing: -0.01em;
-            color: #ffffff;
-            max-width: 2100px;
-            opacity: 1;
-            text-align: left;
-          }
-        </style>
-      </head>
-      <body>
-        <div class="container">
-          <h1>${title}</h1>
-          <p>${description}</p>
-        </div>
-      </body>
-    </html>
-  `;
+// Cargar fuentes locales (Atkinson Hyperlegible)
+function loadFonts(): { regular: ArrayBuffer; bold: ArrayBuffer } {
+  const regularPath = path.join(__dirname, 'fonts', 'AtkinsonHyperlegible-Regular.ttf');
+  const boldPath = path.join(__dirname, 'fonts', 'AtkinsonHyperlegible-Bold.ttf');
+  
+  const regularBuffer = fs.readFileSync(regularPath);
+  const boldBuffer = fs.readFileSync(boldPath);
+  
+  return {
+    regular: regularBuffer.buffer.slice(regularBuffer.byteOffset, regularBuffer.byteOffset + regularBuffer.byteLength),
+    bold: boldBuffer.buffer.slice(boldBuffer.byteOffset, boldBuffer.byteOffset + boldBuffer.byteLength),
+  };
 }
 
-// Genera una imagen OG usando una página existente del navegador
-async function generateOGImage(page: Page, post: PostToProcess): Promise<boolean> {
+// Genera una imagen OG usando Satori
+async function generateOGImage(post: PostToProcess, fonts: { regular: ArrayBuffer; bold: ArrayBuffer }): Promise<boolean> {
   try {
-    const html = generateHTML(post.title, post.description);
-    await page.setContent(html, { waitUntil: 'networkidle0' });
-    await page.screenshot({ 
-      path: post.outputPath, 
-      type: 'png',
-      omitBackground: true
+    // Crear el elemento visual (similar a JSX pero como objeto)
+    const element = {
+      type: 'div',
+      props: {
+        style: {
+          height: '100%',
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          backgroundColor: '#000000',
+          padding: '60px',
+        },
+        children: [
+          {
+            type: 'div',
+            props: {
+              style: {
+                fontSize: '70px',
+                fontWeight: 700,
+                color: '#ffffff',
+                lineHeight: 1.1,
+                marginBottom: '30px',
+                maxWidth: '1080px',
+              },
+              children: post.title,
+            },
+          },
+          {
+            type: 'div',
+            props: {
+              style: {
+                fontSize: '36px',
+                fontWeight: 400,
+                color: '#cccccc',
+                lineHeight: 1.3,
+                maxWidth: '1080px',
+              },
+              children: post.description,
+            },
+          },
+        ],
+      },
+    };
+
+    // Generar SVG con Satori
+    const svg = await satori(element as any, {
+      width: WIDTH,
+      height: HEIGHT,
+      fonts: [
+        {
+          name: 'Atkinson',
+          data: fonts.regular,
+          weight: 400,
+          style: 'normal',
+        },
+        {
+          name: 'Atkinson',
+          data: fonts.bold,
+          weight: 700,
+          style: 'normal',
+        },
+      ],
     });
+
+    // Convertir SVG a PNG con resvg
+    const resvg = new Resvg(svg, {
+      fitTo: {
+        mode: 'width',
+        value: WIDTH,
+      },
+    });
+    const pngData = resvg.render();
+    const pngBuffer = pngData.asPng();
+
+    // Guardar archivo
+    fs.writeFileSync(post.outputPath, pngBuffer);
     return true;
   } catch (error) {
     console.error(`❌ Error generando imagen para ${post.slug}:`, error instanceof Error ? error.message : String(error));
     return false;
   }
-}
-
-// Procesa un batch de posts en paralelo
-async function processBatch(browser: Browser, posts: PostToProcess[], cache: Cache): Promise<number> {
-  const results = await Promise.all(
-    posts.map(async (post) => {
-      const page = await browser.newPage();
-      await page.setViewport({ width: 2400, height: 1260 });
-      
-      try {
-        const success = await generateOGImage(page, post);
-        if (success) {
-          cache[post.slug] = post.hash;
-          
-          // Actualizar frontmatter si no tiene cover.image
-          if (!post.content.includes('[cover]') && !post.content.includes('cover.image')) {
-            const updatedContent = post.content.replace(/(\+\+\+[\s\S]*?)(\+\+\+)/, (match, frontmatter, closing) => {
-              return frontmatter.trimEnd() + '\n[cover]\nimage = "/images/og/' + post.slug + '.png"\nhidden = true\n' + closing;
-            });
-            fs.writeFileSync(post.filePath, updatedContent);
-          }
-          return 1;
-        }
-        return 0;
-      } finally {
-        await page.close();
-      }
-    })
-  );
-  
-  return results.reduce((sum: number, val: number) => sum + val, 0);
 }
 
 async function main(): Promise<void> {
@@ -333,49 +290,33 @@ async function main(): Promise<void> {
     return;
   }
 
-  // Fase 2: Iniciar navegador y procesar en batches
-  const chromePath = findChrome();
-  console.log(`🚀 Iniciando generación de ${postsToProcess.length} imágenes...`);
+  // Fase 2: Cargar fuentes y procesar
+  console.log(`🚀 Generando ${postsToProcess.length} imágenes con Satori...`);
+  const fonts = loadFonts();
   
-  const browser = await puppeteer.launch({
-    headless: true,
-    executablePath: chromePath,
-    args: [
-      '--no-sandbox',
-      '--disable-setuid-sandbox',
-      '--disable-dev-shm-usage',
-      '--disable-accelerated-2d-canvas',
-      '--disable-gpu',
-      '--window-size=2400,1260',
-      '--disable-web-security',
-      '--disable-features=IsolateOrigins,site-per-process'
-    ],
-    timeout: 30000,
-    ignoreHTTPSErrors: true
-  });
-
-  try {
-    let generatedCount = 0;
-    
-    // Procesar en batches
-    for (let i = 0; i < postsToProcess.length; i += PARALLEL_LIMIT) {
-      const batch = postsToProcess.slice(i, i + PARALLEL_LIMIT);
-      const batchNum = Math.floor(i / PARALLEL_LIMIT) + 1;
-      const totalBatches = Math.ceil(postsToProcess.length / PARALLEL_LIMIT);
+  let generatedCount = 0;
+  
+  // Procesar todas las imágenes (Satori es muy rápido, no necesita batches)
+  for (const post of postsToProcess) {
+    const success = await generateOGImage(post, fonts);
+    if (success) {
+      cache[post.slug] = post.hash;
+      generatedCount++;
       
-      process.stdout.write(`\r⏳ Batch ${batchNum}/${totalBatches}...`);
-      
-      const count = await processBatch(browser, batch, cache);
-      generatedCount += count;
+      // Actualizar frontmatter si no tiene cover.image
+      if (!post.content.includes('[cover]') && !post.content.includes('cover.image')) {
+        const updatedContent = post.content.replace(/(\+\+\+[\s\S]*?)(\+\+\+)/, (match, frontmatter, closing) => {
+          return frontmatter.trimEnd() + '\n[cover]\nimage = "/images/og/' + post.slug + '.png"\nhidden = true\n' + closing;
+        });
+        fs.writeFileSync(post.filePath, updatedContent);
+      }
     }
-    
-    console.log(`\n✅ ${generatedCount} imágenes generadas en ${((Date.now() - startTime) / 1000).toFixed(1)}s`);
-    
-    if (generatedCount > 0) {
-      saveCache(cache);
-    }
-  } finally {
-    await browser.close();
+  }
+  
+  console.log(`✅ ${generatedCount} imágenes generadas en ${((Date.now() - startTime) / 1000).toFixed(1)}s`);
+  
+  if (generatedCount > 0) {
+    saveCache(cache);
   }
 }
 

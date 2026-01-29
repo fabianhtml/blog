@@ -16,7 +16,8 @@
     "blog:dev": "hugo server -D"
   },
   "dependencies": {
-    "puppeteer": "^24.36.1"
+    "@resvg/resvg-js": "^2.6.2",
+    "satori": "^0.19.1"
   },
   "devDependencies": {
     "@types/node": "^20.19.30",
