@@ -1,6 +1,6 @@
 # FabLab Blog
 
-Blog personal construido con Hugo y el tema PaperMod, desplegado en Azure Static Web Apps.
+Blog personal construido con Hugo y el tema PaperMod, desplegado en Cloudflare Pages.
 
 ## Características
 
@@ -8,6 +8,7 @@ Blog personal construido con Hugo y el tema PaperMod, desplegado en Azure Static
 - Generación automática de imágenes Open Graph para compartir en redes sociales
 - Soporte para CSS personalizado
 - Optimizado para SEO
+- Build optimizado (~30s en CI)
 
 ## Setup Inicial
 
@@ -37,6 +38,11 @@ npm run blog:build
 Para generar solo las imágenes Open Graph:
 ```bash
 npm run generate-og
+```
+
+Para build de CI (usado por Cloudflare Pages):
+```bash
+npm run ci:build
 ```
 
 ## Generación de Imágenes Open Graph
@@ -75,7 +81,19 @@ Las plantillas de las imágenes OG se pueden personalizar editando:
 
 ## Despliegue
 
-El blog se despliega automáticamente en Azure Static Web Apps cuando se hace push a la rama main.
+El blog se despliega automáticamente en **Cloudflare Pages** cuando se hace push a la rama `main`.
+
+### Configuración en Cloudflare Pages
+
+- **Build command**: `npm run ci:build`
+- **Build output directory**: `public`
+- **Node version**: 18+
+
+### Optimizaciones de Build
+
+- El archivo `.og-cache.json` se commitea al repo para evitar regenerar imágenes existentes
+- El script `ci:build` compila TypeScript y genera imágenes en un solo paso (sin redundancias)
+- Las imágenes OG se procesan en paralelo (batches de 5)
 
 ## Licencia
 
