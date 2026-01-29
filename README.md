@@ -8,41 +8,42 @@ Blog personal construido con Hugo y el tema PaperMod, desplegado en Cloudflare P
 - Generación automática de imágenes Open Graph para compartir en redes sociales
 - Soporte para CSS personalizado
 - Optimizado para SEO
-- Build optimizado (~30s en CI)
+- Build rápido con **Bun** (~20s en CI)
 
 ## Setup Inicial
 
 Ejecuta este comando una sola vez después de clonar el repositorio:
 ```bash
-npm run setup
+bun run setup
 ```
 
 Este comando:
 - Instala todas las dependencias
-- Compila los scripts TypeScript
 - Configura los git hooks
 - Genera las imágenes Open Graph
+
+> **Nota**: El proyecto usa Bun para ejecución directa de TypeScript (sin paso de compilación).
 
 ## Desarrollo Local
 
 Para desarrollo diario:
 ```bash
-npm run blog:dev
+bun run blog:dev
 ```
 
 Para construir el sitio (genera OG images + Hugo build):
 ```bash
-npm run blog:build
+bun run blog:build
 ```
 
 Para generar solo las imágenes Open Graph:
 ```bash
-npm run generate-og
+bun run generate-og
 ```
 
 Para build de CI (usado por Cloudflare Pages):
 ```bash
-npm run ci:build
+bun run ci:build
 ```
 
 ## Generación de Imágenes Open Graph
@@ -87,14 +88,13 @@ El blog se despliega automáticamente en **Cloudflare Pages** cuando se hace pus
 
 ### Configuración en Cloudflare Pages
 
-- **Build command**: `npm run ci:build`
+- **Build command**: `bun run ci:build`
 - **Build output directory**: `public`
-- **Node version**: 18+
 
 ### Optimizaciones de Build
 
+- **Bun** ejecuta TypeScript directamente (sin paso de compilación `tsc`)
 - El archivo `.og-cache.json` se commitea al repo para evitar regenerar imágenes existentes
-- El script `ci:build` compila TypeScript y genera imágenes en un solo paso (sin redundancias)
 - Las imágenes OG se procesan en paralelo (batches de 5)
 
 ## Licencia
