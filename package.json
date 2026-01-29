@@ -16,12 +16,12 @@
     "blog:dev": "hugo server -D"
   },
   "dependencies": {
-    "puppeteer": "^22.8.2"
+    "puppeteer": "^24.36.1"
   },
   "devDependencies": {
-    "@types/node": "^20.17.23",
+    "@types/node": "^20.19.30",
     "husky": "^9.1.7",
-    "typescript": "^5.0.0"
+    "typescript": "^5.9.3"
   },
   "type": "module"
 }
