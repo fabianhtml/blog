@@ -6,9 +6,11 @@
   "scripts": {
     "build": "tsc",
     "generate-og": "npm run build && node dist/generate-og-images.js",
+    "generate-og:run": "node dist/generate-og-images.js",
     "dev": "tsc -w",
     "prepare": "husky",
     "setup": "npm install && npm run build && npm run prepare && npm run generate-og",
+    "ci:build": "tsc && node dist/generate-og-images.js && hugo --gc --minify",
     "blog:build": "npm run generate-og && hugo --minify",
     "blog:dev": "hugo server -D"
   },
