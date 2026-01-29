@@ -2,5 +2,5 @@
 /public/ 
 .DS_Store
 node_modules/
-.og-cache.json
+# .og-cache.json - ahora se commitea para evitar regenerar imágenes en CI
 dist/ 
