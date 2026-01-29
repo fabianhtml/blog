@@ -5,10 +5,10 @@ Blog personal construido con Hugo y el tema PaperMod, desplegado en Cloudflare P
 ## Características
 
 - Tema PaperMod personalizado
-- Generación automática de imágenes Open Graph para compartir en redes sociales
+- Generación automática de imágenes Open Graph con **Satori** (sin Chrome)
 - Soporte para CSS personalizado
 - Optimizado para SEO
-- Build rápido con **Bun** (~20s en CI)
+- Build ultrarrápido con **Bun** (~28s en CI)
 
 ## Setup Inicial
 
@@ -48,12 +48,12 @@ bun run ci:build
 
 ## Generación de Imágenes Open Graph
 
-El sistema genera automáticamente imágenes Open Graph (OG) para compartir en redes sociales usando **Puppeteer** (Chrome headless).
+El sistema genera automáticamente imágenes Open Graph (OG) para compartir en redes sociales usando **Satori** + **resvg**.
 
 ### Cómo Funciona
 
 1. **Automático con commits**: Las imágenes se generan automáticamente al hacer commit gracias al pre-commit hook
-2. **Manual**: Ejecuta `npm run generate-og` para generar solo las imágenes nuevas o modificadas
+2. **Manual**: Ejecuta `bun run generate-og` para generar solo las imágenes nuevas o modificadas
 3. **Detección inteligente**: Solo regenera imágenes cuando cambia el título o descripción del post
 
 ### Requisitos en Posts
@@ -68,19 +68,18 @@ description = "Descripción para redes sociales"
 
 ### Características
 
-- Imágenes de 2400x1260px con fondo negro
-- Fuente Atkinson Hyperlegible para máxima legibilidad
-- Detección automática de Chrome/Chromium
+- Imágenes de 1200x630px con fondo negro
+- Fuente Atkinson Hyperlegible (incluida localmente)
+- **No requiere Chrome/Chromium** - Satori genera SVG, resvg convierte a PNG
 - Sistema de caché inteligente (`.og-cache.json`)
-- Procesamiento en paralelo (batches de 5 imágenes)
-- Reutiliza el navegador para todas las imágenes (no abre/cierra por cada una)
+- Generación ultrarrápida (~1s por imagen)
 - Se agregan automáticamente al frontmatter como `cover.image`
 
 ### Personalización
 
 Las plantillas de las imágenes OG se pueden personalizar editando:
 - La lógica de generación en `scripts/generate-og-images.ts`
-- El estilo está integrado en el script TypeScript
+- Las fuentes en `scripts/fonts/`
 
 ## Despliegue
 
@@ -88,15 +87,17 @@ El blog se despliega automáticamente en **Cloudflare Pages** cuando se hace pus
 
 ### Configuración en Cloudflare Pages
 
-- **Build command**: `bun run ci:build`
+- **Build command**: `bun install && bun run ci:build`
 - **Build output directory**: `public`
+- **Variable**: `SKIP_DEPENDENCY_INSTALL` = `true`
 
 ### Optimizaciones de Build
 
 - **Bun** ejecuta TypeScript directamente (sin paso de compilación `tsc`)
+- **Satori** genera imágenes sin necesidad de navegador (~1.5s install vs ~13s con Puppeteer)
 - El archivo `.og-cache.json` se commitea al repo para evitar regenerar imágenes existentes
-- Las imágenes OG se procesan en paralelo (batches de 5)
+- Solo 29 paquetes vs 104 con Puppeteer
 
 ## Licencia
 
-MIT 
+MIT
