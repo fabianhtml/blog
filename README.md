@@ -47,7 +47,7 @@ npm run ci:build
 
 ## Generación de Imágenes Open Graph
 
-El sistema genera automáticamente imágenes Open Graph (OG) para compartir en redes sociales.
+El sistema genera automáticamente imágenes Open Graph (OG) para compartir en redes sociales usando **Puppeteer** (Chrome headless).
 
 ### Cómo Funciona
 
