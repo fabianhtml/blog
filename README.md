@@ -70,7 +70,9 @@ description = "Descripción para redes sociales"
 - Imágenes de 2400x1260px con fondo negro
 - Fuente Atkinson Hyperlegible para máxima legibilidad
 - Detección automática de Chrome/Chromium
-- Sistema de caché inteligente
+- Sistema de caché inteligente (`.og-cache.json`)
+- Procesamiento en paralelo (batches de 5 imágenes)
+- Reutiliza el navegador para todas las imágenes (no abre/cierra por cada una)
 - Se agregan automáticamente al frontmatter como `cover.image`
 
 ### Personalización
