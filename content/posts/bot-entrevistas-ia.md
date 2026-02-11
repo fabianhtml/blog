@@ -2,7 +2,7 @@
 title = 'No es la misma calidad que un profesional. Pero para muchos proyectos, es suficiente.'
 date = 2026-02-11
 draft = false
-tags = ["inteligencia artificial", "automatizacion", "claude", "whatsapp"]
+tags = ["inteligencia artificial", "automatizacion", "claude", "whatsapp", "openclaw"]
 categories = ["tecnología"]
 description = 'Cómo estoy delegando más de 30 horas de entrevistas a un bot de WhatsApp usando Claude, y por qué la IA rompe el trade-off entre calidad y costo.'
 [cover]
