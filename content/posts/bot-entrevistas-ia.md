@@ -1,14 +1,20 @@
 +++
-title = 'No es la misma calidad que un profesional. Pero para muchos proyectos, es suficiente.'
+title = 'La alternativa real es nada'
 date = 2026-02-11
 draft = false
 tags = ["inteligencia artificial", "automatizacion", "claude", "whatsapp", "openclaw"]
 categories = ["tecnología"]
-description = 'Cómo estoy delegando más de 30 horas de entrevistas a un bot de WhatsApp usando Claude, y por qué la IA rompe el trade-off entre calidad y costo.'
+description = 'Delegué 30 horas de acompañamiento personalizado a un bot. No es perfecto, pero hace viable lo que antes simplemente no iba a pasar.'
 [cover]
 image = "/images/og/bot-entrevistas-ia.png"
 hidden = true
 +++
+
+> Todos sabemos que la atención uno a uno es de las cosas que más mueve la aguja en formación. Un mentor, un tutor, alguien que se siente contigo y te ayude a pensar. Y casi nunca hay recursos para darla. La alternativa real, en la mayoría de programas, no es un profesional, ni un ayudante, ni un practicante. Es nada.
+
+Armé un bot que hace ese trabajo. No es perfecto, pero existe. Y eso ya es más de lo que había antes.
+
+---
 
 Tenemos un programa con unos 30 emprendedores de comunas de la región de Los Ríos, en Chile. El grupo es de todo, menos homogéneo: hay desde una artesana que hace unos amigurumis increíbles, hasta una dentista de mascotas con años en el mercado. Desarrolladores de software, kinesiología, fonoaudiología, salones de belleza, un café al paso, tienda de accesorios y reparación de teléfonos.
 
