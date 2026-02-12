@@ -14,7 +14,7 @@ Tenemos un programa con unos 30 emprendedores de comunas de la región de Los R�
 
 Entre las clases hemos visto cómo desarrollar su propuesta de valor, modelo de negocio y plan de marketing.
 
-La primera vez que hice algo parecido fue en 2013, cuando traje First Tuesday a la región de Los Lagos, y desde ahí que veo un problema: el gap entre la clase y aplicar el conocimiento. En buena manera las personas entienden los conceptos, ven ejemplos, usan frameworks en las sesiones. Pero después cada emprendedor tiene que aterrizar con más detalle esto a su negocio.
+La primera vez que hice algo parecido fue en 2013, cuando traje First Tuesday a la región de Los Lagos, y desde ahí que veo un problema: el gap entre la clase y aplicar el conocimiento. En buena medida las personas entienden los conceptos, ven ejemplos, usan frameworks en las sesiones. Pero después cada emprendedor tiene que aterrizar con más detalle esto a su negocio.
 
 Ese paso, de la teoría al "esto es lo mío" es donde la gente se estanca.
 
@@ -24,9 +24,9 @@ Lo que suele faltar en estos programas es **acompañamiento personalizado**. Alg
 
 Pero es caro y ahí es donde aparece el trade-off de siempre:
 
-Quizá puede conseguir un practicante (que cabe en el presupuesto), para que siga un guión de preguntas. Pero cuando reciba una respuesta vaga como "mi diferenciador es la calidad", no sabe cómo profundizar. No insiste. Anota lo que le dijeron y sigue adelante.
+Quizá puedes conseguir un practicante (que cabe en el presupuesto), para que siga un guión de preguntas. Pero cuando reciba una respuesta vaga como "mi diferenciador es la calidad", no sabe cómo profundizar. No insiste. Anota lo que le dijeron y sigue adelante.
 
-En cambio un profesional con experiencia sabe cuándo una respuesta no está lista. Sabe repreguntar, reformular, sacar lo que la otra persona tiene en la cabeza pero no sabe articular. Y eso cuesta plata. Y para un programa con 30 personas y presupuesto acotado, no siempre es viable.
+En cambio un profesional con experiencia sabe cuándo una respuesta no está lista. Sabe profundizar, reformular, sacar lo que la otra persona tiene en la cabeza pero no sabe articular. Y eso cuesta plata. Y para un programa con 30 personas y presupuesto acotado, no siempre es viable.
 
 Y eso sin contar las horas de gestión: buscar a la persona, entrenarla, supervisar su trabajo, revisar entrevistas, corregir errores. Fácilmente otras 5-10 horas.
 
@@ -61,6 +61,24 @@ Pero además, era la primera vez que montaba algo así: configurar un servidor e
 Igualmente tendría que haber invertido tiempo, al menos unas 6 horas, en crear el proceso de entrevista completo.
 
 El costo de operación es unos US$5: US$4.09 de servidor al mes y menos de US$1 en transcripción de audio para los 30 emprendedores. Pero esto (una versión modificada) además, podría atender 100, 500, 1000 emprendedores a un costo marginal.
+
+### ¿Y el costo del modelo?
+
+No es como lo tengo implementado hoy, pero si alguien quisiera replicar esto pagando por uso vía API, el costo depende del modelo.
+
+Una entrevista de 50 minutos genera unos 20 intercambios por WhatsApp. Como cada llamada a la API envía el historial completo, el consumo de tokens crece con cada turno. Para 30 entrevistas serían unos 5.5 millones de tokens de entrada y 240 mil de salida. El costo podría ser algo como:
+
+| Modelo | Costo estimado (30 entrevistas) |
+|--------|-------------------------------|
+| Kimi K2.5 | ~US$4 |
+| Gemini 2.5 Pro | ~US$9 |
+| GPT-5 | ~US$9 |
+| Claude Sonnet 4.5 | ~US$20 |
+| Claude Opus 4.5 | ~US$34 |
+
+Hay una optimización llamada prompt caching (que reutiliza tokens ya enviados para gastar menos), pero para este caso el caché podría expirar entre mensajes si pasa mucho tiempo entre preguntas y respuestas, así que probablemente no funcione para esto.
+
+Para este tipo de tarea lo crítico es que el modelo sepa cuándo una respuesta es vaga y profundice con criterio. Todos los de la tabla podrían funcionar, es cosa de probar. Modelos más baratos que estos probablemente fallen en lo mismo que un practicante: seguir el guión sin saber cuándo insistir.
 
 ## Lo que puede salir mal
 
