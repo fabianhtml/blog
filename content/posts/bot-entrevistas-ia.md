@@ -30,7 +30,7 @@ En cambio un profesional con experiencia sabe cuándo una respuesta no está lis
 
 Y eso sin contar las horas de gestión: buscar a la persona, entrenarla, supervisar su trabajo, revisar entrevistas, corregir errores. Fácilmente otras 5-10 horas.
 
-En la práctica, lo que pasa es que simplemente no se hace. El acompañamiento personalizado se cae porque no hay presupuesto, no hay tiempo, o las dos cosas. Y esto no es solo un problema de programas de emprendimiento: pasa en colegios, universidades, capacitaciones corporativas. Siempre sabemos que la atención uno a uno haría la diferencia, y casi nunca hay recursos para darla. La alternativa real no es un practicante ni un profesional. Es nada.
+En la práctica, lo que pasa es que **simplemente no se hace**. El acompañamiento personalizado se cae porque no hay presupuesto, no hay tiempo, o las dos cosas. Y esto no es solo un problema de programas de emprendimiento: pasa en colegios, universidades, capacitaciones corporativas. Siempre sabemos que la atención uno a uno haría la diferencia, y casi nunca hay recursos para darla. **La alternativa real no es un practicante ni un profesional. Es nada.**
 
 ## Lo que hice
 
