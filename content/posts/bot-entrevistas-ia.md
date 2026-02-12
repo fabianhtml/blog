@@ -18,7 +18,7 @@ Armé un bot que hace ese trabajo. No es perfecto, pero existe. Y eso ya es más
 
 Tenemos un programa con unos 30 emprendedores de comunas de la región de Los Ríos, en Chile. El grupo es de todo, menos homogéneo: hay desde una artesana que hace unos amigurumis increíbles, hasta una dentista de mascotas con años en el mercado. Desarrolladores de software, kinesiología, fonoaudiología, salones de belleza, un café al paso, tienda de accesorios y reparación de teléfonos.
 
-Entre las clases hemos visto cómo desarrollar su propuesta de valor, modelo de negocio y plan de marketing.
+Son once sesiones donde vemos, entre otras cosas, propuesta de valor, modelo de negocio, números y plan de marketing.
 
 La primera vez que hice algo parecido fue en 2013, cuando traje First Tuesday a la región de Los Lagos, y desde ahí que veo un problema: el gap entre la clase y aplicar el conocimiento. En buena medida las personas entienden los conceptos, ven ejemplos, usan frameworks en las sesiones. Pero después cada emprendedor tiene que aterrizar con más detalle esto a su negocio.
 
@@ -36,7 +36,7 @@ En cambio un profesional con experiencia sabe cuándo una respuesta no está lis
 
 Y eso sin contar las horas de gestión: buscar a la persona, entrenarla, supervisar su trabajo, revisar entrevistas, corregir errores. Fácilmente otras 5-10 horas.
 
-En la práctica, lo que pasa es que **simplemente no se hace**. El acompañamiento personalizado se cae porque no hay presupuesto, no hay tiempo, o las dos cosas. Y esto no es solo un problema de programas de emprendimiento: pasa en colegios, universidades, capacitaciones corporativas. Siempre sabemos que la atención uno a uno haría la diferencia, y casi nunca hay recursos para darla. **La alternativa real no es un practicante ni un profesional. Es nada.**
+En la práctica, lo que pasa es que **simplemente no se hace**. El acompañamiento personalizado se cae porque no hay presupuesto, no hay tiempo, o las dos cosas. Y esto no es solo un problema de programas de emprendimiento: pasa en colegios, universidades, capacitaciones corporativas. Siempre sabemos que la atención uno a uno haría la diferencia, y casi nunca hay recursos para darla. **La alternativa real no es un practicante, un ayudante, o un profesional. Es nada.**
 
 ## Lo que hice
 
