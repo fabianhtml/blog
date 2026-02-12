@@ -122,8 +122,6 @@ El bot no reemplaza la conversación con un profesional experimentado. Pero hace
 
 ## El cambio
 
-Mi trabajo real fue diseñar el sistema. Definir qué preguntas hacer, cuándo profundizar, cómo adaptar las respuestas al contexto.
+Mi trabajo real fue diseñar e implementar el sistema. Definir qué preguntas hacer, cuándo profundizar, cómo adaptar las respuestas al contexto.
 
-La IA ejecuta ese diseño a escala, sin degradar la calidad, sin aumentar el costo.
-
-No reemplaza al profesional. Pero hace viable lo que antes no lo era.
+La IA ejecuta ese diseño a escala. No es perfecto. Pero la alternativa era nada.
