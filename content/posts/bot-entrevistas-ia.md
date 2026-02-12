@@ -92,7 +92,7 @@ Para este tipo de tarea lo crítico es que el modelo sepa cuándo una respuesta 
 
 El costo oculto es el monitoreo. El sistema va a fallar: bugs, errores de transcripción, emprendedores que hacen cosas inesperadas. Hay que revisar periódicamente que todo siga funcionando.
 
-De hecho, el bot partió corriendo en mi computador. Funcionaba, pero dependía de que mi Mac estuviera encendido y conectado. Un día un camión cortó un cable en la calle y me quedé sin internet por horas. Ahí lo migré a un servidor en Hetzner: US$4.09 al mes por confiabilidad operacional 24/7.
+De hecho, el bot partió corriendo en mi computador. Funcionaba, pero dependía de que mi Mac estuviera encendido y conectado. Un día un camión cortó un cable en la calle y me quedé sin internet por horas. Ahí lo migré a un servidor en Hetzner: US$4.09 al mes por confiabilidad operacional 24/7. Y después descubrí que había dejado ese servidor [abierto como una puerta sin llave](/posts/seguridad-servidor-openclaw/).
 
 ## Para quién más sirve esto
 
