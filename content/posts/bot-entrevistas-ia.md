@@ -46,29 +46,17 @@ Escribí un proceso claro: cuál es el objetivo de la conversación, qué inform
 
 El sistema se adapta a perfiles muy distintos. Detecta si es un producto físico, un servicio de salud, una consultora B2B, comercio, servicios personales, etc. Y ajusta las preguntas y recomendaciones según eso.
 
-Pero en vez de entregar esto a una persona, lo delegué a Claude Opus 4.5, orquestado con OpenClaw (un sistema que entre otras cosas, conecta agentes de IA con canales de mensajería como WhatsApp).
+Pero en vez de entregar esto a una persona, lo delegué a Claude Opus 4.5, orquestado con **OpenClaw** (un sistema que, entre otras cosas, conecta agentes de IA con canales de mensajería como WhatsApp).
 
-Creé un bot que corre por WhatsApp 24/7. Transcribe audios automáticamente usando Whisper en Groq (absurdamente rápido, US$0.04 por hora de audio). Corre en un servidor en Hetzner por US$4.09 al mes.
-
-## Por qué funciona
-
-La IA hace cosas que un practicante no haría:
-
-Profundiza tres veces si la respuesta queda corta, reformulando, dando más contexto, entregando ejemplos. No le complica insistir y lo hace con tino. Sigue el framework (confía en el proceso).
-
-Y está disponible en la noche cuando un emprendedor por fin tiene tiempo de sentarse a pensar en su negocio y simplemente mandar audios por WhatsApp.
+El bot transcribe audios automáticamente usando Whisper en Groq (absurdamente rápido, US$0.04 por hora de audio), corre en un servidor en Hetzner por US$4.09 al mes, y no tiene horario de oficina, está ahí cuando alguien por fin se sienta a pensar en su negocio.
 
 ## Los números
 
-Treinta emprendedores, 40-50 minutos de entrevista más 10 minutos mínimo para preparar informes. Son 30 horas de conversaciones que yo no tuve que hacer.
+Treinta emprendedores, alrededor de una hora por cada uno entre entrevista e informe. Son unas 30 horas de trabajo que yo no tuve que hacer.
 
 **Invertí unas 12 horas diseñando el sistema**: las preguntas, la lógica, los criterios para adaptar el plan de marketing según el tipo de negocio y su etapa de madurez.
 
-Pero además, era la primera vez que montaba algo así: configurar un servidor en Hetzner, usar SSH, crear un bot de WhatsApp desde cero, armar un sistema multi-agente que separa la entrevista en etapas para no abrumar al emprendedor entrevistado. También diseñar capas de seguridad: que el agente no entregue información de otros participantes, y que no revele rutas ni configuración interna si alguien intenta manipularlo.
-
-Igualmente tendría que haber invertido tiempo, al menos unas 6 horas, en crear el proceso de entrevista completo.
-
-El costo de operación es unos US$5: US$4.09 de servidor al mes y menos de US$1 en transcripción de audio para los 30 emprendedores. Pero esto (una versión modificada) además, podría atender 100, 500, 1000 emprendedores a un costo marginal.
+Pero además, era la primera vez que montaba algo así: configurar un servidor en Hetzner, usar SSH, crear un bot de WhatsApp desde cero, armar un sistema multi-agente que separa la entrevista en etapas para no abrumar al emprendedor entrevistado. También diseñar capas de seguridad: que el agente no entregue información de otros participantes, y que no revele rutas ni configuración interna si alguien intenta manipularlo. Y una versión modificada podría atender 100, 500, 1000 emprendedores a un costo marginal.
 
 ### ¿Y el costo del modelo?
 
@@ -80,11 +68,9 @@ Una entrevista de 50 minutos genera unos 20 intercambios por WhatsApp. Como cada
 |--------|-------------------------------|
 | Kimi K2.5 | ~US$4 |
 | Gemini 2.5 Pro | ~US$9 |
-| GPT-5 | ~US$9 |
+| GPT-5.1 | ~US$9 |
 | Claude Sonnet 4.5 | ~US$20 |
 | Claude Opus 4.5 | ~US$34 |
-
-Hay una optimización llamada prompt caching (que reutiliza tokens ya enviados para gastar menos), pero para este caso el caché podría expirar entre mensajes si pasa mucho tiempo entre preguntas y respuestas, así que probablemente no funcione para esto.
 
 Para este tipo de tarea lo crítico es que el modelo sepa cuándo una respuesta es vaga y profundice con criterio. Todos los de la tabla podrían funcionar, es cosa de probar. Modelos más baratos que estos probablemente fallen en lo mismo que un practicante: seguir el guión sin saber cuándo insistir.
 
@@ -96,29 +82,19 @@ De hecho, el bot partió corriendo en mi computador. Funcionaba, pero dependía 
 
 ## Para quién más sirve esto
 
-El patrón aplica para cualquier situación donde necesitas conversaciones uno a uno que sigan una estructura:
-
-- Consultores que hacen llamadas de discovery
-- ONGs que necesitan recoger información estructurada
-- Programas de capacitación que quieren dar seguimiento personalizado
-- Coaches que necesitan conocer al cliente antes de la primera sesión
-
-Y una larga lista.
+El patrón aplica para cualquier situación donde necesitas conversaciones uno a uno que sigan una estructura: llamadas de discovery, levantamiento de información en terreno, seguimiento personalizado en programas de capacitación, onboarding de clientes. Cualquier caso donde hoy no se hace porque no hay tiempo o presupuesto para hacerlo bien.
 
 ## La comparación
 
-|                                    | Hacerlo tú mismo                 | Practicante                               | Bot IA                       |
-| ---------------------------------- | -------------------------------- | ----------------------------------------- | ---------------------------- |
-| **Costo**                          | Tu tiempo (alto)                 | $300-500/mes                              | ~$5/mes                      |
-| **Tiempo de setup**                | 0 horas                          | 5-10 horas (buscar, entrenar, supervisar) | 12 horas (primera vez)       |
-| **Calidad de profundización**      | Profesional                      | Limitada                                  | Consistente                  |
-| **Escalabilidad**                  | No escala                        | Lineal (1 persona = 1 practicante)        | Ilimitada                    |
-| **Disponibilidad**                 | Tu horario                       | Horario laboral                           | 24/7                         |
-| **Adaptación al contexto**         | Excelente (si sabes entrevistar) | Depende del guión                         | Buena (si está en el diseño) |
-| **Supervisión requerida**          | Ninguna                          | Continua                                  | Continua                     |
-| **Costo marginal por emprendedor** | Alto                             | Medio                                     | Casi cero                    |
+|                    | Tú              | Practicante                  | Bot IA               |
+| ------------------ | --------------- | ---------------------------- | -------------------- |
+| **Costo**          | Tu tiempo       | $300-500/mes                 | $10-40/mes           |
+| **Profundización** | Profesional     | Limitada                     | Consistente          |
+| **Disponibilidad** | Tu horario      | Horario laboral              | 24/7                 |
+| **Escalabilidad**  | No escala       | Lineal                       | Ilimitada            |
+| **Setup**          | 0 horas         | 5-10 horas                   | ~12 horas              |
 
-El bot no reemplaza la conversación con un profesional experimentado. Pero hace económicamente viable entregar acompañamiento personalizado donde antes no lo era.
+El bot no reemplaza la conversación con un profesional experimentado. Pero [hace viable](/posts/26-02-13-paradoja-jevons-ia/) entregar acompañamiento personalizado donde antes no lo era.
 
 ## El cambio
 
