@@ -1,0 +1,43 @@
+---
+description: Convenciones para crear y nombrar posts del blog Hugo
+globs: content/posts/**/*.md
+alwaysApply: false
+---
+
+# Convenciones de posts
+
+## Nombre de archivo
+
+Todos los posts usan el formato `YY-MM-DD-slug.md`, donde:
+- `YY` es el año con dos dígitos
+- `MM` es el mes con dos dígitos
+- `DD` es el día con dos dígitos
+- `slug` es el identificador del post en kebab-case
+
+Ejemplo: `26-02-13-paradoja-jevons-ia.md`
+
+## Fecha en front matter
+
+Usar formato `YYYY-MM-DD` sin hora ni zona horaria:
+
+```toml
+date = 2026-02-13
+```
+
+## Citas internas
+
+Al referenciar otros posts del blog, usar rutas relativas con el slug completo (incluyendo la fecha):
+
+```markdown
+[texto del enlace](/posts/26-02-11-bot-entrevistas-ia/)
+```
+
+Nunca usar URLs absolutas como `https://fablab.blog/posts/...` ni `http://fablab.blog/posts/...`.
+
+## Redirecciones (aliases)
+
+Si un post se renombra, agregar `aliases` en el front matter para mantener la URL anterior funcionando:
+
+```toml
+aliases = ["/posts/slug-anterior/"]
+```
