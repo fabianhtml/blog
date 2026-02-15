@@ -29,7 +29,7 @@ Cada semana sale un artículo sobre qué trabajos va a reemplazar la IA. La conv
 - Traducciones o transcripciones de contenido de nicho que antes no justificaban
 - Documentación que se quedaba perpetuamente "pendiente", ahora se escribe
 - Feedback personalizado donde antes solo había un contenido general
-- Acompañamiento uno a uno en programas con presupuesto acotado donde [la alternativa real era nada](/posts/bot-entrevistas-ia/)
+- Acompañamiento uno a uno en programas con presupuesto acotado donde [la alternativa real era nada](/posts/26-02-11-bot-entrevistas-ia/)
 
 Ninguna de estas cosas reemplazó a alguien. **Simplemente no se hacían.**
 
