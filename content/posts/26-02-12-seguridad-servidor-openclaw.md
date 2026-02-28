@@ -5,10 +5,10 @@ draft = false
 tags = ["seguridad", "servidor", "openclaw", "hetzner", "vps"]
 categories = ["tecnología"]
 description = 'Un servidor nuevo viene sin protección. Arréglalo en 5 minutos.'
+aliases = ["/posts/seguridad-servidor-openclaw/"]
 [cover]
 image = "/images/og/seguridad-servidor-openclaw.png"
 hidden = true
-aliases = ["/posts/seguridad-servidor-openclaw/"]
 +++
 
 [OpenClaw](https://openclaw.ai/) se convirtió en tendencia en las últimas semanas por lo simple que es montar agentes de IA que funcionen 24/7 conectados a WhatsApp, Telegram y a una gran variedad de servicios, facilitando realizar o automatizar tareas de tu día a día.

@@ -3,10 +3,10 @@ title = '¿Cómo cambiarse a vivir a la ciudad que quisieras?'
 description = 'Trabajo remoto, networking y cómo crear oportunidades.'
 date = 2017-12-23
 draft = false
+aliases = ["/posts/nueva-ciudad/"]
 [cover]
 image = "/images/og/nueva-ciudad.png"
 hidden = true
-aliases = ["/posts/nueva-ciudad/"]
 +++
 **Me gustaría vivir en (o volver a) ¿qué hago ahora?**
 

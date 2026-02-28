@@ -5,10 +5,10 @@ draft = false
 tags = ["reflexión", "naturaleza"]
 categories = ["cultura"]
 description = 'Una reflexión para tiempos oscuros.'
+aliases = ["/posts/ser-como-un-arbol/"]
 [cover]
 image = "/images/og/ser-como-un-arbol.png"
 hidden = true
-aliases = ["/posts/ser-como-un-arbol/"]
 +++
 
 Ayer caminé por un bosque húmedo, rodeado de líquenes, de hojas que se hacían parte con la tierra. Con variedad de verdes que contrastaban con el azul y el gris de las nubes. Y luego vino una noticia que me dejó en la desazón, con una sensación de amenaza.

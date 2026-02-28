@@ -5,10 +5,10 @@ date = 2024-12-25
 draft = false
 tags = ["mentorías", "apuntes"]
 categories = ["comunidades"]
+aliases = ["/posts/escalar-programa-mentorias/"]
 [cover]
 image = "/images/og/escalar-programa-mentorias.png"
 hidden = true
-aliases = ["/posts/escalar-programa-mentorias/"]
 +++
 
 Vuelvo a compartir unos [apuntes](/tags/apuntes/). Esta vez sobre algo que me podrían (y te podrían) ayudar a iterar una iniciativa de comunidad. En particular, un programa de mentorías.

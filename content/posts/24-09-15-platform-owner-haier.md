@@ -5,10 +5,10 @@ date = 2024-09-15
 draft = false
 categories = ["cultura"]
 tags = ["apuntes"]
+aliases = ["/posts/platform-owner-haier/"]
 [cover]
 image = "/images/og/platform-owner-haier.png"
 hidden = true
-aliases = ["/posts/platform-owner-haier/"]
 +++
 
 Antes ya hablé de [Humanocracy](/posts/23-12-31-humanocracy/) un libro muy interesante en mostrar nuevas maneras de crear organizaciones.

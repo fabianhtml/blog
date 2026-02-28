@@ -4,10 +4,10 @@ description = 'Descubre cómo la falta de sentido compartido y productividad afe
 date = 2024-10-22
 draft = false
 categories = ["cultura"]
+aliases = ["/posts/empresa-en-crisis/"]
 [cover]
 image = "/images/og/empresa-en-crisis.png"
 hidden = true
-aliases = ["/posts/empresa-en-crisis/"]
 +++
 
 En su teoría de la acción comunicativa, Jürgen Habermas trató la necesidad producir sentido compartido en las instituciones.

@@ -5,10 +5,10 @@ draft = false
 tags = ["inteligencia artificial", "automatizacion", "claude", "whatsapp", "openclaw"]
 categories = ["tecnología"]
 description = 'Delegué 30 horas de acompañamiento personalizado a un bot. No es perfecto, pero hace viable lo que antes simplemente no iba a pasar.'
+aliases = ["/posts/bot-entrevistas-ia/"]
 [cover]
 image = "/images/og/bot-entrevistas-ia.png"
 hidden = true
-aliases = ["/posts/bot-entrevistas-ia/"]
 +++
 
 > Todos sabemos que la atención uno a uno es de las cosas que más mueve la aguja en formación. Un mentor, un tutor, alguien que se siente contigo y te ayude a pensar. Y casi nunca hay recursos para darla. La alternativa real, en la mayoría de programas, no es un profesional, ni un ayudante, ni un practicante. Es nada.

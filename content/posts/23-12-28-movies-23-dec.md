@@ -5,10 +5,10 @@ date = 2023-12-28
 draft = false
 tags = ["películas"]
 categories = ["ocio"]
+aliases = ["/posts/movies-23-dec/"]
 [cover]
 image = "/images/og/movies-23-dec.png"
 hidden = true
-aliases = ["/posts/movies-23-dec/"]
 +++
 Las 8 películas que he visto o estoy viendo en diciembre de 2023:
 

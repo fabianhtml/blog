@@ -5,10 +5,10 @@ date = 2024-07-20
 draft = false
 categories = ["cultura"]
 tags = ["alineación", "autonomía", "visibilidad", "documentación"]
+aliases = ["/posts/visibilidad/"]
 [cover]
 image = "/images/og/visibilidad.png"
 hidden = true
-aliases = ["/posts/visibilidad/"]
 +++
 
 Cuando se trata de hablar de cultura hay ciertos principios que se repiten más en los equipos.

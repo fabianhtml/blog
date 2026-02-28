@@ -5,10 +5,10 @@ draft = false
 tags = ["inteligencia artificial", "productividad", "claude", "taller", "diseño"]
 categories = ["tecnología"]
 description = '¿Se puede diseñar un taller completo pensando en voz alta? Sí.'
+aliases = ["/posts/taller-dos-versiones-sitio-web/"]
 [cover]
 image = "/images/og/disenar-taller-ia.png"
 hidden = true
-aliases = ["/posts/taller-dos-versiones-sitio-web/"]
 +++
 
 > TL;DR: En unas horas pasé de un briefing a un taller completo con materiales listos para producir. Investigación, dos versiones, decisiones de diseño. La IA no diseñó el taller, pero sin ella no habría explorado todo eso en una sesión.

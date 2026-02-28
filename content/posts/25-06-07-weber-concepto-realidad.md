@@ -5,10 +5,10 @@ date = 2025-06-07
 draft = false
 categories = ["cultura"]
 tags = ["Max Weber", "filosofía", "sociedad", "José Luis Villacañas"]
+aliases = ["/posts/weber-concepto-realidad/"]
 [cover]
 image = "/images/og/weber-concepto-realidad.png"
 hidden = true
-aliases = ["/posts/weber-concepto-realidad/"]
 +++
 
 ¿Cómo desarrollaba Max Weber sus ideas? En una reciente presentación del libro **"Max Weber en contexto: Filosofía y Ciencia Social tras las sendas de Kant"**, de **José Luis Villacañas**, descubrí una síntesis notable:

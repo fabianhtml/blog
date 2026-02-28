@@ -5,10 +5,10 @@ date = 2024-04-13
 draft = false
 categories = ["desarrollo"]
 tags = ["concentración", "bienestar"]
+aliases = ["/posts/atencion/"]
 [cover]
 image = "/images/og/atencion.png"
 hidden = true
-aliases = ["/posts/atencion/"]
 +++
 
 Si te "bajonea" repasar el pasado o te da ansiedad pensar en el futuro, puede que la tecnología tenga parte de la culpa.

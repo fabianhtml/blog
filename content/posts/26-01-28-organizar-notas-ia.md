@@ -5,10 +5,10 @@ draft = false
 tags = ["inteligencia artificial", "productividad", "obsidian", "cursor", "claude code"]
 categories = ["tecnología"]
 description = 'Rescaté notas que había dado por perdidas, pero lo valioso no fue la migración. Fue implementar un sistema donde la IA gestiona el conocimiento: decide dónde organizar, qué conectar, qué patrones emergen.'
+aliases = ["/posts/organizar-notas-ia/"]
 [cover]
 image = "/images/og/organizar-notas-ia.png"
 hidden = true
-aliases = ["/posts/organizar-notas-ia/"]
 +++
 
 

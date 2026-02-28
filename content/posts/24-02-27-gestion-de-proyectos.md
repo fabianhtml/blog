@@ -5,10 +5,10 @@ date = 2024-02-27
 draft = true
 tags = ["tiempo", "energia", "atencion", "motivacion"]
 categories = ["desarrollo"]
+aliases = ["/posts/gestion-de-proyectos/"]
 [cover]
 image = "/images/og/gestion-de-proyectos.png"
 hidden = true
-aliases = ["/posts/gestion-de-proyectos/"]
 +++
 
 
