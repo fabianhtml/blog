@@ -1,10 +1,13 @@
 +++
 title = 'Arrepentimientos, curiosidad y valores: tres formas de cerrar el año'
 date = 2026-03-13
-draft = true
+draft = false
 tags = ["reflexion", "productividad", "desarrollo-profesional"]
 categories = ["desarrollo personal"]
 description = 'Daniel Pink, Anne-Laure Le Cunff y Cal Newport proponen métodos distintos para reflexionar sobre el año: arrepentimientos, curiosidad y métricas.'
+[cover]
+image = "/images/og/26-03-13-reflexion-anual.png"
+hidden = true
 +++
 
 > TL;DR: Daniel Pink escribió un libro muy bueno sobre arrepentimientos (*The Power of Regret*) y propone un método para cerrar el año basado en esa investigación. Anne-Laure Le Cunff parte de la curiosidad. Cal Newport parte de los valores y las métricas. Tres enfoques distintos que se complementan, y cualquiera es mejor que la lista de propósitos que abandonas en febrero.
