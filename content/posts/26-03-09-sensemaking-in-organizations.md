@@ -1,6 +1,6 @@
 +++
 title = 'Sensemaking in Organizations'
-date = 2026-03-09
+date = 2026-04-09
 draft = false
 tags = ["sensemaking", "apuntes"]
 categories = ["libros"]

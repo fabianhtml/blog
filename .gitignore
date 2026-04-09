@@ -4,3 +4,4 @@
 node_modules/
 # .og-cache.json - ahora se commitea para evitar regenerar imágenes en CI
 dist/ 
+.cursor/rules/blog-posts.mdc

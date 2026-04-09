@@ -6,6 +6,7 @@ tags = ["inteligencia artificial", "automatizacion", "claude", "whatsapp", "open
 categories = ["tecnología"]
 description = 'Delegué 30 horas de acompañamiento personalizado a un bot. No es perfecto, pero hace viable lo que antes simplemente no iba a pasar.'
 aliases = ["/posts/bot-entrevistas-ia/"]
+
 [cover]
 image = "/images/og/bot-entrevistas-ia.png"
 hidden = true
