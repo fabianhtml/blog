@@ -28,14 +28,14 @@ interface PostToProcess {
 }
 
 interface FontData {
-  regular: string;
-  bold: string;
+  regularBuffer: Buffer;
+  boldBuffer: Buffer;
 }
 
 // Configuración
 const WIDTH = 1200;
 const HEIGHT = 630;
-const TEMPLATE_VERSION = '6';
+const TEMPLATE_VERSION = '8';
 
 // Función para generar hash
 function generateHash(title: string, description: string): string {
@@ -155,12 +155,12 @@ function loadFonts(): FontData {
   );
 
   return {
-    regular: fs
-      .readFileSync(path.join(fontDir, 'atkinson-hyperlegible-latin-400-normal.woff'))
-      .toString('base64'),
-    bold: fs
-      .readFileSync(path.join(fontDir, 'atkinson-hyperlegible-latin-700-normal.woff'))
-      .toString('base64'),
+    regularBuffer: fs.readFileSync(
+      path.join(fontDir, 'atkinson-hyperlegible-latin-400-normal.woff2')
+    ),
+    boldBuffer: fs.readFileSync(
+      path.join(fontDir, 'atkinson-hyperlegible-latin-700-normal.woff2')
+    ),
   };
 }
 
@@ -215,22 +215,6 @@ function buildSvg(post: PostToProcess, fonts: FontData): string {
 
   return `
 <svg width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <style>
-      @font-face {
-        font-family: 'Atkinson Hyperlegible';
-        font-style: normal;
-        font-weight: 400;
-        src: url(data:font/woff;base64,${fonts.regular}) format('woff');
-      }
-      @font-face {
-        font-family: 'Atkinson Hyperlegible';
-        font-style: normal;
-        font-weight: 700;
-        src: url(data:font/woff;base64,${fonts.bold}) format('woff');
-      }
-    </style>
-  </defs>
   <rect width="${WIDTH}" height="${HEIGHT}" fill="#000000"/>
   <text x="60" y="${titleY}" font-family="Atkinson Hyperlegible" font-size="70" font-weight="700" fill="#ffffff">
     ${renderTextLines(titleLines, 60, titleY, titleLineHeight)}
@@ -246,6 +230,11 @@ async function generateOGImage(post: PostToProcess, fonts: FontData): Promise<bo
   try {
     const svg = buildSvg(post, fonts);
     const resvg = new Resvg(svg, {
+      font: {
+        fontBuffers: [fonts.regularBuffer, fonts.boldBuffer],
+        loadSystemFonts: false,
+        defaultFontFamily: 'Atkinson Hyperlegible',
+      } as any,
       fitTo: {
         mode: 'width',
         value: WIDTH,

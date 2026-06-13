@@ -59,6 +59,8 @@ module:
       target: content
 
 params:
+  ogImageVersion: 8
+
   homeInfoParams:
     title: Aprendizajes para la vida y el trabajo
     content: Soy **[Fabián Acuña Hernández](/about/)**. Aquí encontrarás ideas para tu desarrollo personal y profesional. Regularmente leo, escucho y hablo sobre cultura, desarrollo de comunidades, tecnología, desarrollo de carrera, negocios y trabajo remoto. Te invito a mi [**newsletter** 💌](https://fabianhtml.substack.com). **¡Gracias por pasar**!

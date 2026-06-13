@@ -1,13 +1,18 @@
 {{- $image := "" -}}
 
 {{- if .Params.cover.image -}}
+  {{- $version := site.Params.ogImageVersion | default 1 -}}
   {{- if (ne .Params.cover.relative true) -}}
     {{- $image = (.Params.cover.image | absURL) -}}
   {{- else -}}
     {{- $image = ((path.Join .RelPermalink .Params.cover.image) | absURL) -}}
   {{- end -}}
+  {{- if hasPrefix .Params.cover.image "/images/og/" -}}
+    {{- $image = printf "%s?v=%v" $image $version -}}
+  {{- end -}}
 {{- else if .File -}}
-  {{- $image = (printf "/images/og/%s.png" .File.ContentBaseName | absURL) -}}
+  {{- $version := site.Params.ogImageVersion | default 1 -}}
+  {{- $image = (printf "/images/og/%s.png?v=%v" .File.ContentBaseName $version | absURL) -}}
 {{- else -}}
   {{- $images := partial "templates/_funcs/get-page-images" . -}}
   {{- with index $images 0 -}}
