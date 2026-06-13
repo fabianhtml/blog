@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
+import satori from 'satori';
 import { Resvg } from '@resvg/resvg-js';
 import { fileURLToPath } from 'url';
 
@@ -28,14 +29,14 @@ interface PostToProcess {
 }
 
 interface FontData {
-  regularBuffer: Buffer;
-  boldBuffer: Buffer;
+  regular: ArrayBuffer;
+  bold: ArrayBuffer;
 }
 
 // Configuración
 const WIDTH = 1200;
 const HEIGHT = 630;
-const TEMPLATE_VERSION = '8';
+const TEMPLATE_VERSION = '9';
 
 // Función para generar hash
 function generateHash(title: string, description: string): string {
@@ -139,102 +140,98 @@ function extractFrontMatter(content: string): FrontMatter | null {
   return null;
 }
 
-function escapeXml(value: string): string {
-  return value
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&apos;');
-}
-
 function loadFonts(): FontData {
   const fontDir = path.join(
     __dirname,
     '../node_modules/@fontsource/atkinson-hyperlegible/files'
   );
+  const regularBuffer = fs.readFileSync(
+    path.join(fontDir, 'atkinson-hyperlegible-latin-400-normal.woff')
+  );
+  const boldBuffer = fs.readFileSync(
+    path.join(fontDir, 'atkinson-hyperlegible-latin-700-normal.woff')
+  );
 
   return {
-    regularBuffer: fs.readFileSync(
-      path.join(fontDir, 'atkinson-hyperlegible-latin-400-normal.woff2')
+    regular: regularBuffer.buffer.slice(
+      regularBuffer.byteOffset,
+      regularBuffer.byteOffset + regularBuffer.byteLength
     ),
-    boldBuffer: fs.readFileSync(
-      path.join(fontDir, 'atkinson-hyperlegible-latin-700-normal.woff2')
+    bold: boldBuffer.buffer.slice(
+      boldBuffer.byteOffset,
+      boldBuffer.byteOffset + boldBuffer.byteLength
     ),
   };
-}
-
-function wrapText(text: string, maxCharsPerLine: number, maxLines: number): string[] {
-  const words = text.split(/\s+/).filter(Boolean);
-  const lines: string[] = [];
-  let currentLine = '';
-
-  for (const word of words) {
-    const candidate = currentLine ? `${currentLine} ${word}` : word;
-
-    if (candidate.length <= maxCharsPerLine) {
-      currentLine = candidate;
-      continue;
-    }
-
-    if (currentLine) lines.push(currentLine);
-    currentLine = word;
-
-    if (lines.length === maxLines) break;
-  }
-
-  if (lines.length < maxLines && currentLine) {
-    lines.push(currentLine);
-  }
-
-  if (lines.length === maxLines && words.join(' ').length > lines.join(' ').length) {
-    lines[maxLines - 1] = `${lines[maxLines - 1].replace(/[.,;:!?]*$/, '')}...`;
-  }
-
-  return lines;
-}
-
-function renderTextLines(lines: string[], x: number, y: number, lineHeight: number): string {
-  return lines
-    .map((line, index) => `<tspan x="${x}" y="${y + index * lineHeight}">${escapeXml(line)}</tspan>`)
-    .join('');
-}
-
-function buildSvg(post: PostToProcess, fonts: FontData): string {
-  const titleLines = wrapText(post.title, 30, 4);
-  const descriptionLines = wrapText(post.description, 62, 3);
-  const titleLineHeight = 78;
-  const descriptionLineHeight = 46;
-  const gap = 30;
-  const blockHeight =
-    titleLines.length * titleLineHeight +
-    gap +
-    descriptionLines.length * descriptionLineHeight;
-  const titleY = Math.round((HEIGHT - blockHeight) / 2 + 56);
-  const descriptionY = titleY + titleLines.length * titleLineHeight + gap;
-
-  return `
-<svg width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}" xmlns="http://www.w3.org/2000/svg">
-  <rect width="${WIDTH}" height="${HEIGHT}" fill="#000000"/>
-  <text x="60" y="${titleY}" font-family="Atkinson Hyperlegible" font-size="70" font-weight="700" fill="#ffffff">
-    ${renderTextLines(titleLines, 60, titleY, titleLineHeight)}
-  </text>
-  <text x="60" y="${descriptionY}" font-family="Atkinson Hyperlegible" font-size="36" font-weight="400" fill="#cccccc">
-    ${renderTextLines(descriptionLines, 60, descriptionY, descriptionLineHeight)}
-  </text>
-</svg>`;
 }
 
 // Genera una imagen OG desde SVG y la rasteriza a PNG.
 async function generateOGImage(post: PostToProcess, fonts: FontData): Promise<boolean> {
   try {
-    const svg = buildSvg(post, fonts);
+    const element = {
+      type: 'div',
+      props: {
+        style: {
+          height: '100%',
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          backgroundColor: '#000000',
+          padding: '60px',
+          fontFamily: 'Atkinson',
+        },
+        children: [
+          {
+            type: 'div',
+            props: {
+              style: {
+                fontSize: '70px',
+                fontWeight: 700,
+                color: '#ffffff',
+                lineHeight: 1.1,
+                marginBottom: '30px',
+                maxWidth: '1080px',
+              },
+              children: post.title,
+            },
+          },
+          {
+            type: 'div',
+            props: {
+              style: {
+                fontSize: '36px',
+                fontWeight: 400,
+                color: '#cccccc',
+                lineHeight: 1.3,
+                maxWidth: '1080px',
+              },
+              children: post.description,
+            },
+          },
+        ],
+      },
+    };
+
+    const svg = await satori(element as any, {
+      width: WIDTH,
+      height: HEIGHT,
+      fonts: [
+        {
+          name: 'Atkinson',
+          data: fonts.regular,
+          weight: 400,
+          style: 'normal',
+        },
+        {
+          name: 'Atkinson',
+          data: fonts.bold,
+          weight: 700,
+          style: 'normal',
+        },
+      ],
+    });
+
     const resvg = new Resvg(svg, {
-      font: {
-        fontBuffers: [fonts.regularBuffer, fonts.boldBuffer],
-        loadSystemFonts: false,
-        defaultFontFamily: 'Atkinson Hyperlegible',
-      } as any,
       fitTo: {
         mode: 'width',
         value: WIDTH,

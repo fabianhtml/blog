@@ -59,7 +59,7 @@ module:
       target: content
 
 params:
-  ogImageVersion: 8
+  ogImageVersion: 9
 
   homeInfoParams:
     title: Aprendizajes para la vida y el trabajo

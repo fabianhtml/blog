@@ -17,7 +17,8 @@
   },
   "dependencies": {
     "@fontsource/atkinson-hyperlegible": "^5.2.8",
-    "@resvg/resvg-js": "^2.6.2"
+    "@resvg/resvg-js": "^2.6.2",
+    "satori": "^0.26.0"
   },
   "devDependencies": {
     "@types/node": "^20.19.30",
