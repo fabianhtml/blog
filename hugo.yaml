@@ -44,9 +44,9 @@ security:
   enableInlineShortcodes: true
 
 # Configuración de directorios
-# - Todas las imágenes se guardan en assets/img
-# - Durante la compilación, se copian a static/img en el sitio público
-# - En el sitio generado, las imágenes se acceden como /img/nombre-imagen.ext
+# - Las imágenes editoriales viven en assets/img
+# - Hugo las monta como /img/nombre-imagen.ext en el sitio generado
+# - No crear duplicados manuales en static/img
 module:
   mounts:
     - source: static

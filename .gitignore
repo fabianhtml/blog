@@ -2,6 +2,7 @@
 /public/ 
 .DS_Store
 node_modules/
-# .og-cache.json - ahora se commitea para evitar regenerar imágenes en CI
+.og-cache.json
+/static/images/og/*.png
 dist/ 
 .cursor/rules/blog-posts.mdc
