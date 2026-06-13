@@ -1,0 +1,49 @@
+---
+description: Flujo para instalar imágenes arrastradas en posts del blog
+globs: content/posts/**/*.md
+alwaysApply: false
+---
+
+# Imágenes en posts
+
+Cuando el usuario entregue una ruta de imagen local (normalmente desde Descargas o una imagen arrastrada al chat) para insertarla en un artículo:
+
+1. Mover la imagen a `assets/img/`.
+2. Renombrarla en kebab-case con un nombre descriptivo relacionado con su contenido, no con nombres genéricos como `image.png`, `screenshot.png` o `download.webp`.
+3. Guardarla como WebP. Si la imagen viene en `.png`, `.jpg` o `.jpeg`, convertirla a `.webp` antes de insertarla.
+4. Referenciarla en Markdown usando la ruta pública montada por Hugo: `/img/nombre-del-archivo.webp`.
+5. Insertarla cerca del párrafo relevante con alt text claro y descriptivo.
+
+## Formatos de inserción
+
+Para una imagen sin crédito ni bajada visible, usar Markdown normal:
+
+```markdown
+![Tabla de SemiAnalysis](/img/subsidio-ia.webp)
+```
+
+Para una imagen con crédito, fuente o caption visible, usar siempre el shortcode `figure` con `caption` y `class="image-with-credit"`:
+
+```markdown
+{{< figure src="/img/imagen.webp" alt="Descripción de la imagen" caption="Creada usando illo-skill.com" class="image-with-credit" >}}
+```
+
+No usar HTML crudo como `<small>`, `<div>` o `<figcaption>` dentro del Markdown para créditos; Hugo puede omitirlo por seguridad.
+
+## Portadas
+
+Si la imagen es para portada o preview social custom, usar `[cover]` en el frontmatter:
+
+```toml
+[cover]
+image = "/img/nombre-descriptivo.webp"
+hidden = true
+```
+
+`[cover]` debe ir después de campos normales como `aliases`, porque en TOML abre una sección.
+
+## Antes de terminar
+
+- Verificar que el archivo quedó en `assets/img/`.
+- Verificar que el Markdown apunta a `/img/...webp`, no a `assets/img/...`, `.png`, `.jpg` ni una ruta absoluta del sistema.
+- No duplicar la imagen en `static/`.
