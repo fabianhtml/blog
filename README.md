@@ -5,7 +5,7 @@ Blog personal construido con Hugo y el tema PaperMod, desplegado en Cloudflare P
 ## Características
 
 - Tema PaperMod personalizado
-- Generación automática de imágenes Open Graph con **Satori** (sin Chrome)
+- Generación automática de imágenes Open Graph con **resvg** (sin Chrome)
 - Soporte para CSS personalizado
 - Optimizado para SEO
 - Build ultrarrápido con **Bun** (~28s en CI)
@@ -19,8 +19,6 @@ bun run setup
 
 Este comando:
 - Instala todas las dependencias
-- Configura los git hooks
-- Genera las imágenes Open Graph
 
 > **Nota**: El proyecto usa Bun para ejecución directa de TypeScript (sin paso de compilación).
 
@@ -46,15 +44,23 @@ Para build de CI (usado por Cloudflare Pages):
 bun run ci:build
 ```
 
-## Generación de Imágenes Open Graph
+## Imágenes
 
-El sistema genera automáticamente imágenes Open Graph (OG) para compartir en redes sociales usando **Satori** + **resvg**.
+El blog usa dos tipos de imágenes:
+
+- **Imágenes editoriales**: van en `assets/img` y se referencian como `/img/nombre.webp` desde los posts.
+- **Imágenes Open Graph**: se generan en `static/images/og` durante el build y se publican como `/images/og/slug-del-post.png`.
+
+### Generación de Open Graph
+
+El sistema genera automáticamente imágenes Open Graph (OG) para compartir en redes sociales usando **resvg**.
 
 ### Cómo Funciona
 
-1. **Automático con commits**: Las imágenes se generan automáticamente al hacer commit gracias al pre-commit hook
-2. **Manual**: Ejecuta `bun run generate-og` para generar solo las imágenes nuevas o modificadas
-3. **Detección inteligente**: Solo regenera imágenes cuando cambia el título o descripción del post
+1. **Build local y CI**: `bun run blog:build` y `bun run ci:build` generan las imágenes antes de ejecutar Hugo.
+2. **Manual**: `bun run generate-og` genera solo las imágenes faltantes o modificadas.
+3. **Sin mutar posts**: el generador no edita frontmatter; solo lee `title` y `description`.
+4. **Fallback automático**: si un post no define `cover.image`, los metadatos sociales usan `/images/og/<nombre-del-archivo>.png`.
 
 ### Requisitos en Posts
 
@@ -69,17 +75,24 @@ description = "Descripción para redes sociales"
 ### Características
 
 - Imágenes de 1200x630px con fondo negro
-- Fuente Atkinson Hyperlegible (incluida localmente)
-- **No requiere Chrome/Chromium** - Satori genera SVG, resvg convierte a PNG
-- Sistema de caché inteligente (`.og-cache.json`)
-- Generación ultrarrápida (~1s por imagen)
-- Se agregan automáticamente al frontmatter como `cover.image`
+- **No requiere Chrome/Chromium**
+- Caché local ignorado por git (`.og-cache.json`)
+- No agrega ni modifica `cover.image`
+
+### Portadas custom
+
+Usa `cover.image` solo cuando quieras una imagen social o portada específica:
+
+```toml
+[cover]
+image = "/img/mi-portada.webp"
+hidden = true
+```
 
 ### Personalización
 
 Las plantillas de las imágenes OG se pueden personalizar editando:
 - La lógica de generación en `scripts/generate-og-images.ts`
-- Las fuentes en `scripts/fonts/`
 
 ## Despliegue
 
@@ -94,9 +107,8 @@ El blog se despliega automáticamente en **Cloudflare Pages** cuando se hace pus
 ### Optimizaciones de Build
 
 - **Bun** ejecuta TypeScript directamente (sin paso de compilación `tsc`)
-- **Satori** genera imágenes sin necesidad de navegador (~1.5s install vs ~13s con Puppeteer)
-- El archivo `.og-cache.json` se commitea al repo para evitar regenerar imágenes existentes
-- Solo 29 paquetes vs 104 con Puppeteer
+- **resvg** genera imágenes sin necesidad de navegador
+- `.og-cache.json` queda local para evitar trabajo repetido durante desarrollo
 
 ## Licencia
 

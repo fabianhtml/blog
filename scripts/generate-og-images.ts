@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
-import satori from 'satori';
 import { Resvg } from '@resvg/resvg-js';
 import { fileURLToPath } from 'url';
 
@@ -25,18 +24,22 @@ interface PostToProcess {
   title: string;
   description: string;
   outputPath: string;
-  filePath: string;
-  content: string;
   hash: string;
+}
+
+interface FontData {
+  regular: string;
+  bold: string;
 }
 
 // Configuración
 const WIDTH = 1200;
 const HEIGHT = 630;
+const TEMPLATE_VERSION = '6';
 
 // Función para generar hash
 function generateHash(title: string, description: string): string {
-  const content = `${title}${description}`;
+  const content = `${TEMPLATE_VERSION}:${title}${description}`;
   return crypto.createHash('md5').update(content).digest('hex');
 }
 
@@ -65,6 +68,29 @@ function saveCache(cache: Cache): void {
   }
 }
 
+function cleanFrontMatterValue(value: string): string | boolean {
+  const trimmed = value.trim();
+
+  if (trimmed === 'true') return true;
+  if (trimmed === 'false') return false;
+
+  if (
+    (trimmed.startsWith('"') && trimmed.endsWith('"')) ||
+    (trimmed.startsWith("'") && trimmed.endsWith("'"))
+  ) {
+    return trimmed.slice(1, -1);
+  }
+
+  return trimmed;
+}
+
+function assignFrontMatterValue(frontMatter: FrontMatter, key: string, value: string): void {
+  if (!['title', 'description', 'draft'].includes(key)) return;
+
+  const cleanValue = cleanFrontMatterValue(value);
+  (frontMatter as any)[key] = cleanValue;
+}
+
 // Función para extraer el frontmatter
 function extractFrontMatter(content: string): FrontMatter | null {
   const tomlMatch = content.match(/^\+\+\+([\s\S]*?)\+\+\+/);
@@ -78,23 +104,14 @@ function extractFrontMatter(content: string): FrontMatter | null {
     const lines = tomlMatch[1].split('\n');
     
     for (const line of lines) {
-      if (line.trim() === '' || line.startsWith('#')) continue;
+      if (line.trim() === '' || line.trim().startsWith('#')) continue;
       
       const equalIndex = line.indexOf('=');
       if (equalIndex === -1) continue;
       
       const key = line.slice(0, equalIndex).trim();
-      let value = line.slice(equalIndex + 1).trim();
-      
-      if (value.startsWith('"') && value.endsWith('"')) {
-        value = value.slice(1, -1);
-      } else if (value.startsWith("'") && value.endsWith("'")) {
-        value = value.slice(1, -1);
-      }
-      
-      if (key in frontMatter) {
-        (frontMatter as any)[key] = value;
-      }
+      const value = line.slice(equalIndex + 1).trim();
+      assignFrontMatterValue(frontMatter, key, value);
     }
     return frontMatter;
   }
@@ -113,17 +130,8 @@ function extractFrontMatter(content: string): FrontMatter | null {
       if (colonIndex === -1) continue;
       
       const key = line.slice(0, colonIndex).trim();
-      let value = line.slice(colonIndex + 1).trim();
-      
-      if (value.startsWith('"') && value.endsWith('"')) {
-        value = value.slice(1, -1);
-      } else if (value.startsWith("'") && value.endsWith("'")) {
-        value = value.slice(1, -1);
-      }
-      
-      if (key in frontMatter) {
-        (frontMatter as any)[key] = value;
-      }
+      const value = line.slice(colonIndex + 1).trim();
+      assignFrontMatterValue(frontMatter, key, value);
     }
     return frontMatter;
   }
@@ -131,89 +139,112 @@ function extractFrontMatter(content: string): FrontMatter | null {
   return null;
 }
 
-// Cargar fuentes locales (Atkinson Hyperlegible)
-function loadFonts(): { regular: ArrayBuffer; bold: ArrayBuffer } {
-  const regularPath = path.join(__dirname, 'fonts', 'AtkinsonHyperlegible-Regular.ttf');
-  const boldPath = path.join(__dirname, 'fonts', 'AtkinsonHyperlegible-Bold.ttf');
-  
-  const regularBuffer = fs.readFileSync(regularPath);
-  const boldBuffer = fs.readFileSync(boldPath);
-  
+function escapeXml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
+function loadFonts(): FontData {
+  const fontDir = path.join(
+    __dirname,
+    '../node_modules/@fontsource/atkinson-hyperlegible/files'
+  );
+
   return {
-    regular: regularBuffer.buffer.slice(regularBuffer.byteOffset, regularBuffer.byteOffset + regularBuffer.byteLength),
-    bold: boldBuffer.buffer.slice(boldBuffer.byteOffset, boldBuffer.byteOffset + boldBuffer.byteLength),
+    regular: fs
+      .readFileSync(path.join(fontDir, 'atkinson-hyperlegible-latin-400-normal.woff'))
+      .toString('base64'),
+    bold: fs
+      .readFileSync(path.join(fontDir, 'atkinson-hyperlegible-latin-700-normal.woff'))
+      .toString('base64'),
   };
 }
 
-// Genera una imagen OG usando Satori
-async function generateOGImage(post: PostToProcess, fonts: { regular: ArrayBuffer; bold: ArrayBuffer }): Promise<boolean> {
+function wrapText(text: string, maxCharsPerLine: number, maxLines: number): string[] {
+  const words = text.split(/\s+/).filter(Boolean);
+  const lines: string[] = [];
+  let currentLine = '';
+
+  for (const word of words) {
+    const candidate = currentLine ? `${currentLine} ${word}` : word;
+
+    if (candidate.length <= maxCharsPerLine) {
+      currentLine = candidate;
+      continue;
+    }
+
+    if (currentLine) lines.push(currentLine);
+    currentLine = word;
+
+    if (lines.length === maxLines) break;
+  }
+
+  if (lines.length < maxLines && currentLine) {
+    lines.push(currentLine);
+  }
+
+  if (lines.length === maxLines && words.join(' ').length > lines.join(' ').length) {
+    lines[maxLines - 1] = `${lines[maxLines - 1].replace(/[.,;:!?]*$/, '')}...`;
+  }
+
+  return lines;
+}
+
+function renderTextLines(lines: string[], x: number, y: number, lineHeight: number): string {
+  return lines
+    .map((line, index) => `<tspan x="${x}" y="${y + index * lineHeight}">${escapeXml(line)}</tspan>`)
+    .join('');
+}
+
+function buildSvg(post: PostToProcess, fonts: FontData): string {
+  const titleLines = wrapText(post.title, 30, 4);
+  const descriptionLines = wrapText(post.description, 62, 3);
+  const titleLineHeight = 78;
+  const descriptionLineHeight = 46;
+  const gap = 30;
+  const blockHeight =
+    titleLines.length * titleLineHeight +
+    gap +
+    descriptionLines.length * descriptionLineHeight;
+  const titleY = Math.round((HEIGHT - blockHeight) / 2 + 56);
+  const descriptionY = titleY + titleLines.length * titleLineHeight + gap;
+
+  return `
+<svg width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @font-face {
+        font-family: 'Atkinson Hyperlegible';
+        font-style: normal;
+        font-weight: 400;
+        src: url(data:font/woff;base64,${fonts.regular}) format('woff');
+      }
+      @font-face {
+        font-family: 'Atkinson Hyperlegible';
+        font-style: normal;
+        font-weight: 700;
+        src: url(data:font/woff;base64,${fonts.bold}) format('woff');
+      }
+    </style>
+  </defs>
+  <rect width="${WIDTH}" height="${HEIGHT}" fill="#000000"/>
+  <text x="60" y="${titleY}" font-family="Atkinson Hyperlegible" font-size="70" font-weight="700" fill="#ffffff">
+    ${renderTextLines(titleLines, 60, titleY, titleLineHeight)}
+  </text>
+  <text x="60" y="${descriptionY}" font-family="Atkinson Hyperlegible" font-size="36" font-weight="400" fill="#cccccc">
+    ${renderTextLines(descriptionLines, 60, descriptionY, descriptionLineHeight)}
+  </text>
+</svg>`;
+}
+
+// Genera una imagen OG desde SVG y la rasteriza a PNG.
+async function generateOGImage(post: PostToProcess, fonts: FontData): Promise<boolean> {
   try {
-    // Crear el elemento visual (similar a JSX pero como objeto)
-    const element = {
-      type: 'div',
-      props: {
-        style: {
-          height: '100%',
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          backgroundColor: '#000000',
-          padding: '60px',
-        },
-        children: [
-          {
-            type: 'div',
-            props: {
-              style: {
-                fontSize: '70px',
-                fontWeight: 700,
-                color: '#ffffff',
-                lineHeight: 1.1,
-                marginBottom: '30px',
-                maxWidth: '1080px',
-              },
-              children: post.title,
-            },
-          },
-          {
-            type: 'div',
-            props: {
-              style: {
-                fontSize: '36px',
-                fontWeight: 400,
-                color: '#cccccc',
-                lineHeight: 1.3,
-                maxWidth: '1080px',
-              },
-              children: post.description,
-            },
-          },
-        ],
-      },
-    };
-
-    // Generar SVG con Satori
-    const svg = await satori(element as any, {
-      width: WIDTH,
-      height: HEIGHT,
-      fonts: [
-        {
-          name: 'Atkinson',
-          data: fonts.regular,
-          weight: 400,
-          style: 'normal',
-        },
-        {
-          name: 'Atkinson',
-          data: fonts.bold,
-          weight: 700,
-          style: 'normal',
-        },
-      ],
-    });
-
-    // Convertir SVG a PNG con resvg
+    const svg = buildSvg(post, fonts);
     const resvg = new Resvg(svg, {
       fitTo: {
         mode: 'width',
@@ -254,7 +285,7 @@ async function main(): Promise<void> {
     const content = fs.readFileSync(filePath, 'utf8');
     const frontMatter = extractFrontMatter(content);
 
-    if (!frontMatter || !frontMatter.title || !frontMatter.description) {
+    if (!frontMatter || frontMatter.draft || !frontMatter.title || !frontMatter.description) {
       skippedCount++;
       continue;
     }
@@ -273,8 +304,6 @@ async function main(): Promise<void> {
         title: frontMatter.title,
         description: frontMatter.description,
         outputPath,
-        filePath,
-        content,
         hash: currentHash
       });
     } else {
@@ -290,26 +319,17 @@ async function main(): Promise<void> {
     return;
   }
 
-  // Fase 2: Cargar fuentes y procesar
-  console.log(`🚀 Generando ${postsToProcess.length} imágenes con Satori...`);
+  // Fase 2: Generar imágenes pendientes
+  console.log(`🚀 Generando ${postsToProcess.length} imágenes OG...`);
   const fonts = loadFonts();
   
   let generatedCount = 0;
   
-  // Procesar todas las imágenes (Satori es muy rápido, no necesita batches)
   for (const post of postsToProcess) {
     const success = await generateOGImage(post, fonts);
     if (success) {
       cache[post.slug] = post.hash;
       generatedCount++;
-      
-      // Actualizar frontmatter si no tiene cover.image
-      if (!post.content.includes('[cover]') && !post.content.includes('cover.image')) {
-        const updatedContent = post.content.replace(/(\+\+\+[\s\S]*?)(\+\+\+)/, (match, frontmatter, closing) => {
-          return frontmatter.trimEnd() + '\n[cover]\nimage = "/images/og/' + post.slug + '.png"\nhidden = true\n' + closing;
-        });
-        fs.writeFileSync(post.filePath, updatedContent);
-      }
     }
   }
   

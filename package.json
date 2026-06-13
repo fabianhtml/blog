@@ -9,15 +9,15 @@
     "generate-og:node": "tsc && node dist/generate-og-images.js",
     "dev": "tsc -w",
     "prepare": "husky",
-    "setup": "bun install && bun run generate-og",
+    "setup": "bun install",
     "ci:build": "bun scripts/generate-og-images.ts && hugo --gc --minify",
     "ci:build:node": "tsc && node dist/generate-og-images.js && hugo --gc --minify",
     "blog:build": "bun run generate-og && hugo --minify",
     "blog:dev": "hugo server -D"
   },
   "dependencies": {
-    "@resvg/resvg-js": "^2.6.2",
-    "satori": "^0.19.1"
+    "@fontsource/atkinson-hyperlegible": "^5.2.8",
+    "@resvg/resvg-js": "^2.6.2"
   },
   "devDependencies": {
     "@types/node": "^20.19.30",
