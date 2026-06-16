@@ -1,5 +1,5 @@
 baseURL: "https://fablab.blog"
-languageCode: "es-cl"
+locale: "es-cl"
 pagination:
   pagerSize: 8
 title: FabLab
@@ -32,9 +32,6 @@ caches:
     maxAge: -1
   getresource:
     dir: :cacheDir/_gen/getresource
-    maxAge: -1
-  getjson:
-    dir: :cacheDir/_gen/getjson
     maxAge: -1
   modules:
     dir: :cacheDir/_gen/modules
